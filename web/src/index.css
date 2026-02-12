@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Warm Spotlight Palette - DARK MODE */
+  --color-black: #FFFFFF; /* Text is now white */
+  --color-white: #000000; /* Background is now black */
+  --color-warm-gold: #D4A574;
+  --color-deep-gray: #E0E0E0; /* Lighter gray for dark bg */
+  --color-off-white: #000000; /* Pitch Black */
+  --color-gold-tint: #1F1F1F; /* Dark tint for hover */
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Inter', sans-serif;
+
+  /* Spacing */
+  --unit: 8px;
+  --container-width: 1400px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-off-white);
+  color: var(--color-black);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+button {
+  font-family: var(--font-sans);
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+}

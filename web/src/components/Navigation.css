@@ -1,0 +1,75 @@
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 0;
+  z-index: 100;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-serif); /* Using serif for logo per brief hint or general style? Actually logo usually custom, but serif matches 'BRILLIANCE' */
+  cursor: pointer;
+}
+
+.logo-brilliance {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 20px;
+}
+
+.logo-exposed {
+  font-weight: 300;
+  font-size: 20px;
+  color: var(--color-deep-gray);
+  font-family: var(--font-sans); /* 'exposed' in lowercase sans often looks good, checking brief... actually brief didn't specify font for logo, just text. I'll stick to serif for elegance or mix. Let's try serif for both for now to be safe. */
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+.logo-circle {
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-black);
+  border-radius: 50%;
+  margin-left: 4px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  color: var(--color-deep-gray);
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--color-warm-gold);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hiding nav links on mobile for MVP */
+  }
+}

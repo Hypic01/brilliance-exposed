@@ -1,0 +1,46 @@
+.intro-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.quote-container {
+    max-width: 900px;
+    padding: 0 20px;
+}
+
+.intro-quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: 42px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+}
+
+.intro-attribution {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: #666; /* Using a slightly lighter gray for attribution */
+  font-style: italic;
+  margin-top: 16px;
+}
+
+@media (max-width: 768px) {
+  .intro-quote {
+    font-size: 32px;
+  }
+  .intro-attribution {
+    font-size: 16px;
+  }
+}
