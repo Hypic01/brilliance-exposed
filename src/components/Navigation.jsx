@@ -21,6 +21,19 @@ const Navigation = () => {
           <div className="logo-circle"></div>
         </Link>
         
+        <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+          <li><Link to="/" onClick={closeMenu}>Home</Link></li>
+          <li><Link to="/portraits" onClick={closeMenu}>Portraits</Link></li>
+          <li><Link to="/about" onClick={closeMenu}>About</Link></li>
+          <li><Link to="/events" onClick={closeMenu}>Events</Link></li>
+          <li><Link to="/shop" onClick={closeMenu}>Shop</Link></li>
+          <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
+          <li><Link to="/donate" className="donate-link" onClick={closeMenu}>Donate</Link></li>
+          {isShopPage && (
+            <li className="mobile-only"><button onClick={() => { toggleCart(); closeMenu(); }}>Cart ({cartCount})</button></li>
+          )}
+        </ul>
+
         <div className="nav-actions">
             {isShopPage && (
                 <button className="cart-trigger" onClick={toggleCart} aria-label="Open Cart">
@@ -36,19 +49,6 @@ const Navigation = () => {
                 <span className="hamburger-line"></span>
             </button>
         </div>
-
-        <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-          <li><Link to="/" onClick={closeMenu}>Home</Link></li>
-          <li><Link to="/portraits" onClick={closeMenu}>Portraits</Link></li>
-          <li><Link to="/about" onClick={closeMenu}>About</Link></li>
-          <li><Link to="/events" onClick={closeMenu}>Events</Link></li>
-          <li><Link to="/shop" onClick={closeMenu}>Shop</Link></li>
-          <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
-          <li><Link to="/donate" className="donate-link" onClick={closeMenu}>Donate</Link></li>
-          {isShopPage && (
-            <li className="mobile-only"><button onClick={() => { toggleCart(); closeMenu(); }}>Cart ({cartCount})</button></li>
-          )}
-        </ul>
       </div>
     </nav>
   );
