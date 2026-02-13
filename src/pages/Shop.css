@@ -1,8 +1,8 @@
 
 .shop-page {
     padding-top: 140px;
-    background-color: var(--color-black); /* Pitch Black */
-    color: var(--color-white); /* White Text */
+    background-color: var(--color-white); /* Resolved to Black */
+    color: var(--color-black); /* Resolved to White */
     min-height: 100vh;
     padding-bottom: 80px;
 }
