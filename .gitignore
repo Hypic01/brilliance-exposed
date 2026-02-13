@@ -55,4 +55,13 @@ lerna-debug.log*
 .env.local
 .env.development.local
 .env.test.local
-.env.production.local
+# React/Vite
+node_modules
+dist
+dist-ssr
+*.local
+.vscode/*
+!.vscode/extensions.json
+*.ntvs*
+*.njsproj
+*.sln
