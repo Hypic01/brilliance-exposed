@@ -2,10 +2,12 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
+import { CartProvider } from './context/CartContext';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import IntroOverlay from './components/IntroOverlay';
+import CartDrawer from './components/CartDrawer';
 
 // Pages
 import Home from './pages/Home';
@@ -31,18 +33,21 @@ function App() {
 
   return (
     <Router>
-      <ScrollToTop />
-      <div className="app">
-        <AnimatePresence>
-            {!introComplete && (
-                <IntroOverlay onComplete={handleIntroComplete} />
-            )}
-        </AnimatePresence>
+      <CartProvider>
+        <ScrollToTop />
+        <div className="app">
+            <AnimatePresence>
+                {!introComplete && (
+                    <IntroOverlay onComplete={handleIntroComplete} />
+                )}
+            </AnimatePresence>
+            
+            <CartDrawer />
 
-        {/* Navigation is always rendered but z-index will put it behind overlay initially */}
-        <Navigation />
-        
-        <Routes>
+            {/* Navigation is always rendered but z-index will put it behind overlay initially */}
+            <Navigation />
+            
+            <Routes>
           <Route path="/" element={<Home introComplete={introComplete} />} />
           <Route path="/portraits" element={<Portraits />} />
           <Route path="/about" element={<About />} />
@@ -53,6 +58,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
+     </CartProvider>
     </Router>
   );
 }

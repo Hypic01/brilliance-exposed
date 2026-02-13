@@ -1,9 +1,12 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useCart } from '../context/CartContext';
 import './Shop.css';
 
 const Shop = () => {
+    const { addToCart } = useCart();
+
     const products = [
         { id: 1, name: "Exhibition Catalog", price: "$45.00", image: "https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&q=80&w=800" },
         { id: 2, name: "Limited Edition Print", price: "$120.00", image: "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&q=80&w=800" },
@@ -44,7 +47,7 @@ const Shop = () => {
                             <div className="product-image">
                                 <img src={product.image} alt={product.name} />
                                 <div className="product-overlay">
-                                    <button>Add to Cart</button>
+                                    <button onClick={() => addToCart(product)}>Add to Cart</button>
                                 </div>
                             </div>
                             <div className="product-info">
