@@ -1,19 +1,33 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import './Navigation.css';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { toggleCart, cartCount } = useCart();
   const location = useLocation();
   const isShopPage = location.pathname === '/shop';
 
   const closeMenu = () => setIsMenuOpen(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className={`navigation ${isMenuOpen ? 'menu-open' : ''}`}>
+    <nav className={`navigation ${isMenuOpen ? 'menu-open' : ''} ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <Link to="/" className="logo" onClick={closeMenu}>
           <span className="logo-brilliance">BRILLIANCE</span>
