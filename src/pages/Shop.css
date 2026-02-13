@@ -1,0 +1,125 @@
+
+.shop-page {
+    padding-top: 140px;
+    background-color: var(--color-black); /* Pitch Black */
+    color: var(--color-white); /* White Text */
+    min-height: 100vh;
+    padding-bottom: 80px;
+}
+
+.shop-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.shop-header h1 {
+    font-family: var(--font-serif);
+    font-size: 80px;
+    font-weight: 300;
+    margin-bottom: 24px;
+}
+
+.shop-header p {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    color: #CCC;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 0 40px;
+}
+
+.product-card {
+    background: transparent;
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    margin-bottom: 24px;
+    background: #111;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.product-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.product-overlay button {
+    background: var(--color-warm-gold);
+    color: #000;
+    padding: 12px 24px;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-overlay button {
+    transform: translateY(0);
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-info h3 {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #FFF;
+}
+
+.product-info p {
+    font-family: var(--font-sans);
+    color: var(--color-warm-gold);
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 0 24px;
+    }
+    
+    .shop-header h1 {
+        font-size: 48px;
+    }
+}

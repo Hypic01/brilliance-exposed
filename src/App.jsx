@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 import Navigation from './components/Navigation';
@@ -14,6 +14,7 @@ import About from './pages/About';
 import Events from './pages/Events';
 import Contact from './pages/Contact';
 import Donate from './pages/Donate';
+import Shop from './pages/Shop';
 
 import './App.css';
 
@@ -46,6 +47,7 @@ function App() {
           <Route path="/portraits" element={<Portraits />} />
           <Route path="/about" element={<About />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/shop" element={<Shop />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/donate" element={<Donate />} />
         </Routes>

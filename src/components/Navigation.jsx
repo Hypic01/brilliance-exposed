@@ -31,6 +31,7 @@ const Navigation = () => {
           <li><Link to="/portraits" onClick={closeMenu}>Portraits</Link></li>
           <li><Link to="/about" onClick={closeMenu}>About</Link></li>
           <li><Link to="/events" onClick={closeMenu}>Events</Link></li>
+          <li><Link to="/shop" onClick={closeMenu}>Shop</Link></li>
           <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
           <li><Link to="/donate" className="donate-link" onClick={closeMenu}>Donate</Link></li>
         </ul>
