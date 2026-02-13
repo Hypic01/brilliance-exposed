@@ -1,39 +1,57 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import IntroOverlay from './components/IntroOverlay';
+
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 import Navigation from './components/Navigation';
-import PortraitCarousel from './components/PortraitCarousel';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
+import IntroOverlay from './components/IntroOverlay';
+
+// Pages
+import Home from './pages/Home';
+import Portraits from './pages/Portraits';
+import About from './pages/About';
+import Events from './pages/Events';
+import Contact from './pages/Contact';
+import Donate from './pages/Donate';
+
 import './App.css';
 
 function App() {
-  const [introComplete, setIntroComplete] = useState(false);
+  // Initialize state based on sessionStorage
+  const [introComplete, setIntroComplete] = useState(() => {
+    return sessionStorage.getItem('introComplete') === 'true';
+  });
+
+  const handleIntroComplete = () => {
+    setIntroComplete(true);
+    sessionStorage.setItem('introComplete', 'true');
+  };
 
   return (
-    <div className="app">
-      <AnimatePresence>
-        {!introComplete && (
-          <IntroOverlay onComplete={() => setIntroComplete(true)} />
-        )}
-      </AnimatePresence>
+    <Router>
+      <ScrollToTop />
+      <div className="app">
+        <AnimatePresence>
+            {!introComplete && (
+                <IntroOverlay onComplete={handleIntroComplete} />
+            )}
+        </AnimatePresence>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: introComplete ? 1 : 0 }}
-        transition={{ duration: 2, delay: 0.5 }}
-      >
+        {/* Navigation is always rendered but z-index will put it behind overlay initially */}
         <Navigation />
-      </motion.div>
-      
-      <main>
-        <motion.div
-           initial={{ opacity: 0 }}
-           animate={{ opacity: introComplete ? 1 : 0 }}
-           transition={{ duration: 2, ease: "easeOut" }} // Slow cinematic fade
-        >
-           <PortraitCarousel isActive={introComplete} />
-        </motion.div>
-      </main>
-    </div>
+        
+        <Routes>
+          <Route path="/" element={<Home introComplete={introComplete} />} />
+          <Route path="/portraits" element={<Portraits />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/events" element={<Events />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/donate" element={<Donate />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

@@ -1,3 +1,4 @@
+
 .navigation {
   position: absolute;
   top: 0;
@@ -5,13 +6,18 @@
   width: 100%;
   padding: 40px 0;
   z-index: 100;
+  transition: background-color 0.3s ease;
+}
+
+.navigation.menu-open {
+    background-color: #000; /* Solid background when menu is open */
 }
 
 .nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: var(--container-width);
+  max-width: var(--container-width, 1400px);
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -20,30 +26,31 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: var(--font-serif); /* Using serif for logo per brief hint or general style? Actually logo usually custom, but serif matches 'BRILLIANCE' */
-  cursor: pointer;
+  text-decoration: none;
+  z-index: 102; /* Above mobile menu overlay */
 }
 
 .logo-brilliance {
-  font-weight: 600;
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: 0.25em; /* Extremely wide tracking */
+  color: var(--color-black);
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  font-size: 20px;
 }
 
 .logo-exposed {
-  font-weight: 300;
-  font-size: 20px;
-  color: var(--color-deep-gray);
-  font-family: var(--font-sans); /* 'exposed' in lowercase sans often looks good, checking brief... actually brief didn't specify font for logo, just text. I'll stick to serif for elegance or mix. Let's try serif for both for now to be safe. */
   font-family: var(--font-serif);
   font-style: italic;
+  font-weight: 300;
+  font-size: 16px;
+  color: #888;
 }
 
 .logo-circle {
   width: 6px;
   height: 6px;
-  background-color: var(--color-black);
+  background-color: var(--color-warm-gold); /* Gold accent */
   border-radius: 50%;
   margin-left: 4px;
 }
@@ -52,24 +59,107 @@
   display: flex;
   gap: 40px;
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+    line-height: 1;
 }
 
 .nav-links a {
-  font-family: var(--font-sans);
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 0.05em;
+  text-decoration: none;
   color: var(--color-deep-gray);
-  font-weight: 400;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover, .nav-links a.active {
   color: var(--color-warm-gold);
 }
 
+.donate-link {
+    color: var(--color-warm-gold) !important;
+    border: 1px solid var(--color-warm-gold);
+    padding: 8px 16px;
+    transition: all 0.3s ease !important;
+}
+
+.donate-link:hover {
+    background: var(--color-warm-gold);
+    color: #000 !important;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    z-index: 102;
+    padding: 10px;
+}
+
+.hamburger-line {
+    width: 24px;
+    height: 2px;
+    background-color: #FFF;
+    transition: all 0.3s ease;
+}
+
+/* Mobile Responsive */
 @media (max-width: 768px) {
+  .nav-container {
+    padding: 0 24px;
+  }
+
+  .mobile-menu-toggle {
+      display: flex;
+  }
+  
+  /* Menu styles when open */
+  .navigation.menu-open .hamburger-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 6px);
+  }
+  
+  .navigation.menu-open .hamburger-line:nth-child(2) {
+      transform: rotate(-45deg) translate(5px, -6px);
+  }
+
   .nav-links {
-    display: none; /* Hiding nav links on mobile for MVP */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    transform: translateY(-100%);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 101; /* Below toggle but above content */
+  }
+
+  .nav-links.active {
+      transform: translateY(0);
+  }
+  
+  .nav-links a {
+      font-size: 24px; /* Larger font for mobile menu */
+      font-family: var(--font-serif);
+      text-transform: none;
+      letter-spacing: normal;
+  }
+  
+  .donate-link {
+      font-size: 20px !important;
+      padding: 12px 30px;
   }
 }

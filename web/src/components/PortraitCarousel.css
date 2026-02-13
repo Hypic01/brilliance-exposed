@@ -124,7 +124,7 @@
 }
 
 .indicator.active {
-  background-color: var(--color-white);
+  background-color: #FFFFFF;
   transform: scale(1.2);
 }
 

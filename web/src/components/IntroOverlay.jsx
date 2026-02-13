@@ -1,24 +1,24 @@
+
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 import './IntroOverlay.css';
 
 const IntroOverlay = ({ onComplete }) => {
   useEffect(() => {
-    // 1.5s fade in + 3s hold = 4.5s
-    // The component will unmount after onComplete calls parent state update
+    // 3.5s hold time before triggering completion
     const timer = setTimeout(() => {
       onComplete();
-    }, 4500);
+    }, 3500);
     return () => clearTimeout(timer);
   }, [onComplete]);
 
   return (
     <motion.div
       className="intro-overlay"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 1.5, ease: "easeInOut" }}
+      initial={{ opacity: 1 }} // Start purely opaque (black)
+      animate={{ opacity: 1 }} // Stay opaque while quoting
+      exit={{ opacity: 0 }} // Fade out to reveal content
+      transition={{ duration: 1.5, ease: "easeInOut" }} // Smooth 1.5s fade out
     >
       <div className="quote-container">
         <motion.div
