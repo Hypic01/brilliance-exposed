@@ -21,6 +21,16 @@ const Navigation = () => {
           <div className="logo-circle"></div>
         </Link>
         
+          {/* Mobile menu toggle button */}
+        <button 
+            className="mobile-menu-toggle" 
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle Menu"
+        >
+            <span className="hamburger-line"></span>
+            <span className="hamburger-line"></span>
+        </button>
+
         <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
           <li><Link to="/" onClick={closeMenu}>Home</Link></li>
           <li><Link to="/portraits" onClick={closeMenu}>Portraits</Link></li>
@@ -29,26 +39,7 @@ const Navigation = () => {
           <li><Link to="/shop" onClick={closeMenu}>Shop</Link></li>
           <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
           <li><Link to="/donate" className="donate-link" onClick={closeMenu}>Donate</Link></li>
-          {isShopPage && (
-            <li className="mobile-only"><button onClick={() => { toggleCart(); closeMenu(); }}>Cart ({cartCount})</button></li>
-          )}
         </ul>
-
-        <div className="nav-actions">
-            {isShopPage && (
-                <button className="cart-trigger" onClick={toggleCart} aria-label="Open Cart">
-                    Cart ({cartCount})
-                </button>
-            )}
-            <button 
-                className="mobile-menu-toggle" 
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                aria-label="Toggle Menu"
-            >
-                <span className="hamburger-line"></span>
-                <span className="hamburger-line"></span>
-            </button>
-        </div>
       </div>
     </nav>
   );
