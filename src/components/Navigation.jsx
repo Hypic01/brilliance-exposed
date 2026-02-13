@@ -1,12 +1,14 @@
 
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import './Navigation.css';
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { toggleCart, cartCount } = useCart();
+  const location = useLocation();
+  const isShopPage = location.pathname === '/shop';
 
   const closeMenu = () => setIsMenuOpen(false);
 
@@ -20,9 +22,11 @@ const Navigation = () => {
         </Link>
         
         <div className="nav-actions">
-            <button className="cart-trigger" onClick={toggleCart} aria-label="Open Cart">
-                Cart ({cartCount})
-            </button>
+            {isShopPage && (
+                <button className="cart-trigger" onClick={toggleCart} aria-label="Open Cart">
+                    Cart ({cartCount})
+                </button>
+            )}
             <button 
                 className="mobile-menu-toggle" 
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -41,7 +45,9 @@ const Navigation = () => {
           <li><Link to="/shop" onClick={closeMenu}>Shop</Link></li>
           <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
           <li><Link to="/donate" className="donate-link" onClick={closeMenu}>Donate</Link></li>
-          <li className="mobile-only"><button onClick={() => { toggleCart(); closeMenu(); }}>Cart ({cartCount})</button></li>
+          {isShopPage && (
+            <li className="mobile-only"><button onClick={() => { toggleCart(); closeMenu(); }}>Cart ({cartCount})</button></li>
+          )}
         </ul>
       </div>
     </nav>
