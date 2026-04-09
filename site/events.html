@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<style>html,body{background:#000;color:#e0e0e0}html{color-scheme:dark}</style>
+<title>Events — Brilliance Exposed</title>
+<meta name="description" content="Exhibition venues and dates for Brilliance Exposed, including Detroit, Paris, and New York City.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="page-transition" id="pageTransition" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ========== NAVIGATION ========== -->
+<header class="nav" id="navbar">
+  <a href="index.html" class="nav-logo" aria-label="Brilliance Exposed — Home">
+    <img src="../logo/logo-white.png" alt="Brilliance Exposed">
+  </a>
+  <nav aria-label="Primary">
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="events.html" aria-current="page">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <a href="donate.html" class="nav-donate">Donate</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navMobilePanel">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<aside class="nav-mobile-panel" id="navMobilePanel" aria-hidden="true">
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="events.html" aria-current="page">Events</a>
+  <a href="contact.html">Contact</a>
+  <a href="donate.html" class="btn-gold">Donate</a>
+</aside>
+
+<main id="main">
+
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <span class="page-hero-eyebrow">Exhibitions</span>
+    <h1>Where to Experience</h1>
+    <p class="page-hero-lede">
+      The 2026 traveling exhibition &mdash; three venues across two continents, opening this spring.
+    </p>
+  </div>
+</section>
+
+<!-- ========== EVENTS LIST ========== -->
+<section class="events">
+  <div class="section-inner">
+
+    <!-- Current -->
+    <div class="events-group reveal" id="current">
+      <h2 class="events-group-title">Now On View</h2>
+      <div class="events-list">
+        <div class="event-item is-disabled">
+          <div class="event-date">
+            Spring 2026
+            <span class="event-date-line">Opening Soon</span>
+          </div>
+          <div class="event-details">
+            <p class="event-name">First venue opens April 2026 &mdash; see upcoming exhibitions below.</p>
+            <p class="event-venue">Detroit, Michigan</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upcoming -->
+    <div class="events-group reveal reveal-d1" id="upcoming">
+      <h2 class="events-group-title">Upcoming Exhibitions</h2>
+      <div class="events-list">
+        <a href="#detroit" class="event-item" id="detroit">
+          <div class="event-date">
+            April 2026
+            <span class="event-date-line">Opening Reception</span>
+          </div>
+          <div class="event-details">
+            <p class="event-name">Charles H. Wright Museum of African American History</p>
+            <p class="event-venue">315 East Warren Avenue &mdash; Detroit, Michigan</p>
+          </div>
+          <span class="event-arrow">&rarr;</span>
+        </a>
+
+        <a href="#paris" class="event-item" id="paris">
+          <div class="event-date">
+            June 2026
+            <span class="event-date-line">International Debut</span>
+          </div>
+          <div class="event-details">
+            <p class="event-name">Galerie Brilliance &mdash; Paris Exhibition</p>
+            <p class="event-venue">Paris, France</p>
+          </div>
+          <span class="event-arrow">&rarr;</span>
+        </a>
+
+        <a href="#tiffany" class="event-item" id="tiffany">
+          <div class="event-date">
+            Summer 2026
+            <span class="event-date-line">Private Reception</span>
+          </div>
+          <div class="event-details">
+            <p class="event-name">Tiffany &amp; Co. Flagship Reception</p>
+            <p class="event-venue">Fifth Avenue &mdash; New York City, New York</p>
+          </div>
+          <span class="event-arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Past -->
+    <div class="events-group reveal reveal-d2" id="past">
+      <h2 class="events-group-title">Past Exhibitions</h2>
+      <div class="events-list">
+        <div class="event-item is-disabled">
+          <div class="event-date">
+            &mdash;
+            <span class="event-date-line">Inaugural Season</span>
+          </div>
+          <div class="event-details">
+            <p class="event-name">The 2026 tour is the inaugural traveling season.</p>
+            <p class="event-venue">Past exhibitions will be archived here beginning late 2026.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"><span class="diamond"></span></div>
+
+<!-- ========== PRESS / PARTNERSHIPS CTA ========== -->
+<section class="mission">
+  <div class="mission-inner">
+    <p class="mission-label reveal">Bring the Exhibition to Your Venue</p>
+    <p class="mission-text reveal reveal-d1">
+      Brilliance Exposed is actively scheduling venues for its 2027 international tour. Museums, galleries, and cultural institutions interested in hosting are invited to reach out.
+    </p>
+    <div class="hero-cta-row reveal reveal-d2" style="justify-content: center;">
+      <a href="contact.html#partnerships" class="btn-gold">
+        Partnership Inquiries
+        <span class="arrow">&rarr;</span>
+      </a>
+      <a href="contact.html#press" class="btn-ghost">
+        <span class="line"></span>
+        Press Inquiries
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../logo/logo-white.png" alt="Brilliance Exposed">
+        <p class="footer-tagline">An international photographic exhibition honoring Black-presenting professionals in STEAM.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="gallery.html#videos">Interviews</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#press">Press</a></li>
+          <li><a href="contact.html#partnerships">Partnerships</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h4>Stay Connected</h4>
+        <p>Exhibition updates delivered to your inbox.</p>
+        <form class="newsletter-form" data-form="newsletter">
+          <input type="email" placeholder="Email address" aria-label="Email address" required>
+          <button type="submit" aria-label="Subscribe">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </button>
+        </form>
+        <p class="newsletter-status" data-form-status></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Brilliance Exposed. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" aria-disabled="true">Instagram</a>
+        <a href="#" aria-disabled="true">Facebook</a>
+        <a href="#" aria-disabled="true">X / Twitter</a>
+        <a href="#" aria-disabled="true">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>
