@@ -6,16 +6,15 @@
 <meta name="color-scheme" content="dark">
 <style>html,body{background:#000;color:#e0e0e0}html{color-scheme:dark}</style>
 <title>Gallery — Brilliance Exposed</title>
-<meta name="description" content="The portrait gallery of Brilliance Exposed — Black-presenting honorees in Science, Technology, Engineering, Arts, and Mathematics.">
+<meta name="description" content="The portrait gallery of Brilliance Exposed — honoring Black-presenting professionals in STEAM.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<div class="page-transition" id="pageTransition" aria-hidden="true"></div>
 <a class="skip-link" href="#main">Skip to main content</a>
 
 <!-- ========== NAVIGATION ========== -->
@@ -28,7 +27,9 @@
       <li><a href="about.html">About</a></li>
       <li><a href="gallery.html" aria-current="page">Gallery</a></li>
       <li><a href="events.html">Events</a></li>
+      <li><a href="shop.html">Shop</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Journal</a></li>
     </ul>
   </nav>
   <a href="donate.html" class="nav-donate">Donate</a>
@@ -43,142 +44,69 @@
   <a href="about.html">About</a>
   <a href="gallery.html" aria-current="page">Gallery</a>
   <a href="events.html">Events</a>
+  <a href="shop.html">Shop</a>
   <a href="contact.html">Contact</a>
+  <a href="blog.html">Journal</a>
   <a href="donate.html" class="btn-gold">Donate</a>
 </aside>
 
 <main id="main">
 
-<!-- ========== PAGE HERO ========== -->
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <span class="page-hero-eyebrow">Gallery</span>
-    <h1>Faces of Brilliance</h1>
-    <p class="page-hero-lede">
-      Every portrait is an act of recognition. Every story a testament to resilience and genius.
-    </p>
-  </div>
-</section>
+<section class="gallery-page">
 
-<!-- ========== PORTRAITS ========== -->
-<section class="portraits" id="portraits">
-  <div class="section-inner">
-    <div class="section-header reveal">
-      <div>
-        <span class="section-eyebrow">2026 Season</span>
-        <h2 class="section-title">The Honorees</h2>
+  <!-- Ambient background: blurred portrait orbs + frosted glass overlay -->
+  <div class="gallery-bg" aria-hidden="true">
+    <div class="gallery-bg-orb"></div>
+    <div class="gallery-bg-orb"></div>
+    <div class="gallery-bg-orb"></div>
+    <div class="gallery-bg-blur"></div>
+  </div>
+
+  <!-- Title -->
+  <h1 class="gallery-title">Brilliance Exposed Exhibition</h1>
+
+  <!-- Main content: portrait left + STEAM panel right -->
+  <div class="gallery-content">
+
+    <!-- Left: featured portrait -->
+    <div class="gallery-portrait" id="galleryPortrait">
+      <img id="galleryPortraitImg" src="../Images/gallery-portrait.jpeg" alt="Portrait of Yasmin Hurd">
+
+      <div class="gallery-detail" id="galleryDetail">
+        <h2 class="gallery-detail-name" id="galleryDetailName">Yasmin Hurd</h2>
+        <p class="gallery-detail-role" id="galleryDetailRole">PhD &mdash; Chair of Transnational Neuroscience, Director of Addiction Institute</p>
+        <a href="#" class="gallery-detail-link" aria-disabled="true">Biography coming soon</a>
       </div>
-      <a href="contact.html" class="btn-ghost section-view-all">
-        <span class="line"></span>
-        Nominate Someone
-      </a>
     </div>
 
-    <div class="portraits-grid is-large">
-      <article class="portrait-card reveal reveal-d1" id="clemons">
-        <img src="../assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image0.jpeg" alt="Portrait of William 'Bil' Clemons Jr.">
-        <span class="portrait-card-number">01</span>
-        <div class="portrait-card-meta">
-          <p class="portrait-card-name">William &ldquo;Bil&rdquo; Clemons Jr.</p>
-          <p class="portrait-card-field">Structural Biologist &mdash; Caltech</p>
-        </div>
-      </article>
+    <!-- Right: STEAM category panel -->
+    <div class="gallery-steam" id="gallerySteam">
+      <h2 class="gallery-steam-cat" id="gallerySteamCat">Science</h2>
+      <p class="gallery-steam-desc" id="gallerySteamDesc">
+        The study of the physical world through investigation, experimentation, and observation, understanding topics in physics, biology, and chemistry.
+      </p>
 
-      <article class="portrait-card reveal reveal-d2" id="west">
-        <img src="../assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image1.jpeg" alt="Portrait of Dr. Gladys West" loading="lazy">
-        <span class="portrait-card-number">02</span>
-        <div class="portrait-card-meta">
-          <p class="portrait-card-name">Dr. Gladys West</p>
-          <p class="portrait-card-field">Mathematician &mdash; GPS Pioneer</p>
-        </div>
-      </article>
-
-      <article class="portrait-card reveal reveal-d3" id="alexander">
-        <img src="../assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image2.jpeg" alt="Portrait of Dr. Stephon Alexander" loading="lazy">
-        <span class="portrait-card-number">03</span>
-        <div class="portrait-card-meta">
-          <p class="portrait-card-name">Dr. Stephon Alexander</p>
-          <p class="portrait-card-field">Theoretical Physicist</p>
-        </div>
-      </article>
-
-      <article class="portrait-card reveal reveal-d4">
-        <img src="../assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image6.jpeg" alt="Portrait of a Brilliance Exposed honoree" loading="lazy">
-        <span class="portrait-card-number">04</span>
-        <div class="portrait-card-meta">
-          <p class="portrait-card-name">Honoree</p>
-          <p class="portrait-card-field">2026 Portrait Series</p>
-        </div>
-      </article>
-
-      <article class="portrait-card reveal reveal-d1">
-        <img src="../assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image8.jpeg" alt="Portrait of a Brilliance Exposed honoree" loading="lazy">
-        <span class="portrait-card-number">05</span>
-        <div class="portrait-card-meta">
-          <p class="portrait-card-name">Honoree</p>
-          <p class="portrait-card-field">2026 Portrait Series</p>
-        </div>
-      </article>
-
-      <article class="portrait-card reveal reveal-d2">
-        <img src="../assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image10.jpeg" alt="Portrait of a Brilliance Exposed honoree" loading="lazy">
-        <span class="portrait-card-number">06</span>
-        <div class="portrait-card-meta">
-          <p class="portrait-card-name">Honoree</p>
-          <p class="portrait-card-field">2026 Portrait Series</p>
-        </div>
-      </article>
-
-      <article class="portrait-card reveal reveal-d3">
-        <img src="../assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image11.jpeg" alt="Portrait of a Brilliance Exposed honoree" loading="lazy">
-        <span class="portrait-card-number">07</span>
-        <div class="portrait-card-meta">
-          <p class="portrait-card-name">Honoree</p>
-          <p class="portrait-card-field">2026 Portrait Series</p>
-        </div>
-      </article>
-
-      <article class="portrait-card reveal reveal-d4">
-        <img src="../assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image12.jpeg" alt="Portrait of a Brilliance Exposed honoree" loading="lazy">
-        <span class="portrait-card-number">08</span>
-        <div class="portrait-card-meta">
-          <p class="portrait-card-name">Honoree</p>
-          <p class="portrait-card-field">2026 Portrait Series</p>
-        </div>
-      </article>
+      <!-- Scrollable honoree name list -->
+      <div class="gallery-names" id="galleryNames">
+        <button class="gallery-name is-active" data-index="0">Yasmin Hurd</button>
+        <button class="gallery-name" data-index="1">Alena Analeigh</button>
+        <button class="gallery-name" data-index="2">Zach Green</button>
+        <button class="gallery-name" data-index="3">Gentry Patrick</button>
+        <button class="gallery-name" data-index="4">Bianca Jones Marlin</button>
+        <button class="gallery-name" data-index="5">Willis Jenkins</button>
+      </div>
     </div>
   </div>
-</section>
 
-<div class="divider"><span class="diamond"></span></div>
-
-<!-- ========== VIDEO INTERVIEWS ========== -->
-<section class="video-section" id="videos" aria-labelledby="video-heading">
-  <div class="video-inner">
-    <a href="#" class="video-frame reveal" aria-label="Watch the featured Brilliance Exposed interview" aria-disabled="true">
-      <img src="../assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image4.jpeg" alt="" loading="lazy">
-      <span class="video-play">
-        <span class="video-play-btn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="8,5 20,12 8,19"/></svg>
-        </span>
-      </span>
-    </a>
-
-    <div class="video-info">
-      <span class="section-eyebrow reveal">Interview Series</span>
-      <h2 class="video-title reveal reveal-d1" id="video-heading">Stories<br>Behind the Portraits</h2>
-      <p class="video-desc reveal reveal-d2">
-        The Brilliance Exposed interview series sits behind every portrait in the exhibition. Each honoree speaks for themselves &mdash; about the paths they took, the moments that decided their direction, and the work they are most proud of.
-      </p>
-      <p class="video-desc reveal reveal-d3">
-        The first interviews are in post-production and will publish alongside the Detroit opening in April 2026.
-      </p>
-      <a href="contact.html" class="btn-ghost reveal reveal-d4">
-        <span class="line"></span>
-        Be Notified When Interviews Launch
-      </a>
-    </div>
+  <!-- STEAM category tabs (bottom) -->
+  <div class="gallery-tabs" id="galleryTabs">
+    <button class="gallery-tab is-active" data-cat="science">Science</button>
+    <button class="gallery-tab" data-cat="technology">Technology</button>
+    <button class="gallery-tab" data-cat="engineering">Engineering</button>
+    <button class="gallery-tab" data-cat="arts">Arts</button>
+    <button class="gallery-tab" data-cat="mathematics">Mathematics</button>
   </div>
+
 </section>
 
 </main>
@@ -198,7 +126,9 @@
           <li><a href="about.html">About</a></li>
           <li><a href="gallery.html">Gallery</a></li>
           <li><a href="events.html">Events</a></li>
-          <li><a href="gallery.html#videos">Interviews</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Journal</a></li>
         </ul>
       </div>
 
@@ -238,6 +168,131 @@
     </div>
   </div>
 </footer>
+
+<!-- Gallery interaction: tab switching + name selection -->
+<script>
+(function () {
+  'use strict';
+
+  // STEAM category data
+  const STEAM = {
+    science: {
+      title: 'Science',
+      desc: 'The study of the physical world through investigation, experimentation, and observation, understanding topics in physics, biology, and chemistry.',
+      honorees: [
+        { name: 'Yasmin Hurd',         role: 'PhD — Chair of Transnational Neuroscience, Director of Addiction Institute', image: '../Images/gallery-portrait.jpeg' },
+        { name: 'Alena Analeigh',      role: 'Young Scientist & Innovator',            image: '../Images/image13.jpeg' },
+        { name: 'Zach Green',          role: 'Scientist & Entrepreneur',               image: '../Images/image6.jpeg' },
+        { name: 'Gentry Patrick',      role: 'Neuroscientist',                         image: '../Images/image10.jpeg' },
+        { name: 'Bianca Jones Marlin', role: 'Neuroscientist & Geneticist',            image: '../Images/image11.jpeg' },
+        { name: 'Willis Jenkins',      role: 'Research Scientist',                     image: '../Images/image12.jpeg' }
+      ]
+    },
+    technology: {
+      title: 'Technology',
+      desc: 'The application of scientific knowledge to develop tools, systems, and processes that solve problems and improve lives.',
+      honorees: [
+        { name: 'Coming Soon', role: 'Honorees for Technology will be announced with the Detroit opening.', image: '../Images/image6.jpeg' }
+      ]
+    },
+    engineering: {
+      title: 'Engineering',
+      desc: 'The design and construction of systems, structures, and devices through the creative application of science and mathematics.',
+      honorees: [
+        { name: 'Coming Soon', role: 'Honorees for Engineering will be announced with the Detroit opening.', image: '../Images/image12.jpeg' }
+      ]
+    },
+    arts: {
+      title: 'Arts',
+      desc: 'The diverse range of human expression and creativity including visual arts, music, literature, and performance.',
+      honorees: [
+        { name: 'Coming Soon', role: 'Honorees for Arts will be announced with the Detroit opening.', image: '../Images/image11.jpeg' }
+      ]
+    },
+    mathematics: {
+      title: 'Mathematics',
+      desc: 'The abstract science of numbers, quantity, and space, applied in many fields including engineering, physics, and economics.',
+      honorees: [
+        { name: 'Coming Soon', role: 'Honorees for Mathematics will be announced with the Detroit opening.', image: '../Images/image10.jpeg' }
+      ]
+    }
+  };
+
+  let currentCat = 'science';
+  let currentIndex = 0;
+
+  const portraitImg   = document.getElementById('galleryPortraitImg');
+  const detailName    = document.getElementById('galleryDetailName');
+  const detailRole    = document.getElementById('galleryDetailRole');
+  const steamCat      = document.getElementById('gallerySteamCat');
+  const steamDesc     = document.getElementById('gallerySteamDesc');
+  const namesContainer = document.getElementById('galleryNames');
+  const tabsContainer = document.getElementById('galleryTabs');
+
+  function showHonoree(idx) {
+    const cat = STEAM[currentCat];
+    if (!cat) return;
+    currentIndex = Math.max(0, Math.min(idx, cat.honorees.length - 1));
+    const h = cat.honorees[currentIndex];
+
+    if (portraitImg)  { portraitImg.src = h.image; portraitImg.alt = 'Portrait of ' + h.name; }
+    if (detailName)   detailName.textContent = h.name;
+    if (detailRole)   detailRole.textContent = h.role;
+
+    if (namesContainer) {
+      namesContainer.querySelectorAll('.gallery-name').forEach((btn, i) => {
+        btn.classList.toggle('is-active', i === currentIndex);
+      });
+    }
+  }
+
+  function showCategory(catKey) {
+    const cat = STEAM[catKey];
+    if (!cat) return;
+    currentCat = catKey;
+    currentIndex = 0;
+
+    if (steamCat)  steamCat.textContent = cat.title;
+    if (steamDesc) steamDesc.textContent = cat.desc;
+
+    // Rebuild name buttons
+    if (namesContainer) {
+      namesContainer.innerHTML = '';
+      cat.honorees.forEach((h, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'gallery-name' + (i === 0 ? ' is-active' : '');
+        btn.dataset.index = i;
+        btn.textContent = h.name;
+        btn.addEventListener('click', () => showHonoree(i));
+        namesContainer.appendChild(btn);
+      });
+    }
+
+    // Update tabs active state
+    if (tabsContainer) {
+      tabsContainer.querySelectorAll('.gallery-tab').forEach(tab => {
+        tab.classList.toggle('is-active', tab.dataset.cat === catKey);
+      });
+    }
+
+    showHonoree(0);
+  }
+
+  // Tab click handlers
+  if (tabsContainer) {
+    tabsContainer.querySelectorAll('.gallery-tab').forEach(tab => {
+      tab.addEventListener('click', () => showCategory(tab.dataset.cat));
+    });
+  }
+
+  // Initial name click handlers
+  if (namesContainer) {
+    namesContainer.querySelectorAll('.gallery-name').forEach(btn => {
+      btn.addEventListener('click', () => showHonoree(parseInt(btn.dataset.index, 10)));
+    });
+  }
+})();
+</script>
 
 <script src="site.js"></script>
 </body>
