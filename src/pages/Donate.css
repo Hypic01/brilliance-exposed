@@ -45,11 +45,23 @@
     color: var(--color-warm-gold);
 }
 
-.impact-text p {
-    font-family: var(--font-sans);
+.impact-text blockquote {
+    font-family: var(--font-serif);
+    font-style: italic;
     font-size: 18px;
-    line-height: 1.6;
-    color: #CCC;
+    line-height: 1.4;
+    color: #e0e0e0;
+    border-left: 1px solid var(--color-warm-gold);
+    padding-left: 16px;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.impact-text .attribution {
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: #888;
+    text-align: left;
 }
 
 .donation-tiers {
@@ -162,39 +174,39 @@
 }
 
 .other-giving {
-    text-align: center;
+    border-top: 1px solid rgba(212, 165, 116, 0.3);
+    padding-top: 60px;
+    margin-top: 20px;
 }
 
 .other-giving h3 {
     font-family: var(--font-serif);
     font-size: 32px;
-    margin-bottom: 40px;
+    margin-bottom: 16px;
 }
 
-.giving-options {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
+.major-gifts-intro {
+    font-family: var(--font-serif);
+    font-size: 22px;
+    color: #e0e0e0;
+    margin-bottom: 16px;
 }
 
-.option h4 {
+.major-gifts-desc {
     font-family: var(--font-sans);
     font-size: 16px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    max-width: 680px;
+    margin-bottom: 16px;
+}
+
+.major-gifts-contact a {
     color: var(--color-warm-gold);
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-size: 16px;
+    transition: opacity 0.3s ease;
 }
 
-.option p {
-    font-family: var(--font-sans);
-    font-size: 14px;
-    color: #888;
-}
-
-@media (max-width: 768px) {
-    .giving-options {
-        flex-direction: column;
-        gap: 32px;
-    }
+.major-gifts-contact a:hover {
+    opacity: 0.8;
 }

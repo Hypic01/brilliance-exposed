@@ -1,20 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Inter:wght@400&display=swap');
 
 :root {
-  /* Warm Spotlight Palette - DARK MODE */
-  --color-black: #FFFFFF; /* Text is now white */
-  --color-white: #000000; /* Background is now black */
-  --color-warm-gold: #D4A574;
-  --color-deep-gray: #E0E0E0; /* Lighter gray for dark bg */
-  --color-off-white: #000000; /* Pitch Black */
-  --color-gold-tint: #1F1F1F; /* Dark tint for hover */
+  /* Design System Colors (from Figma — source of truth) */
+  --color-black: #000000;
+  --color-white: #e0e0e0;       /* Soft off-white, NOT pure #fff */
+  --color-gold: #D4A574;         /* Accent, CTAs */
+  --color-inactive: #2d2d2d;    /* Muted UI states */
+
+  /* Semantic aliases */
+  --bg-primary: var(--color-black);
+  --bg-secondary: #0A0A0A;
+  --bg-card: #111111;
+  --text-primary: #FFFFFF;
+  --text-secondary: var(--color-white); /* #e0e0e0 */
+  --text-muted: #888888;
+  --border-subtle: #222222;
+  --border-input: #333333;
+
+  /* Legacy aliases (keep for existing components) */
+  --color-warm-gold: var(--color-gold);
+  --color-deep-gray: var(--color-white);
+  --color-off-white: var(--color-black);
+  --color-gold-tint: #1F1F1F;
 
   /* Typography */
   --font-serif: 'Cormorant Garamond', serif;
   --font-sans: 'Inter', sans-serif;
 
-  /* Spacing */
+  /* Spacing (from Figma) */
   --unit: 8px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
   --container-width: 1400px;
 }
 
@@ -26,12 +47,15 @@
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--color-off-white);
-  color: var(--color-black);
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.7px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-  overflow-y: scroll; /* Force vertical scrollbar to prevent layout shift */
+  overflow-y: scroll;
 }
 
 h1, h2, h3, h4, h5, h6 {

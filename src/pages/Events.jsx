@@ -6,29 +6,32 @@ import './Events.css';
 const eventsValues = [
     {
         id: 1,
-        title: "Brilliance Exposed: The Opening",
-        date: "March 15, 2026",
-        time: "6:00 PM - 9:00 PM",
-        location: "The Modern Gallery, New York",
-        type: "Exhibition Opening",
+        title: "Charles H. Wright Museum of African American History",
+        date: "March 15 — June 30, 2026",
+        time: "",
+        location: "Detroit, Michigan",
+        type: "Current Exhibition",
+        description: "The inaugural exhibition featuring over 30 black-and-white portraits celebrating Black professionals in STEAM. Includes guided tours, educational programming, and a special reception.",
         image: "https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&grayscale"
     },
     {
         id: 2,
-        title: "Artist Talk: Alexis Dixon",
-        date: "March 20, 2026",
-        time: "2:00 PM - 4:00 PM",
-        location: "Auditorium A, NY Public Library",
-        type: "Lecture & Q&A",
+        title: "Galerie Dix-Neuf",
+        date: "September 2026",
+        time: "",
+        location: "Paris, France",
+        type: "Upcoming",
+        description: "A curated selection of portraits showcasing the intersection of science, art, and identity — exhibited in the heart of Paris.",
         image: "https://images.unsplash.com/photo-1475721027767-p05fa6ad1437?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&grayscale"
     },
     {
         id: 3,
-        title: "Youth Workshop: Finding Your Light",
-        date: "April 05, 2026",
-        time: "10:00 AM - 1:00 PM",
-        location: "Community Arts Center",
-        type: "Workshop",
+        title: "Tiffany & Co. Reception",
+        date: "November 2026",
+        time: "",
+        location: "New York, NY",
+        type: "Upcoming",
+        description: "An intimate reception at the iconic Tiffany & Co. flagship, celebrating brilliance in STEAM with an evening of portraiture and conversation.",
         image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80&grayscale"
     }
 ];
@@ -50,7 +53,7 @@ const Events = () => {
                          animate={{ opacity: 1 }}
                          transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        Join us in celebrating brilliance and inspiring the next generation.
+                        Experience Brilliance Exposed at museums and galleries worldwide. From Detroit to Paris — each venue brings the exhibition to life.
                     </motion.p>
                 </div>
             </header>
@@ -75,10 +78,11 @@ const Events = () => {
                                 <span className="event-type">{event.type}</span>
                                 <h3>{event.title}</h3>
                                 <div className="event-meta">
-                                    <p>{event.time}</p>
-                                    <p>{event.location}</p>
+                                    <p className="event-location">{event.location}</p>
+                                    <p className="event-date">{event.date}</p>
                                 </div>
-                                <button className="event-cta">Get Tickets</button>
+                                {event.description && <p className="event-description">{event.description}</p>}
+                                <button className="event-cta">Learn More</button>
                             </div>
                         </motion.div>
                     ))}

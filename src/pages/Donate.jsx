@@ -6,31 +6,24 @@ import './Donate.css';
 const donationTiers = [
     {
         id: 'tier1',
-        amount: '$25',
-        level: 'Friend',
-        description: "Provides art supplies for one student workshop.",
-        benefits: ["Digital Thank You", "Quarterly Newsletter"]
+        amount: '$50',
+        level: 'Supporter',
+        description: "Help bring the exhibition to a new community. Your contribution supports transportation, installation, and educational materials.",
+        benefits: ["Digital Thank You", "Quarterly Newsletter", "Name on Website"]
     },
     {
         id: 'tier2',
-        amount: '$100',
-        level: 'Supporter',
-        description: "Funds a professional portrait session for one nominee.",
-        benefits: ["All Friend Benefits", "Name on Website", "Early Event Access"]
+        amount: '$250',
+        level: 'Patron',
+        description: "Fund a portrait's exhibition journey — from photography to framing to gallery installation. Receive a signed exhibition catalog.",
+        benefits: ["All Supporter Benefits", "Signed Exhibition Catalog", "Early Event Access"]
     },
     {
         id: 'tier3',
-        amount: '$500',
-        level: 'Patron',
-        description: "Sponsors a community exhibition event.",
-        benefits: ["All Supporter Benefits", "Signed Exhibition Print", "VIP Reception Invite"]
-    },
-    {
-        id: 'tier4',
-        amount: '$1000+',
-        level: 'Benefactor',
-        description: "Fuels the expansion of Brilliance Exposed to new cities.",
-        benefits: ["All Patron Benefits", "Private Studio Tour", "Dedication in Catalog"]
+        amount: '$1,000+',
+        level: 'Visionary',
+        description: "Become a founding partner of Brilliance Exposed. Receive VIP access to all exhibition openings, exclusive prints, and recognition in the catalog.",
+        benefits: ["All Patron Benefits", "VIP Reception Access", "Exclusive Prints", "Catalog Recognition"]
     }
 ];
 
@@ -51,7 +44,7 @@ const Donate = () => {
                          animate={{ opacity: 1 }}
                          transition={{ duration: 0.8, delay: 0.2 }}
                     >
-                        Your contribution helps us capture and share stories that inspire the world.
+                        Your generosity helps bring Brilliance Exposed to museums, galleries, and communities around the world — inspiring future generations in STEAM.
                     </motion.p>
                 </div>
             </header>
@@ -60,13 +53,11 @@ const Donate = () => {
                 {/* Impact Statement */}
                 <section className="impact-statement">
                     <div className="impact-text">
-                        <h2>Why We Need Your Help</h2>
-                        <p>
-                            Brilliance Exposed is a non-profit initiative dedicated to changing narratives.
-                            We rely on the generosity of individuals like you to fund our photography sessions,
-                            educational workshops, and public exhibitions. Every dollar goes directly towards
-                            shining a light on the brilliance within our communities.
-                        </p>
+                        <h2>Your Impact</h2>
+                        <blockquote>
+                            "Every contribution helps illuminate the stories of those whose brilliance has been overlooked. Together, we can ensure that future generations see themselves reflected in the legacy of innovation, creativity, and excellence."
+                        </blockquote>
+                        <p className="attribution">— Alexis Dixon, Founder</p>
                     </div>
                 </section>
 
@@ -75,7 +66,7 @@ const Donate = () => {
                     {donationTiers.map((tier, index) => (
                         <motion.div 
                             key={tier.id}
-                            className={`tier-card ${index === 3 ? 'featured' : ''}`}
+                            className={`tier-card ${index === 2 ? 'featured' : ''}`}
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -97,21 +88,16 @@ const Donate = () => {
 
                 {/* Other Ways to Give */}
                 <section className="other-giving">
-                    <h3>Other Ways to Support</h3>
-                    <div className="giving-options">
-                        <div className="option">
-                            <h4>Volunteer</h4>
-                            <p>Join our team at events and workshops.</p>
-                        </div>
-                        <div className="option">
-                            <h4>In-Kind</h4>
-                            <p>Donate equipment or services.</p>
-                        </div>
-                         <div className="option">
-                            <h4>Corporate</h4>
-                            <p>Partner with us for sponsorship.</p>
-                        </div>
-                    </div>
+                    <h3>Major Gifts & Sponsorships</h3>
+                    <p className="major-gifts-intro">For gifts of $5,000 or more</p>
+                    <p className="major-gifts-desc">
+                        We welcome conversations about transformative partnerships. Major gifts directly fund
+                        exhibition installations at new venues, educational programming for underserved communities,
+                        and the continued documentation of brilliance in STEAM.
+                    </p>
+                    <p className="major-gifts-contact">
+                        <a href="mailto:mymediationsolution@gmail.com">mymediationsolution@gmail.com</a>
+                    </p>
                 </section>
             </div>
         </div>
