@@ -17,7 +17,7 @@
   // ===========================================================
   // Honoree data
   // ===========================================================
-  const IMAGES_BASE = '../Images/';
+  const IMAGES_BASE = './Images/';
   const PLACEHOLDER_BIO = [
     'This portrait is part of the Brilliance Exposed 2026 collection &mdash; an international photographic series honoring Black-presenting professionals in Science, Technology, Engineering, Arts and Mathematics.',
     'Full biographies and interview segments for each honoree will be published alongside the inaugural exhibition opening at the Charles H. Wright Museum of African American History in Detroit, April 2026.'

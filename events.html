@@ -64,7 +64,7 @@
     <div class="events-exhibit">
       <div class="events-carousel">
         <div class="events-carousel-frame" id="eventsCarouselFrame">
-          <img id="eventsCarouselImg" src="../Images/events-exhibit.jpeg" alt="Exhibition photograph — Brilliance Exposed at the Charles H. Wright Museum">
+          <img id="eventsCarouselImg" src="./Images/events-exhibit.jpeg" alt="Exhibition photograph — Brilliance Exposed at the Charles H. Wright Museum">
           <button class="events-carousel-arrow is-prev" aria-label="Previous image" id="eventsCarouselPrev">&lsaquo;</button>
           <button class="events-carousel-arrow is-next" aria-label="Next image" id="eventsCarouselNext">&rsaquo;</button>
         </div>
@@ -102,7 +102,7 @@
 
         <article class="events-future-card is-active" data-idx="0">
           <div class="events-future-card-thumb">
-            <img src="../Images/image8.jpeg" alt="Galerie Brilliance — Paris" loading="lazy">
+            <img src="./Images/image8.jpeg" alt="Galerie Brilliance — Paris" loading="lazy">
           </div>
           <div>
             <h2 class="events-future-card-title">Galerie Brilliance &mdash; Paris</h2>
@@ -116,7 +116,7 @@
 
         <article class="events-future-card" data-idx="1">
           <div class="events-future-card-thumb">
-            <img src="../Images/image4.jpeg" alt="Tiffany & Co. Flagship Reception" loading="lazy">
+            <img src="./Images/image4.jpeg" alt="Tiffany & Co. Flagship Reception" loading="lazy">
           </div>
           <div>
             <h2 class="events-future-card-title">Tiffany &amp; Co. Flagship Reception</h2>
@@ -130,7 +130,7 @@
 
         <article class="events-future-card" data-idx="2">
           <div class="events-future-card-thumb">
-            <img src="../Images/image13.jpeg" alt="2027 International Tour" loading="lazy">
+            <img src="./Images/image13.jpeg" alt="2027 International Tour" loading="lazy">
           </div>
           <div>
             <h2 class="events-future-card-title">2027 International Tour</h2>
@@ -146,7 +146,7 @@
 
       <!-- Right: large preview image -->
       <div class="events-future-preview" id="eventsFuturePreview">
-        <img id="eventsFutureImg" src="../Images/image8.jpeg" alt="Preview — Galerie Brilliance Paris" loading="lazy">
+        <img id="eventsFutureImg" src="./Images/image8.jpeg" alt="Preview — Galerie Brilliance Paris" loading="lazy">
         <p class="events-future-preview-caption" id="eventsFutureCaption">&ldquo;Galerie Brilliance&rdquo; From 6.01.26 &ndash; 8.15.26</p>
       </div>
 
@@ -169,7 +169,7 @@
 
         <article class="events-future-card is-active" data-idx="0">
           <div class="events-future-card-thumb">
-            <img src="../Images/events-exhibit.jpeg" alt="Charles H. Wright Museum" loading="lazy">
+            <img src="./Images/events-exhibit.jpeg" alt="Charles H. Wright Museum" loading="lazy">
           </div>
           <div>
             <h2 class="events-future-card-title">Charles H. Wright Museum of African American History</h2>
@@ -183,7 +183,7 @@
 
         <article class="events-future-card" data-idx="1">
           <div class="events-future-card-thumb">
-            <img src="../Images/image8.jpeg" alt="Galerie Brilliance — Paris" loading="lazy">
+            <img src="./Images/image8.jpeg" alt="Galerie Brilliance — Paris" loading="lazy">
           </div>
           <div>
             <h2 class="events-future-card-title">Galerie Brilliance &mdash; Paris</h2>
@@ -197,7 +197,7 @@
 
         <article class="events-future-card" data-idx="2">
           <div class="events-future-card-thumb">
-            <img src="../Images/image4.jpeg" alt="Tiffany & Co. Reception" loading="lazy">
+            <img src="./Images/image4.jpeg" alt="Tiffany & Co. Reception" loading="lazy">
           </div>
           <div>
             <h2 class="events-future-card-title">Tiffany &amp; Co. Flagship Reception</h2>
@@ -213,7 +213,7 @@
 
       <!-- Right: large preview image -->
       <div class="events-future-preview" id="eventsPastPreview">
-        <img id="eventsPastImg" src="../Images/events-exhibit.jpeg" alt="Preview — Charles H. Wright Museum" loading="lazy">
+        <img id="eventsPastImg" src="./Images/events-exhibit.jpeg" alt="Preview — Charles H. Wright Museum" loading="lazy">
         <p class="events-future-preview-caption" id="eventsPastCaption">&ldquo;Exhibition Title&rdquo; From 3.14.26 &ndash; 5.21.26</p>
       </div>
 
@@ -359,9 +359,9 @@
 
   // ---- Current Exhibition carousel ----
   const CAROUSEL = [
-    { src: '../Images/events-exhibit.jpeg', caption: '\u201cBrilliance Within\u201d' },
-    { src: '../Images/image8.jpeg',         caption: '\u201cResilience\u201d' },
-    { src: '../Images/image13.jpeg',        caption: '\u201cThe Next Generation\u201d' }
+    { src: './Images/events-exhibit.jpeg', caption: '\u201cBrilliance Within\u201d' },
+    { src: './Images/image8.jpeg',         caption: '\u201cResilience\u201d' },
+    { src: './Images/image13.jpeg',        caption: '\u201cThe Next Generation\u201d' }
   ];
   let cIdx = 0;
   const cImg     = document.getElementById('eventsCarouselImg');
@@ -400,16 +400,16 @@
 
   // Future exhibitions data
   wireCardList('eventsFutureList', 'eventsFutureImg', 'eventsFutureCaption', [
-    { image: '../Images/image8.jpeg',  caption: '\u201cGalerie Brilliance\u201d From 6.01.26 \u2013 8.15.26' },
-    { image: '../Images/image4.jpeg',  caption: '\u201cTiffany & Co.\u201d Summer 2026' },
-    { image: '../Images/image13.jpeg', caption: '\u201c2027 Tour\u201d Venues TBD' }
+    { image: './Images/image8.jpeg',  caption: '\u201cGalerie Brilliance\u201d From 6.01.26 \u2013 8.15.26' },
+    { image: './Images/image4.jpeg',  caption: '\u201cTiffany & Co.\u201d Summer 2026' },
+    { image: './Images/image13.jpeg', caption: '\u201c2027 Tour\u201d Venues TBD' }
   ]);
 
   // Past exhibitions data
   wireCardList('eventsPastList', 'eventsPastImg', 'eventsPastCaption', [
-    { image: '../Images/events-exhibit.jpeg', caption: '\u201cCharles H. Wright Museum\u201d From 3.14.26 \u2013 5.21.26' },
-    { image: '../Images/image8.jpeg',         caption: '\u201cGalerie Brilliance Paris\u201d From 6.01.26 \u2013 8.15.26' },
-    { image: '../Images/image4.jpeg',         caption: '\u201cTiffany & Co. Reception\u201d Summer 2026' }
+    { image: './Images/events-exhibit.jpeg', caption: '\u201cCharles H. Wright Museum\u201d From 3.14.26 \u2013 5.21.26' },
+    { image: './Images/image8.jpeg',         caption: '\u201cGalerie Brilliance Paris\u201d From 6.01.26 \u2013 8.15.26' },
+    { image: './Images/image4.jpeg',         caption: '\u201cTiffany & Co. Reception\u201d Summer 2026' }
   ]);
 })();
 </script>
