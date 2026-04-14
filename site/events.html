@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<style>html,body{background:#000;color:#e0e0e0}html{color-scheme:dark}</style>
+<title>Events — Brilliance Exposed</title>
+<meta name="description" content="Exhibition venues and dates for Brilliance Exposed — Detroit, Paris, and New York City.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ========== NAVIGATION ========== -->
+<header class="nav" id="navbar">
+  <a href="index.html" class="nav-logo" aria-label="Brilliance Exposed — Home">
+    <img src="../logo/logo-white.png" alt="Brilliance Exposed">
+  </a>
+  <nav aria-label="Primary">
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="events.html" aria-current="page">Events</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Journal</a></li>
+    </ul>
+  </nav>
+  <a href="donate.html" class="nav-donate">Donate</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navMobilePanel">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<aside class="nav-mobile-panel" id="navMobilePanel" aria-hidden="true">
+  <a href="about.html">About</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="events.html" aria-current="page">Events</a>
+  <a href="shop.html">Shop</a>
+  <a href="contact.html">Contact</a>
+  <a href="blog.html">Journal</a>
+  <a href="donate.html" class="btn-gold">Donate</a>
+</aside>
+
+<main id="main">
+
+<div class="events-page">
+
+  <!-- ========================================================
+       VIEW 1: CURRENT EXHIBITIONS (default view)
+       ======================================================== -->
+  <div class="events-view is-active" data-view="current">
+
+    <h1 class="events-page-title">Current Exhibitions</h1>
+
+    <div class="events-exhibit">
+      <div class="events-carousel">
+        <div class="events-carousel-frame" id="eventsCarouselFrame">
+          <img id="eventsCarouselImg" src="../Images/events-exhibit.jpeg" alt="Exhibition photograph — Brilliance Exposed at the Charles H. Wright Museum">
+          <button class="events-carousel-arrow is-prev" aria-label="Previous image" id="eventsCarouselPrev">&lsaquo;</button>
+          <button class="events-carousel-arrow is-next" aria-label="Next image" id="eventsCarouselNext">&rsaquo;</button>
+        </div>
+        <p class="events-carousel-caption" id="eventsCarouselCaption">&ldquo;Brilliance Within&rdquo;</p>
+      </div>
+
+      <div class="events-info">
+        <h2 class="events-info-title">Charles H. Wright Museum of African American History</h2>
+        <p class="events-info-date">From 3.14.26 &ndash; 5.21.26</p>
+        <div class="events-info-desc">
+          <p>The inaugural exhibition of Brilliance Exposed opens at the Charles H. Wright Museum of African American History in Detroit, Michigan &mdash; one of the largest institutions in the world dedicated to the African American experience.</p>
+          <p>Featuring the full 2026 portrait series alongside the premiere of the interview documentary segments, the Detroit installation sets the visual and narrative standard for the international tour that follows.</p>
+        </div>
+        <a href="#" class="btn-tickets" aria-disabled="true">
+          Tickets at the Door
+          <span class="arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ========================================================
+       VIEW 2: FUTURE EXHIBITIONS
+       Card list left + large preview right (Figma 155:130)
+       ======================================================== -->
+  <div class="events-view" data-view="future">
+
+    <h1 class="events-page-title">Future Exhibitions</h1>
+
+    <div class="events-future">
+
+      <!-- Left: stacked exhibition cards -->
+      <div class="events-future-list" id="eventsFutureList">
+
+        <article class="events-future-card is-active" data-idx="0">
+          <div class="events-future-card-thumb">
+            <img src="../Images/image8.jpeg" alt="Galerie Brilliance — Paris" loading="lazy">
+          </div>
+          <div>
+            <h2 class="events-future-card-title">Galerie Brilliance &mdash; Paris</h2>
+            <p class="events-future-card-date">From 6.01.26 &ndash; 8.15.26</p>
+            <p class="events-future-card-desc">The international debut of Brilliance Exposed arrives in Paris. The exhibition features the complete 2026 portrait series alongside new works for the European audience.</p>
+            <a href="#" class="btn-tickets" aria-disabled="true">
+              Get Tickets <span class="arrow">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="events-future-card" data-idx="1">
+          <div class="events-future-card-thumb">
+            <img src="../Images/image4.jpeg" alt="Tiffany & Co. Flagship Reception" loading="lazy">
+          </div>
+          <div>
+            <h2 class="events-future-card-title">Tiffany &amp; Co. Flagship Reception</h2>
+            <p class="events-future-card-date">Summer 2026 &mdash; Private Reception</p>
+            <p class="events-future-card-desc">An intimate private reception at the Tiffany &amp; Co. flagship on Fifth Avenue, New York City. A curated selection of portraits with a conversation between Alexis Dixon and Michele Zousmer.</p>
+            <a href="contact.html" class="btn-tickets">
+              Request an Invitation <span class="arrow">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="events-future-card" data-idx="2">
+          <div class="events-future-card-thumb">
+            <img src="../Images/image13.jpeg" alt="2027 International Tour" loading="lazy">
+          </div>
+          <div>
+            <h2 class="events-future-card-title">2027 International Tour</h2>
+            <p class="events-future-card-date">2027 &mdash; Venues Being Confirmed</p>
+            <p class="events-future-card-desc">The second touring season is in active planning. Museums and galleries interested in hosting the exhibition are invited to reach out via our partnerships page.</p>
+            <a href="contact.html#partnerships" class="btn-tickets">
+              Partnership Inquiry <span class="arrow">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Right: large preview image -->
+      <div class="events-future-preview" id="eventsFuturePreview">
+        <img id="eventsFutureImg" src="../Images/image8.jpeg" alt="Preview — Galerie Brilliance Paris" loading="lazy">
+        <p class="events-future-preview-caption" id="eventsFutureCaption">&ldquo;Galerie Brilliance&rdquo; From 6.01.26 &ndash; 8.15.26</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ========================================================
+       VIEW 3: PAST EXHIBITIONS
+       Same card-list + preview layout as Future (Figma 155:197)
+       ======================================================== -->
+  <div class="events-view" data-view="past">
+
+    <h1 class="events-page-title">Past Exhibitions</h1>
+
+    <div class="events-future">
+
+      <!-- Left: stacked exhibition cards -->
+      <div class="events-future-list" id="eventsPastList">
+
+        <article class="events-future-card is-active" data-idx="0">
+          <div class="events-future-card-thumb">
+            <img src="../Images/events-exhibit.jpeg" alt="Charles H. Wright Museum" loading="lazy">
+          </div>
+          <div>
+            <h2 class="events-future-card-title">Charles H. Wright Museum of African American History</h2>
+            <p class="events-future-card-date">From 3.14.26 &ndash; 5.21.26</p>
+            <p class="events-future-card-desc">The inaugural exhibition of Brilliance Exposed opened in Detroit, Michigan &mdash; featuring the full 2026 portrait series and the premiere of the interview documentary segments.</p>
+            <a href="#" class="btn-tickets" aria-disabled="true">
+              View Archive <span class="arrow">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="events-future-card" data-idx="1">
+          <div class="events-future-card-thumb">
+            <img src="../Images/image8.jpeg" alt="Galerie Brilliance — Paris" loading="lazy">
+          </div>
+          <div>
+            <h2 class="events-future-card-title">Galerie Brilliance &mdash; Paris</h2>
+            <p class="events-future-card-date">From 6.01.26 &ndash; 8.15.26</p>
+            <p class="events-future-card-desc">The international debut of Brilliance Exposed in Paris featured the complete 2026 portrait series alongside works commissioned for the European audience.</p>
+            <a href="#" class="btn-tickets" aria-disabled="true">
+              View Archive <span class="arrow">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+        <article class="events-future-card" data-idx="2">
+          <div class="events-future-card-thumb">
+            <img src="../Images/image4.jpeg" alt="Tiffany & Co. Reception" loading="lazy">
+          </div>
+          <div>
+            <h2 class="events-future-card-title">Tiffany &amp; Co. Flagship Reception</h2>
+            <p class="events-future-card-date">Summer 2026 &mdash; Private Reception</p>
+            <p class="events-future-card-desc">The 2026 season closed with an intimate private reception at the Tiffany &amp; Co. flagship on Fifth Avenue, featuring a conversation between Alexis Dixon and Michele Zousmer.</p>
+            <a href="#" class="btn-tickets" aria-disabled="true">
+              View Archive <span class="arrow">&rarr;</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Right: large preview image -->
+      <div class="events-future-preview" id="eventsPastPreview">
+        <img id="eventsPastImg" src="../Images/events-exhibit.jpeg" alt="Preview — Charles H. Wright Museum" loading="lazy">
+        <p class="events-future-preview-caption" id="eventsPastCaption">&ldquo;Exhibition Title&rdquo; From 3.14.26 &ndash; 5.21.26</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ========================================================
+       BOTTOM NAVIGATION: Past ← dots → Future
+       ======================================================== -->
+  <nav class="events-bottom-nav" aria-label="Exhibition timeline">
+    <button class="events-bottom-btn is-prev" id="eventsNavPrev" data-target="past">
+      <span class="arrow">&larr;</span>
+      Past Exhibitions
+    </button>
+
+    <div class="events-bottom-dots">
+      <button class="events-bottom-dot" data-target="past" aria-label="Past exhibitions"></button>
+      <button class="events-bottom-dot is-active" data-target="current" aria-label="Current exhibitions"></button>
+      <button class="events-bottom-dot" data-target="future" aria-label="Future exhibitions"></button>
+    </div>
+
+    <button class="events-bottom-btn is-next" id="eventsNavNext" data-target="future">
+      Future Exhibitions
+      <span class="arrow">&rarr;</span>
+    </button>
+  </nav>
+
+</div>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="../logo/logo-white.png" alt="Brilliance Exposed">
+        <p class="footer-tagline">An international photographic exhibition honoring Black-presenting professionals in STEAM.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Journal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#press">Press</a></li>
+          <li><a href="contact.html#partnerships">Partnerships</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h4>Stay Connected</h4>
+        <p>Exhibition updates delivered to your inbox.</p>
+        <form class="newsletter-form" data-form="newsletter">
+          <input type="email" placeholder="Email address" aria-label="Email address" required>
+          <button type="submit" aria-label="Subscribe">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </button>
+        </form>
+        <p class="newsletter-status" data-form-status></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Brilliance Exposed. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" aria-disabled="true">Instagram</a>
+        <a href="#" aria-disabled="true">Facebook</a>
+        <a href="#" aria-disabled="true">X / Twitter</a>
+        <a href="#" aria-disabled="true">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Events page interactions -->
+<script>
+(function () {
+  'use strict';
+
+  // ---- View switching (Past / Current / Future) ----
+  const views = ['past', 'current', 'future'];
+  let currentView = 'current';
+
+  const viewEls   = document.querySelectorAll('.events-view');
+  const dots      = document.querySelectorAll('.events-bottom-dot');
+  const prevBtn   = document.getElementById('eventsNavPrev');
+  const nextBtn   = document.getElementById('eventsNavNext');
+
+  function showView(name) {
+    currentView = name;
+    viewEls.forEach(v => v.classList.toggle('is-active', v.dataset.view === name));
+    dots.forEach(d => d.classList.toggle('is-active', d.dataset.target === name));
+
+    const idx = views.indexOf(name);
+
+    // Update prev arrow
+    if (prevBtn) {
+      if (idx <= 0) { prevBtn.hidden = true; }
+      else {
+        prevBtn.hidden = false;
+        prevBtn.dataset.target = views[idx - 1];
+        const label = views[idx - 1].charAt(0).toUpperCase() + views[idx - 1].slice(1);
+        prevBtn.innerHTML = '<span class="arrow">&larr;</span> ' + label + ' Exhibitions';
+      }
+    }
+
+    // Update next arrow
+    if (nextBtn) {
+      if (idx >= views.length - 1) { nextBtn.hidden = true; }
+      else {
+        nextBtn.hidden = false;
+        nextBtn.dataset.target = views[idx + 1];
+        const label = views[idx + 1].charAt(0).toUpperCase() + views[idx + 1].slice(1);
+        nextBtn.innerHTML = label + ' Exhibitions <span class="arrow">&rarr;</span>';
+      }
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', () => showView(prevBtn.dataset.target));
+  if (nextBtn) nextBtn.addEventListener('click', () => showView(nextBtn.dataset.target));
+  dots.forEach(d => d.addEventListener('click', () => showView(d.dataset.target)));
+
+  // Initial state
+  showView('current');
+
+  // ---- Current Exhibition carousel ----
+  const CAROUSEL = [
+    { src: '../Images/events-exhibit.jpeg', caption: '\u201cBrilliance Within\u201d' },
+    { src: '../Images/image8.jpeg',         caption: '\u201cResilience\u201d' },
+    { src: '../Images/image13.jpeg',        caption: '\u201cThe Next Generation\u201d' }
+  ];
+  let cIdx = 0;
+  const cImg     = document.getElementById('eventsCarouselImg');
+  const cCaption = document.getElementById('eventsCarouselCaption');
+  const cPrev    = document.getElementById('eventsCarouselPrev');
+  const cNext    = document.getElementById('eventsCarouselNext');
+
+  function showCarousel(i) {
+    cIdx = ((i % CAROUSEL.length) + CAROUSEL.length) % CAROUSEL.length;
+    if (cImg) { cImg.style.opacity = '0'; setTimeout(() => { cImg.src = CAROUSEL[cIdx].src; cImg.style.opacity = '1'; }, 300); }
+    if (cCaption) cCaption.textContent = CAROUSEL[cIdx].caption;
+  }
+  if (cPrev) cPrev.addEventListener('click', () => showCarousel(cIdx - 1));
+  if (cNext) cNext.addEventListener('click', () => showCarousel(cIdx + 1));
+
+  // ---- Generic card-list → preview wiring ----
+  // Works for both Future and Past views (same layout, different IDs)
+  function wireCardList(listId, imgId, capId, data) {
+    const list = document.getElementById(listId);
+    const img  = document.getElementById(imgId);
+    const cap  = document.getElementById(capId);
+    if (!list) return;
+
+    list.querySelectorAll('.events-future-card').forEach(card => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('a')) return;          // don't hijack link clicks
+        const idx = parseInt(card.dataset.idx, 10);
+        list.querySelectorAll('.events-future-card').forEach(c => c.classList.remove('is-active'));
+        card.classList.add('is-active');
+        const d = data[idx];
+        if (d && img) { img.style.opacity = '0'; setTimeout(() => { img.src = d.image; img.alt = d.caption; img.style.opacity = '1'; }, 300); }
+        if (d && cap) cap.textContent = d.caption;
+      });
+    });
+  }
+
+  // Future exhibitions data
+  wireCardList('eventsFutureList', 'eventsFutureImg', 'eventsFutureCaption', [
+    { image: '../Images/image8.jpeg',  caption: '\u201cGalerie Brilliance\u201d From 6.01.26 \u2013 8.15.26' },
+    { image: '../Images/image4.jpeg',  caption: '\u201cTiffany & Co.\u201d Summer 2026' },
+    { image: '../Images/image13.jpeg', caption: '\u201c2027 Tour\u201d Venues TBD' }
+  ]);
+
+  // Past exhibitions data
+  wireCardList('eventsPastList', 'eventsPastImg', 'eventsPastCaption', [
+    { image: '../Images/events-exhibit.jpeg', caption: '\u201cCharles H. Wright Museum\u201d From 3.14.26 \u2013 5.21.26' },
+    { image: '../Images/image8.jpeg',         caption: '\u201cGalerie Brilliance Paris\u201d From 6.01.26 \u2013 8.15.26' },
+    { image: '../Images/image4.jpeg',         caption: '\u201cTiffany & Co. Reception\u201d Summer 2026' }
+  ]);
+})();
+</script>
+
+<script src="site.js"></script>
+</body>
+</html>
