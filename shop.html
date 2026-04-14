@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
 <style>html,body{background:#000;color:#e0e0e0}html{color-scheme:dark}</style>
-<title>Donate — Brilliance Exposed</title>
-<meta name="description" content="Support Brilliance Exposed — help fund portraits, interviews, and international exhibition travel.">
+<title>Shop — Brilliance Exposed</title>
+<meta name="description" content="Official merchandise and collaborations from Brilliance Exposed.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,19 +20,19 @@
 <!-- ========== NAVIGATION ========== -->
 <header class="nav" id="navbar">
   <a href="index.html" class="nav-logo" aria-label="Brilliance Exposed — Home">
-    <img src="../logo/logo-white.png" alt="Brilliance Exposed">
+    <img src="./logo/logo-white.png" alt="Brilliance Exposed">
   </a>
   <nav aria-label="Primary">
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="events.html">Events</a></li>
-      <li><a href="shop.html">Shop</a></li>
+      <li><a href="shop.html" aria-current="page">Shop</a></li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="blog.html">Journal</a></li>
     </ul>
   </nav>
-  <a href="donate.html" class="nav-donate" aria-current="page">Donate</a>
+  <a href="donate.html" class="nav-donate">Donate</a>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navMobilePanel">
     <span></span><span></span><span></span>
   </button>
@@ -44,70 +44,67 @@
   <a href="about.html">About</a>
   <a href="gallery.html">Gallery</a>
   <a href="events.html">Events</a>
-  <a href="shop.html">Shop</a>
+  <a href="shop.html" aria-current="page">Shop</a>
   <a href="contact.html">Contact</a>
   <a href="blog.html">Journal</a>
-  <a href="donate.html" class="btn-gold" aria-current="page">Donate</a>
+  <a href="donate.html" class="btn-gold">Donate</a>
 </aside>
 
 <main id="main">
 
-<div class="donate-page">
+<div class="shop-page">
 
-  <!-- ========== LEFT: heading + description ========== -->
-  <div class="donate-left reveal">
-    <h1 class="donate-heading">Help us keep growing</h1>
-    <p class="donate-desc">
-      Donate today to help Brilliance Exposed keep inspiring the next generation of thinkers and creators. Your donation will go towards new portraits, video interviews, archival infrastructure, and the international tour.
-    </p>
+  <!-- ========== FEATURED PRODUCT HERO ========== -->
+  <div class="shop-hero reveal">
+    <div class="shop-hero-image">
+      <img src="../Images/shop-converse-hero.jpeg" alt="Converse x Brilliance Exposed — Classic High Top with yellow stitching">
+    </div>
   </div>
 
-  <!-- ========== RIGHT: donation form ========== -->
-  <div class="donate-right reveal reveal-d1">
-
-    <!-- Donation frequency -->
-    <p class="donate-section-label">Donation Frequency</p>
-    <div class="donate-toggles" id="donateFrequency">
-      <button class="donate-toggle is-active" data-value="monthly">Monthly</button>
-      <button class="donate-toggle" data-value="one-time">One Time</button>
+  <!-- Featured product info -->
+  <div class="shop-featured reveal reveal-d1">
+    <div>
+      <h1 class="shop-featured-name">Converse x Brilliance Exposed</h1>
+      <p class="shop-featured-tag">Collaboration</p>
+      <p class="shop-featured-desc">Classic Converse High Top, black, Yellow Stitching</p>
     </div>
+    <a href="#" class="btn-gold" aria-disabled="true">
+      Available Soon
+      <span class="arrow">&rarr;</span>
+    </a>
+  </div>
 
-    <!-- Amount -->
-    <p class="donate-section-label">Amount</p>
-    <div class="donate-amounts" id="donateAmounts">
-      <button class="donate-amount" data-value="25">$25</button>
-      <button class="donate-amount is-active" data-value="50">$50</button>
-      <button class="donate-amount" data-value="100">$100</button>
-      <button class="donate-amount" data-value="custom">Custom</button>
-    </div>
+  <div class="divider"><span class="diamond"></span></div>
 
-    <!-- Name + Email -->
-    <form data-form="donate">
-      <div class="contact-form-row">
-        <div class="contact-field">
-          <label for="donateName">Name</label>
-          <input type="text" id="donateName" name="name" placeholder="Enter your name" required>
-        </div>
-        <div class="contact-field">
-          <label for="donateEmail">Contact / Email</label>
-          <input type="email" id="donateEmail" name="email" placeholder="email@address.com" required>
-        </div>
+  <!-- ========== PRODUCT GRID ========== -->
+  <div class="shop-grid">
+
+    <article class="shop-card reveal reveal-d1">
+      <div class="shop-card-image">
+        <img src="../Images/shop-tshirt.jpeg" alt="Brilliance Exposed T-shirt — black, white, unisex" loading="lazy">
       </div>
+      <h2 class="shop-card-name">Brilliance Exposed T-shirt</h2>
+      <p class="shop-card-tag">Merch</p>
+      <p class="shop-card-desc">Black, white, unisex</p>
+    </article>
 
-      <!-- Message (optional) -->
-      <div class="contact-field contact-field-full">
-        <label for="donateMessage">Transmission / Message</label>
-        <textarea id="donateMessage" name="message" placeholder="Type your inquiry here..." style="min-height: 84px;"></textarea>
+    <article class="shop-card reveal reveal-d2">
+      <div class="shop-card-image">
+        <img src="../Images/shop-converse-thumb.jpeg" alt="Converse x Brilliance Exposed — Classic High Top" loading="lazy">
       </div>
+      <h2 class="shop-card-name">Converse x Brilliance Exposed</h2>
+      <p class="shop-card-tag">Collaboration</p>
+      <p class="shop-card-desc">Classic Converse High Top, black, Yellow Stitching</p>
+    </article>
 
-      <button type="submit" class="btn-donate-now">
-        Donate Now
-        <span class="arrow">&rarr;</span>
-      </button>
-
-      <p class="form-status" data-form-status style="clear: both; padding-top: var(--space-md);"></p>
-
-    </form>
+    <article class="shop-card reveal reveal-d3">
+      <div class="shop-card-image">
+        <img src="../Images/shop-converse-thumb.jpeg" alt="Brilliance Exposed Cap — Classic High Top" loading="lazy">
+      </div>
+      <h2 class="shop-card-name">Brilliance Exposed Cap</h2>
+      <p class="shop-card-tag">Merch</p>
+      <p class="shop-card-desc">Black, embroidered, one size fits all</p>
+    </article>
 
   </div>
 
@@ -120,7 +117,7 @@
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="../logo/logo-white.png" alt="Brilliance Exposed">
+        <img src="./logo/logo-white.png" alt="Brilliance Exposed">
         <p class="footer-tagline">An international photographic exhibition honoring Black-presenting professionals in STEAM.</p>
       </div>
 
@@ -172,35 +169,6 @@
     </div>
   </div>
 </footer>
-
-<!-- Donate page toggle interactions -->
-<script>
-(function () {
-  'use strict';
-
-  // Frequency toggles: only one active at a time
-  const freqGroup = document.getElementById('donateFrequency');
-  if (freqGroup) {
-    freqGroup.querySelectorAll('.donate-toggle').forEach(btn => {
-      btn.addEventListener('click', () => {
-        freqGroup.querySelectorAll('.donate-toggle').forEach(b => b.classList.remove('is-active'));
-        btn.classList.add('is-active');
-      });
-    });
-  }
-
-  // Amount buttons: only one active at a time
-  const amountGroup = document.getElementById('donateAmounts');
-  if (amountGroup) {
-    amountGroup.querySelectorAll('.donate-amount').forEach(btn => {
-      btn.addEventListener('click', () => {
-        amountGroup.querySelectorAll('.donate-amount').forEach(b => b.classList.remove('is-active'));
-        btn.classList.add('is-active');
-      });
-    });
-  }
-})();
-</script>
 
 <script src="site.js"></script>
 </body>
