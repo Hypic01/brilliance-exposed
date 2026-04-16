@@ -650,9 +650,9 @@ main {
   transform: scale(1.5);             /* continues growing as it disappears */
   filter: blur(12px);                /* soft dissolution */
   transition:
-    opacity   1.4s var(--ease-out-expo),
-    transform 1.8s var(--ease-out-expo),
-    filter    1.6s var(--ease-out-expo);
+    opacity   1.0s var(--ease-out-expo),
+    transform 1.3s var(--ease-out-expo),
+    filter    1.2s var(--ease-out-expo);
 }
 
 /* Active (visible) state — sharp, at scale 1, no blur.
@@ -661,7 +661,7 @@ main {
   opacity: 1;
   transform: scale(1);               /* reset — animation takes over from here */
   filter: blur(0);
-  animation: kenBurns 8s cubic-bezier(0.25, 0, 0.5, 1) forwards;
+  animation: kenBurns 5.5s cubic-bezier(0.25, 0, 0.5, 1) forwards;
 }
 
 .hero-portrait-slide img {
