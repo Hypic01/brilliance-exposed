@@ -330,8 +330,9 @@ body.intro-active { overflow: hidden; }
 }
 .intro-logo {
   animation:
-    introLogoIn  0.85s var(--ease-out-expo) 3.65s forwards,
-    introLogoOut 0.75s var(--ease-in-out)   5.55s forwards;
+    introLogoDevelopIn  1.6s cubic-bezier(0.4, 0, 0.2, 1) 3.65s forwards,
+    introLogoDevelopOut 0.75s var(--ease-in-out)          5.8s forwards;
+  will-change: opacity, filter, transform;
 }
 .intro-logo img {
   width: min(460px, 64vw);
@@ -355,8 +356,35 @@ body.intro-active { overflow: hidden; }
 
 @keyframes introQuoteIn  { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes introQuoteOut { from { opacity: 1; transform: translateY(0); }   to { opacity: 0; transform: translateY(-10px); } }
-@keyframes introLogoIn   { from { opacity: 0; transform: scale(0.97); }     to { opacity: 1; transform: scale(1); } }
-@keyframes introLogoOut  { from { opacity: 1; transform: scale(1); }        to { opacity: 0; transform: scale(1.025); } }
+/* Photographic-development entry: logo emerges from near-black darkroom state. */
+@keyframes introLogoDevelopIn {
+  from {
+    opacity: 0;
+    filter: brightness(0.1) blur(14px);
+    transform: scale(0.97);
+  }
+  35% {
+    opacity: 0.8;
+    filter: brightness(0.45) blur(6px);
+  }
+  to {
+    opacity: 1;
+    filter: brightness(1) blur(0);
+    transform: scale(1);
+  }
+}
+@keyframes introLogoDevelopOut {
+  from {
+    opacity: 1;
+    filter: brightness(1) blur(0);
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    filter: brightness(0.85) blur(2px);
+    transform: scale(1.01);
+  }
+}
 @keyframes introOverlayOut { from { opacity: 1; } to { opacity: 0; visibility: hidden; } }
 @keyframes introSkipIn { from { opacity: 0; } to { opacity: 0.55; } }
 
