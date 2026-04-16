@@ -52,64 +52,71 @@
 
 <main id="main">
 
-<div class="donate-page">
+<div class="donate-v2">
 
-  <!-- ========== LEFT: heading + description ========== -->
-  <div class="donate-left reveal">
-    <h1 class="donate-heading">Help us keep growing</h1>
-    <p class="donate-desc">
-      Donate today to help Brilliance Exposed keep inspiring the next generation of thinkers and creators. Your donation will go towards new portraits, video interviews, archival infrastructure, and the international tour.
-    </p>
+  <!-- Hero -->
+  <section class="donate-v2-hero reveal">
+    <div class="donate-v2-hero-text">
+      <h1 class="page-header-title">Support<br>Brilliance</h1>
+      <p class="page-header-intro">Your generosity helps bring Brilliance Exposed to museums, galleries, and communities around the world &mdash; inspiring future generations in STEAM.</p>
+    </div>
+    <div class="donate-v2-hero-image" aria-hidden="true"></div>
+  </section>
+
+  <hr class="hairline" role="presentation">
+
+  <!-- Ways to Give -->
+  <div class="v2-section-eyebrow reveal">
+    <p class="section-eyebrow-rule"><span>Ways to Give</span></p>
   </div>
 
-  <!-- ========== RIGHT: donation form ========== -->
-  <div class="donate-right reveal reveal-d1">
+  <section class="donate-v2-tiers">
+    <article class="donate-v2-tier reveal reveal-d1">
+      <p class="donate-v2-tier-amt">$50</p>
+      <p class="donate-v2-tier-label">Supporter</p>
+      <p class="donate-v2-tier-desc">Help bring the exhibition to a new community. Your contribution supports transportation, installation, and educational materials.</p>
+      <a href="#" class="btn-gold">Become a Supporter</a>
+    </article>
 
-    <!-- Donation frequency -->
-    <p class="donate-section-label">Donation Frequency</p>
-    <div class="donate-toggles" id="donateFrequency">
-      <button class="donate-toggle is-active" data-value="monthly">Monthly</button>
-      <button class="donate-toggle" data-value="one-time">One Time</button>
-    </div>
+    <article class="donate-v2-tier reveal reveal-d2">
+      <p class="donate-v2-tier-amt">$250</p>
+      <p class="donate-v2-tier-label">Patron</p>
+      <p class="donate-v2-tier-desc">Fund a portrait&rsquo;s exhibition journey &mdash; from photography to framing to gallery installation. Receive a signed exhibition catalog.</p>
+      <a href="#" class="btn-gold">Become a Patron</a>
+    </article>
 
-    <!-- Amount -->
-    <p class="donate-section-label">Amount</p>
-    <div class="donate-amounts" id="donateAmounts">
-      <button class="donate-amount" data-value="25">$25</button>
-      <button class="donate-amount is-active" data-value="50">$50</button>
-      <button class="donate-amount" data-value="100">$100</button>
-      <button class="donate-amount" data-value="custom">Custom</button>
-    </div>
+    <article class="donate-v2-tier reveal reveal-d3">
+      <p class="donate-v2-tier-amt">$1,000+</p>
+      <p class="donate-v2-tier-label">Visionary</p>
+      <p class="donate-v2-tier-desc">Become a founding partner of Brilliance Exposed. Receive VIP access to all exhibition openings, exclusive prints, and recognition in the exhibition catalog.</p>
+      <a href="#" class="btn-gold">Become a Visionary</a>
+    </article>
+  </section>
 
-    <!-- Name + Email -->
-    <form data-form="donate">
-      <div class="contact-form-row">
-        <div class="contact-field">
-          <label for="donateName">Name</label>
-          <input type="text" id="donateName" name="name" placeholder="Enter your name" required>
-        </div>
-        <div class="contact-field">
-          <label for="donateEmail">Contact / Email</label>
-          <input type="email" id="donateEmail" name="email" placeholder="email@address.com" required>
-        </div>
-      </div>
+  <hr class="hairline" role="presentation">
 
-      <!-- Message (optional) -->
-      <div class="contact-field contact-field-full">
-        <label for="donateMessage">Transmission / Message</label>
-        <textarea id="donateMessage" name="message" placeholder="Type your inquiry here..." style="min-height: 84px;"></textarea>
-      </div>
-
-      <button type="submit" class="btn-donate-now">
-        Donate Now
-        <span class="arrow">&rarr;</span>
-      </button>
-
-      <p class="form-status" data-form-status style="clear: both; padding-top: var(--space-md);"></p>
-
-    </form>
-
+  <!-- Your Impact testimonial -->
+  <div class="v2-section-eyebrow reveal">
+    <p class="section-eyebrow-rule"><span>Your Impact</span></p>
   </div>
+
+  <section class="donate-v2-impact reveal">
+    <p class="donate-v2-impact-quote">&ldquo;Every contribution helps illuminate the stories of those whose brilliance has been overlooked. Together, we can ensure that future generations see themselves reflected in the legacy of innovation, creativity, and excellence.&rdquo;</p>
+    <p class="donate-v2-impact-attr">&mdash; Alexis Dixon, Founder</p>
+  </section>
+
+  <hr class="hairline" role="presentation">
+
+  <!-- Major gifts -->
+  <div class="v2-section-eyebrow reveal">
+    <p class="section-eyebrow-rule"><span>Major Gifts &amp; Sponsorships</span></p>
+  </div>
+
+  <section class="donate-v2-major reveal">
+    <h2 class="donate-v2-major-title">For gifts of $5,000 or more</h2>
+    <p class="donate-v2-major-desc">We welcome conversations about transformative partnerships. Major gifts directly fund exhibition installations at new venues, educational programming for underserved communities, and the continued documentation of brilliance in STEAM. Please reach out to discuss how your contribution can make the greatest impact.</p>
+    <a class="donate-v2-major-email" href="mailto:mymediasolutions.com@gmail.com">mymediasolutions.com@gmail.com</a>
+  </section>
 
 </div>
 
@@ -172,35 +179,6 @@
     </div>
   </div>
 </footer>
-
-<!-- Donate page toggle interactions -->
-<script>
-(function () {
-  'use strict';
-
-  // Frequency toggles: only one active at a time
-  const freqGroup = document.getElementById('donateFrequency');
-  if (freqGroup) {
-    freqGroup.querySelectorAll('.donate-toggle').forEach(btn => {
-      btn.addEventListener('click', () => {
-        freqGroup.querySelectorAll('.donate-toggle').forEach(b => b.classList.remove('is-active'));
-        btn.classList.add('is-active');
-      });
-    });
-  }
-
-  // Amount buttons: only one active at a time
-  const amountGroup = document.getElementById('donateAmounts');
-  if (amountGroup) {
-    amountGroup.querySelectorAll('.donate-amount').forEach(btn => {
-      btn.addEventListener('click', () => {
-        amountGroup.querySelectorAll('.donate-amount').forEach(b => b.classList.remove('is-active'));
-        btn.classList.add('is-active');
-      });
-    });
-  }
-})();
-</script>
 
 <script src="site.js"></script>
 </body>

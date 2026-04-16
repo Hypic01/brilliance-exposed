@@ -52,62 +52,94 @@
 
 <main id="main">
 
-<section class="gallery-page">
+<div class="gallery-v2">
 
-  <!-- Ambient background: blurred portrait orbs + frosted glass overlay -->
-  <div class="gallery-bg" aria-hidden="true">
-    <div class="gallery-bg-orb"></div>
-    <div class="gallery-bg-orb"></div>
-    <div class="gallery-bg-orb"></div>
-    <div class="gallery-bg-blur"></div>
+  <!-- Hero -->
+  <div class="page-header reveal">
+    <h1 class="page-header-title">Gallery</h1>
+    <p class="page-header-intro">Portraits of brilliance &mdash; honoring the extraordinary contributions of Black-presenting professionals in Science, Technology, Engineering, Arts, and Math.</p>
   </div>
 
-  <!-- Title -->
-  <h1 class="gallery-title">Brilliance Exposed Exhibition</h1>
-
-  <!-- Main content: portrait left + STEAM panel right -->
-  <div class="gallery-content">
-
-    <!-- Left: featured portrait -->
-    <div class="gallery-portrait" id="galleryPortrait">
-      <img id="galleryPortraitImg" src="./Images/gallery-portrait.jpeg" alt="Portrait of Yasmin Hurd">
-
-      <div class="gallery-detail" id="galleryDetail">
-        <h2 class="gallery-detail-name" id="galleryDetailName">Yasmin Hurd</h2>
-        <p class="gallery-detail-role" id="galleryDetailRole">PhD &mdash; Chair of Transnational Neuroscience, Director of Addiction Institute</p>
-        <a href="#" class="gallery-detail-link" aria-disabled="true">Biography coming soon</a>
-      </div>
+  <!-- Featured portrait -->
+  <section class="gallery-v2-featured reveal">
+    <div class="gallery-v2-featured-image">
+      <img src="./Images/gallery-portrait.jpeg" alt="Portrait of Yasmin Hurd">
     </div>
-
-    <!-- Right: STEAM category panel -->
-    <div class="gallery-steam" id="gallerySteam">
-      <h2 class="gallery-steam-cat" id="gallerySteamCat">Science</h2>
-      <p class="gallery-steam-desc" id="gallerySteamDesc">
-        The study of the physical world through investigation, experimentation, and observation, understanding topics in physics, biology, and chemistry.
-      </p>
-
-      <!-- Scrollable honoree name list -->
-      <div class="gallery-names" id="galleryNames">
-        <button class="gallery-name is-active" data-index="0">Yasmin Hurd</button>
-        <button class="gallery-name" data-index="1">Alena Analeigh</button>
-        <button class="gallery-name" data-index="2">Zach Green</button>
-        <button class="gallery-name" data-index="3">Gentry Patrick</button>
-        <button class="gallery-name" data-index="4">Bianca Jones Marlin</button>
-        <button class="gallery-name" data-index="5">Willis Jenkins</button>
-      </div>
+    <div class="gallery-v2-featured-info">
+      <h2 class="gallery-v2-featured-name">Yasmin Hurd</h2>
+      <p class="gallery-v2-featured-role">PhD &mdash; Chair of Transnational Neuroscience, Director of Addiction Institute</p>
+      <p class="gallery-v2-featured-quote">&ldquo;I find it beautiful that every individual is a capsule of a unique story, which is why it is so important to invite all lives into science.&rdquo;</p>
+      <p class="gallery-v2-featured-bio">Dr. Hurd has spent decades advancing our understanding of addiction and the neurobiology of opioid use disorder, inspiring future generations of scientists through rigorous research and mentorship.</p>
+      <a href="#" class="gallery-v2-featured-link">Read Full Story &rarr;</a>
     </div>
+  </section>
+
+  <hr class="hairline" role="presentation">
+
+  <!-- STEAM filter tabs + grid -->
+  <div class="gallery-v2-tabs" id="galleryTabs" role="tablist" aria-label="Filter by STEAM category">
+    <button class="gallery-v2-tab is-active" data-cat="all" role="tab" aria-selected="true">All</button>
+    <button class="gallery-v2-tab" data-cat="science" role="tab" aria-selected="false">Science</button>
+    <button class="gallery-v2-tab" data-cat="technology" role="tab" aria-selected="false">Technology</button>
+    <button class="gallery-v2-tab" data-cat="engineering" role="tab" aria-selected="false">Engineering</button>
+    <button class="gallery-v2-tab" data-cat="arts" role="tab" aria-selected="false">Arts</button>
+    <button class="gallery-v2-tab" data-cat="mathematics" role="tab" aria-selected="false">Math</button>
   </div>
 
-  <!-- STEAM category tabs (bottom) -->
-  <div class="gallery-tabs" id="galleryTabs">
-    <button class="gallery-tab is-active" data-cat="science">Science</button>
-    <button class="gallery-tab" data-cat="technology">Technology</button>
-    <button class="gallery-tab" data-cat="engineering">Engineering</button>
-    <button class="gallery-tab" data-cat="arts">Arts</button>
-    <button class="gallery-tab" data-cat="mathematics">Mathematics</button>
-  </div>
+  <section class="gallery-v2-grid" id="galleryGrid">
+    <article class="gallery-v2-card" data-cat="science">
+      <div class="gallery-v2-card-image"><img src="./Images/gallery-portrait.jpeg" alt="Portrait of Yasmin Hurd" loading="lazy"></div>
+      <h3 class="gallery-v2-card-name">Yasmin Hurd</h3>
+      <p class="gallery-v2-card-role">Chair of Transnational Neuroscience</p>
+    </article>
+    <article class="gallery-v2-card" data-cat="science">
+      <div class="gallery-v2-card-image"><img src="./Images/image13.jpeg" alt="Portrait of Alena Analeigh" loading="lazy"></div>
+      <h3 class="gallery-v2-card-name">Alena Analeigh</h3>
+      <p class="gallery-v2-card-role">Young Scientist &amp; Innovator</p>
+    </article>
+    <article class="gallery-v2-card" data-cat="science">
+      <div class="gallery-v2-card-image"><img src="./Images/image6.jpeg" alt="Portrait of Zach Green" loading="lazy"></div>
+      <h3 class="gallery-v2-card-name">Zach Green</h3>
+      <p class="gallery-v2-card-role">Scientist &amp; Entrepreneur</p>
+    </article>
+    <article class="gallery-v2-card" data-cat="science">
+      <div class="gallery-v2-card-image"><img src="./Images/image10.jpeg" alt="Portrait of Gentry Patrick" loading="lazy"></div>
+      <h3 class="gallery-v2-card-name">Gentry Patrick</h3>
+      <p class="gallery-v2-card-role">Neuroscientist</p>
+    </article>
+    <article class="gallery-v2-card" data-cat="science">
+      <div class="gallery-v2-card-image"><img src="./Images/image11.jpeg" alt="Portrait of Bianca Jones Marlin" loading="lazy"></div>
+      <h3 class="gallery-v2-card-name">Bianca Jones Marlin</h3>
+      <p class="gallery-v2-card-role">Neuroscientist &amp; Geneticist</p>
+    </article>
+    <article class="gallery-v2-card" data-cat="science">
+      <div class="gallery-v2-card-image"><img src="./Images/image12.jpeg" alt="Portrait of Willis Jenkins" loading="lazy"></div>
+      <h3 class="gallery-v2-card-name">Willis Jenkins</h3>
+      <p class="gallery-v2-card-role">Research Scientist</p>
+    </article>
+    <article class="gallery-v2-card" data-cat="technology">
+      <div class="gallery-v2-card-image"></div>
+      <h3 class="gallery-v2-card-name">Coming Soon</h3>
+      <p class="gallery-v2-card-role">Technology Honoree</p>
+    </article>
+    <article class="gallery-v2-card" data-cat="engineering">
+      <div class="gallery-v2-card-image"></div>
+      <h3 class="gallery-v2-card-name">Coming Soon</h3>
+      <p class="gallery-v2-card-role">Engineering Honoree</p>
+    </article>
+    <article class="gallery-v2-card" data-cat="arts">
+      <div class="gallery-v2-card-image"></div>
+      <h3 class="gallery-v2-card-name">Coming Soon</h3>
+      <p class="gallery-v2-card-role">Arts Honoree</p>
+    </article>
+    <article class="gallery-v2-card" data-cat="mathematics">
+      <div class="gallery-v2-card-image"></div>
+      <h3 class="gallery-v2-card-name">Coming Soon</h3>
+      <p class="gallery-v2-card-role">Mathematics Honoree</p>
+    </article>
+  </section>
 
-</section>
+</div>
 
 </main>
 
@@ -169,128 +201,26 @@
   </div>
 </footer>
 
-<!-- Gallery interaction: tab switching + name selection -->
+<!-- Gallery v2: simple category filter across the static grid -->
 <script>
 (function () {
   'use strict';
-
-  // STEAM category data
-  const STEAM = {
-    science: {
-      title: 'Science',
-      desc: 'The study of the physical world through investigation, experimentation, and observation, understanding topics in physics, biology, and chemistry.',
-      honorees: [
-        { name: 'Yasmin Hurd',         role: 'PhD — Chair of Transnational Neuroscience, Director of Addiction Institute', image: './Images/gallery-portrait.jpeg' },
-        { name: 'Alena Analeigh',      role: 'Young Scientist & Innovator',            image: './Images/image13.jpeg' },
-        { name: 'Zach Green',          role: 'Scientist & Entrepreneur',               image: './Images/image6.jpeg' },
-        { name: 'Gentry Patrick',      role: 'Neuroscientist',                         image: './Images/image10.jpeg' },
-        { name: 'Bianca Jones Marlin', role: 'Neuroscientist & Geneticist',            image: './Images/image11.jpeg' },
-        { name: 'Willis Jenkins',      role: 'Research Scientist',                     image: './Images/image12.jpeg' }
-      ]
-    },
-    technology: {
-      title: 'Technology',
-      desc: 'The application of scientific knowledge to develop tools, systems, and processes that solve problems and improve lives.',
-      honorees: [
-        { name: 'Coming Soon', role: 'Honorees for Technology will be announced with the Detroit opening.', image: './Images/image6.jpeg' }
-      ]
-    },
-    engineering: {
-      title: 'Engineering',
-      desc: 'The design and construction of systems, structures, and devices through the creative application of science and mathematics.',
-      honorees: [
-        { name: 'Coming Soon', role: 'Honorees for Engineering will be announced with the Detroit opening.', image: './Images/image12.jpeg' }
-      ]
-    },
-    arts: {
-      title: 'Arts',
-      desc: 'The diverse range of human expression and creativity including visual arts, music, literature, and performance.',
-      honorees: [
-        { name: 'Coming Soon', role: 'Honorees for Arts will be announced with the Detroit opening.', image: './Images/image11.jpeg' }
-      ]
-    },
-    mathematics: {
-      title: 'Mathematics',
-      desc: 'The abstract science of numbers, quantity, and space, applied in many fields including engineering, physics, and economics.',
-      honorees: [
-        { name: 'Coming Soon', role: 'Honorees for Mathematics will be announced with the Detroit opening.', image: './Images/image10.jpeg' }
-      ]
-    }
-  };
-
-  let currentCat = 'science';
-  let currentIndex = 0;
-
-  const portraitImg   = document.getElementById('galleryPortraitImg');
-  const detailName    = document.getElementById('galleryDetailName');
-  const detailRole    = document.getElementById('galleryDetailRole');
-  const steamCat      = document.getElementById('gallerySteamCat');
-  const steamDesc     = document.getElementById('gallerySteamDesc');
-  const namesContainer = document.getElementById('galleryNames');
-  const tabsContainer = document.getElementById('galleryTabs');
-
-  function showHonoree(idx) {
-    const cat = STEAM[currentCat];
-    if (!cat) return;
-    currentIndex = Math.max(0, Math.min(idx, cat.honorees.length - 1));
-    const h = cat.honorees[currentIndex];
-
-    if (portraitImg)  { portraitImg.src = h.image; portraitImg.alt = 'Portrait of ' + h.name; }
-    if (detailName)   detailName.textContent = h.name;
-    if (detailRole)   detailRole.textContent = h.role;
-
-    if (namesContainer) {
-      namesContainer.querySelectorAll('.gallery-name').forEach((btn, i) => {
-        btn.classList.toggle('is-active', i === currentIndex);
+  const tabs = document.querySelectorAll('#galleryTabs .gallery-v2-tab');
+  const cards = document.querySelectorAll('#galleryGrid .gallery-v2-card');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      const cat = tab.dataset.cat;
+      tabs.forEach(t => {
+        const isActive = t === tab;
+        t.classList.toggle('is-active', isActive);
+        t.setAttribute('aria-selected', isActive ? 'true' : 'false');
       });
-    }
-  }
-
-  function showCategory(catKey) {
-    const cat = STEAM[catKey];
-    if (!cat) return;
-    currentCat = catKey;
-    currentIndex = 0;
-
-    if (steamCat)  steamCat.textContent = cat.title;
-    if (steamDesc) steamDesc.textContent = cat.desc;
-
-    // Rebuild name buttons
-    if (namesContainer) {
-      namesContainer.innerHTML = '';
-      cat.honorees.forEach((h, i) => {
-        const btn = document.createElement('button');
-        btn.className = 'gallery-name' + (i === 0 ? ' is-active' : '');
-        btn.dataset.index = i;
-        btn.textContent = h.name;
-        btn.addEventListener('click', () => showHonoree(i));
-        namesContainer.appendChild(btn);
+      cards.forEach(card => {
+        const match = cat === 'all' || card.dataset.cat === cat;
+        card.hidden = !match;
       });
-    }
-
-    // Update tabs active state
-    if (tabsContainer) {
-      tabsContainer.querySelectorAll('.gallery-tab').forEach(tab => {
-        tab.classList.toggle('is-active', tab.dataset.cat === catKey);
-      });
-    }
-
-    showHonoree(0);
-  }
-
-  // Tab click handlers
-  if (tabsContainer) {
-    tabsContainer.querySelectorAll('.gallery-tab').forEach(tab => {
-      tab.addEventListener('click', () => showCategory(tab.dataset.cat));
     });
-  }
-
-  // Initial name click handlers
-  if (namesContainer) {
-    namesContainer.querySelectorAll('.gallery-name').forEach(btn => {
-      btn.addEventListener('click', () => showHonoree(parseInt(btn.dataset.index, 10)));
-    });
-  }
+  });
 })();
 </script>
 
