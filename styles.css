@@ -272,23 +272,22 @@ ul { list-style: none; }
 
 /* ============================================================
    LANDING INTRO OVERLAY (home only)
-   Phase 1: quote (black on white)  ~0.95s total
-   Phase 2: black logo                ~1.0s total
-   Phase 3: fade overlay out          ~0.6s
-   Total: ~3.5s (down from 7.2s)
+   Phase 1: quote (white on black)
+   Phase 2: white logo on black
+   Phase 3: fade overlay out
    ============================================================ */
 body.intro-active { overflow: hidden; }
 
 .intro-overlay {
   position: fixed;
   inset: 0;
-  background: #ffffff;
+  background: var(--color-black);
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  /* Slow original timing: ~7.2s total */
+  /* Total timing: ~7.2s */
   animation: introOverlayOut 0.9s var(--ease-in-out) 6.2s forwards;
 }
 .intro-overlay.skipped {
@@ -316,7 +315,7 @@ body.intro-active { overflow: hidden; }
   font-family: var(--font-display);
   font-style: italic;
   font-weight: 400;
-  color: #0a0a0a;
+  color: var(--color-white);
   font-size: clamp(1.5rem, 3.2vw, 2.625rem);
   line-height: 1.4;
   margin-bottom: var(--space-xl);
@@ -327,7 +326,7 @@ body.intro-active { overflow: hidden; }
   font-weight: 400;
   letter-spacing: 0.7px;
   text-transform: uppercase;
-  color: #6a6560;
+  color: var(--text-muted);
 }
 .intro-logo {
   animation:
@@ -347,7 +346,7 @@ body.intro-active { overflow: hidden; }
   font-weight: 400;
   letter-spacing: 0.7px;
   text-transform: uppercase;
-  color: #8a8580;
+  color: var(--text-muted);
   opacity: 0;
   animation: introSkipIn 0.6s ease 1.4s forwards;
   pointer-events: none;
