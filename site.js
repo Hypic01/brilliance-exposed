@@ -320,12 +320,36 @@
   }
 
   // ===========================================================
+  // Per-page: gallery category filter
+  // ===========================================================
+  function initGalleryFilter() {
+    const tabs = document.querySelectorAll('#galleryTabs .gallery-v2-tab');
+    const cards = document.querySelectorAll('#galleryGrid .gallery-v2-card');
+    if (!tabs.length || !cards.length) return;
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const cat = tab.dataset.cat;
+        tabs.forEach(t => {
+          const isActive = t === tab;
+          t.classList.toggle('is-active', isActive);
+          t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        });
+        cards.forEach(card => {
+          const match = cat === 'all' || card.dataset.cat === cat;
+          card.hidden = !match;
+        });
+      });
+    });
+  }
+
+  // ===========================================================
   // Page init / teardown orchestrators
   // ===========================================================
   function initPage() {
     initHeroCarousel();
     initReveal();
     initForms();
+    initGalleryFilter();
   }
 
   function teardownPage() {
