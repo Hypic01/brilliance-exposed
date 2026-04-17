@@ -1445,6 +1445,12 @@ section { padding: var(--space-3xl) var(--page-pad-x); }
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.gallery-v2-card.is-hiding {
+  opacity: 0;
+  transform: translateY(4px);
+  pointer-events: none;
 }
 .gallery-v2-card[hidden] { display: none; }
 .gallery-v2-card-image {

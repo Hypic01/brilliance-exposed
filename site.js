@@ -334,9 +334,19 @@
           t.classList.toggle('is-active', isActive);
           t.setAttribute('aria-selected', isActive ? 'true' : 'false');
         });
+
+        // Immediately swap visibility, fade in new cards
         cards.forEach(card => {
           const match = cat === 'all' || card.dataset.cat === cat;
-          card.hidden = !match;
+          if (!match) {
+            card.hidden = true;
+            card.classList.remove('is-hiding');
+          } else if (card.hidden) {
+            card.classList.add('is-hiding');
+            card.hidden = false;
+            forceReflow(card);
+            card.classList.remove('is-hiding');
+          }
         });
       });
     });
