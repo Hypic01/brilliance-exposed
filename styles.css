@@ -1341,25 +1341,24 @@ section { padding: var(--space-3xl) var(--page-pad-x); }
    ABOUT PAGE — matches Figma node 1016:794
    ============================================================ */
 
-/* Hero: dramatic portrait left, headline right */
+/* Hero: contained portrait + headline, centered in content container (Figma 1016:794) */
 .about-hero {
-  position: relative;
-  min-height: max(85vh, 620px);
+  max-width: var(--max-content);
+  margin: 0 auto;
+  padding: var(--nav-height) var(--page-pad-x) var(--space-3xl);
   display: grid;
-  grid-template-columns: 38% 1fr;
+  grid-template-columns: minmax(0, 600fr) minmax(0, 640fr);
+  gap: var(--space-3xl);
   align-items: center;
-  overflow: hidden;
   background: var(--color-black);
-  padding-top: var(--nav-height);
 }
 .about-hero-image {
   position: relative;
-  height: 100%;
+  aspect-ratio: 658 / 858;
   overflow: hidden;
+  background: var(--bg-elevated);
 }
 .about-hero-image img {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1374,8 +1373,6 @@ section { padding: var(--space-3xl) var(--page-pad-x); }
   color: var(--color-white);
   text-transform: uppercase;
   letter-spacing: 0.6px;
-  padding: var(--space-3xl) var(--page-pad-x);
-  max-width: 640px;
 }
 
 /* Centered logo interlude between hero and body text */
@@ -1527,14 +1524,11 @@ section { padding: var(--space-3xl) var(--page-pad-x); }
 @media (max-width: 1080px) {
   .about-hero {
     grid-template-columns: 1fr;
-    min-height: auto;
+    padding: var(--nav-height) var(--page-pad-x-md) var(--space-2xl);
+    gap: var(--space-2xl);
   }
   .about-hero-image {
-    height: 50vh;
-    min-height: 360px;
-  }
-  .about-hero-title {
-    padding: var(--space-2xl) var(--page-pad-x-md);
+    aspect-ratio: 4 / 3;
   }
   .about-body {
     grid-template-columns: 1fr;
@@ -1555,6 +1549,7 @@ section { padding: var(--space-3xl) var(--page-pad-x); }
   .about-logo { padding: var(--space-2xl) var(--page-pad-x-md); }
 }
 @media (max-width: 600px) {
+  .about-hero { padding: var(--nav-height) var(--page-pad-x-sm) var(--space-xl); }
   .about-hero-title { font-size: 2rem; }
   .about-creator { padding: var(--space-2xl) var(--page-pad-x-sm); }
   .about-body { padding: 0 var(--page-pad-x-sm) var(--space-2xl); }
