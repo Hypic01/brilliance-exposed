@@ -3321,6 +3321,270 @@ body.modal-open .hero-portrait-slide.is-active {
 }
 
 /* ============================================================
+   GALLERY SUB-NAV — Portraits / Interviews toggle on gallery.html
+   ============================================================ */
+.gallery-subnav {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  gap: var(--space-2xl);
+  justify-content: center;
+  margin: 0 auto var(--space-2xl);
+  padding: 0 var(--page-pad-x) var(--space-md);
+  border-bottom: 1px solid var(--border-visible);
+  max-width: var(--max-content);
+}
+.gallery-subnav-link {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.gallery-subnav-link:hover { color: var(--color-white); }
+.gallery-subnav-link.is-active,
+.gallery-subnav-link[aria-current="page"] {
+  color: var(--color-white);
+  border-bottom-color: var(--color-gold);
+}
+
+/* ============================================================
+   INTERVIEWS PAGE
+   Figma node 238:194 — alternating image / text rows, category filter.
+   ============================================================ */
+.interviews-page {
+  max-width: var(--max-content);
+  margin: 0 auto;
+  padding: calc(var(--nav-height) + var(--space-3xl)) var(--page-pad-x) calc(var(--space-3xl) * 1.5);
+}
+
+.interviews-header { margin-bottom: var(--space-3xl); }
+
+.interviews-title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(3.5rem, 9vw, 8rem);  /* Figma: 128px @ 1280 */
+  line-height: 1;
+  letter-spacing: 0.7px;
+  color: var(--color-white);
+  margin-bottom: var(--space-2xl);
+}
+
+.interviews-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--border-subtle);
+  flex-wrap: wrap;
+}
+
+.interviews-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xl);
+  align-items: center;
+}
+
+.filter-chip {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+.filter-chip:hover { color: var(--color-white); }
+.filter-chip.is-active {
+  color: var(--color-white);
+  border-bottom-color: var(--color-gold);
+}
+.filter-chip.is-trigger {
+  color: var(--color-gold);
+}
+.filter-chip.is-trigger:hover { color: var(--color-gold-hover); }
+
+.interviews-viewing {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--color-white);
+  white-space: nowrap;
+}
+
+/* ----- Interview list ----- */
+.interviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+.interview-row {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);  /* Figma: 697 / 814 */
+  gap: var(--space-2xl);
+  align-items: stretch;
+  transition: opacity 0.4s var(--ease-out-expo), transform 0.4s var(--ease-out-expo);
+}
+.interview-row.is-reversed .interview-portrait { order: 2; }
+.interview-row.is-reversed .interview-meta     { order: 1; }
+.interview-row.is-hidden {
+  display: none;
+}
+
+/* Portrait card — bordered frame with FIRST LAST overlay */
+.interview-portrait {
+  position: relative;
+  aspect-ratio: 697 / 414;
+  border: 1px solid var(--border-visible);
+  background: var(--color-black);
+  overflow: hidden;
+}
+.interview-portrait-frame {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+.interview-portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 22%;
+  filter: grayscale(0.05);
+  transition: transform 1s var(--ease-out-expo);
+}
+.interview-row:hover .interview-portrait-frame img {
+  transform: scale(1.03);
+}
+
+.interview-portrait-name {
+  position: absolute;
+  inset: auto var(--space-xl) var(--space-md) var(--space-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(2rem, 4.5vw, 3.75rem);  /* Figma: 60px */
+  line-height: 1;
+  letter-spacing: 0.5px;
+  color: var(--color-white);
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55);
+  pointer-events: none;
+}
+
+/* Text card — title, body, date, desc, play */
+.interview-meta {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: var(--space-xl) 0;
+  gap: var(--space-md);
+}
+.interview-date {
+  position: absolute;
+  top: var(--space-xl);
+  right: 0;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.7px;
+  color: var(--color-white);
+}
+.interview-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);  /* Figma: 40px */
+  line-height: 1.15;
+  color: var(--color-white);
+  letter-spacing: 0.4px;
+  max-width: 80%;
+}
+.interview-subtitle {
+  display: block;
+  font-style: italic;
+  opacity: 0.92;
+}
+.interview-body {
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  max-width: 36ch;
+}
+.interview-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: var(--space-lg);
+  padding-top: var(--space-md);
+}
+.interview-desc {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.interview-play {
+  position: relative;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.6vw, 2.5rem);  /* Figma: 40px */
+  line-height: 1;
+  letter-spacing: 0.4px;
+  color: var(--color-white);
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-white);
+  transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s var(--ease-out-expo);
+}
+.interview-play:hover,
+.interview-play:focus-visible {
+  color: var(--color-gold);
+  border-bottom-color: var(--color-gold);
+}
+.interview-play[aria-disabled="true"] {
+  color: var(--text-muted);
+  border-bottom-color: var(--text-muted);
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Tablet / mobile — stack image above text */
+@media (max-width: 900px) {
+  .interview-row,
+  .interview-row.is-reversed {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  .interview-row.is-reversed .interview-portrait { order: 0; }
+  .interview-row.is-reversed .interview-meta     { order: 1; }
+  .interview-meta { padding: 0 0 var(--space-md); }
+  .interview-date {
+    position: static;
+    margin-bottom: var(--space-xs);
+  }
+  .interview-title { max-width: 100%; }
+}
+
+@media (max-width: 600px) {
+  .interviews-page {
+    padding: calc(var(--nav-height) + var(--space-2xl)) var(--page-pad-x-sm) var(--space-3xl);
+  }
+  .interviews-filter { gap: var(--space-lg); }
+  .interview-portrait-name {
+    inset: auto var(--space-md) var(--space-sm) var(--space-md);
+  }
+}
+
+/* ============================================================
    FOOTER
    ============================================================ */
 footer {
