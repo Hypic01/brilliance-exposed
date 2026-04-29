@@ -3429,13 +3429,13 @@ body.modal-open .hero-portrait-slide.is-active {
 
 .interview-row {
   display: grid;
-  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);  /* Figma: 697 / 814 */
+  grid-template-columns: 1fr 1fr;
   gap: var(--space-2xl);
   align-items: stretch;
   transition: opacity 0.4s var(--ease-out-expo), transform 0.4s var(--ease-out-expo);
 }
-.interview-row.is-reversed .interview-portrait { order: 2; }
-.interview-row.is-reversed .interview-meta     { order: 1; }
+.interview-row.is-reversed .interview-portrait { grid-column: 2; }
+.interview-row.is-reversed .interview-meta     { grid-column: 1; grid-row: 1; justify-content: flex-end; }
 .interview-row.is-hidden {
   display: none;
 }
@@ -3481,49 +3481,61 @@ body.modal-open .hero-portrait-slide.is-active {
   pointer-events: none;
 }
 
-/* Text card — title, body, date, desc, play */
+/* Text card — title, body, date, desc, play.
+   Outer .interview-meta fills the row column; .interview-meta-inner
+   constrains the cluster width so date and play stay tight to the
+   title/body cluster instead of slamming the card's outer edge. */
 .interview-meta {
-  position: relative;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  align-items: center;
   padding: var(--space-xl) 0;
-  gap: var(--space-md);
 }
-.interview-date {
-  position: absolute;
-  top: var(--space-xl);
-  right: 0;
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  letter-spacing: 0.7px;
-  color: var(--color-white);
+.interview-meta-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  width: 100%;
+  max-width: 460px;
+}
+.interview-meta-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-md);
 }
 .interview-title {
   font-family: var(--font-display);
   font-weight: 400;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);  /* Figma: 40px */
+  font-size: clamp(1.75rem, 2.6vw, 2.5rem);  /* Figma: 40px */
   line-height: 1.15;
   color: var(--color-white);
   letter-spacing: 0.4px;
-  max-width: 80%;
 }
 .interview-subtitle {
   display: block;
   font-style: italic;
   opacity: 0.92;
 }
+.interview-date {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.7px;
+  color: var(--color-white);
+  white-space: nowrap;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
 .interview-body {
   font-family: var(--font-body);
   font-size: 0.875rem;
   line-height: 1.65;
   color: var(--text-secondary);
-  max-width: 36ch;
 }
 .interview-footer {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-top: var(--space-lg);
+  gap: var(--space-md);
   padding-top: var(--space-md);
 }
 .interview-desc {
@@ -3534,16 +3546,16 @@ body.modal-open .hero-portrait-slide.is-active {
   color: var(--text-muted);
 }
 .interview-play {
-  position: relative;
+  display: inline-block;
   font-family: var(--font-body);
   font-weight: 400;
-  font-size: clamp(1.5rem, 2.6vw, 2.5rem);  /* Figma: 40px */
+  font-size: clamp(1.5rem, 2.2vw, 2.25rem);  /* Figma: 40px */
   line-height: 1;
   letter-spacing: 0.4px;
   color: var(--color-white);
   padding-bottom: 4px;
   border-bottom: 1px solid var(--color-white);
-  transition: color 0.3s ease, border-color 0.3s ease, transform 0.3s var(--ease-out-expo);
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 .interview-play:hover,
 .interview-play:focus-visible {
@@ -3564,14 +3576,9 @@ body.modal-open .hero-portrait-slide.is-active {
     grid-template-columns: 1fr;
     gap: var(--space-lg);
   }
-  .interview-row.is-reversed .interview-portrait { order: 0; }
-  .interview-row.is-reversed .interview-meta     { order: 1; }
+  .interview-row.is-reversed .interview-portrait { grid-column: 1; grid-row: 1; }
+  .interview-row.is-reversed .interview-meta     { grid-column: 1; grid-row: 2; }
   .interview-meta { padding: 0 0 var(--space-md); }
-  .interview-date {
-    position: static;
-    margin-bottom: var(--space-xs);
-  }
-  .interview-title { max-width: 100%; }
 }
 
 @media (max-width: 600px) {
