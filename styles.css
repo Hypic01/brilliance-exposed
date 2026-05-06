@@ -661,7 +661,7 @@ main {
   opacity: 1;
   transform: scale(1);               /* reset — animation takes over from here */
   filter: blur(0);
-  animation: kenBurns 5.5s cubic-bezier(0.25, 0, 0.5, 1) forwards;
+  animation: kenBurns 4.5s cubic-bezier(0.25, 0, 0.5, 1) forwards;
 }
 
 .hero-portrait-slide img {
