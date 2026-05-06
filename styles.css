@@ -687,7 +687,7 @@ main {
   font-weight: 500;
   font-size: clamp(1rem, 2vw, 1.5rem);
   letter-spacing: 0.04em;
-  color: rgba(224, 224, 224, 0.55);
+  color: rgba(255, 255, 255, 0.85);
   line-height: 1.15;
   pointer-events: none;
   white-space: normal;
