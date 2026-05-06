@@ -650,9 +650,9 @@ main {
   transform: scale(1.5);             /* continues growing as it disappears */
   filter: blur(12px);                /* soft dissolution */
   transition:
-    opacity   1.0s var(--ease-out-expo),
-    transform 1.3s var(--ease-out-expo),
-    filter    1.2s var(--ease-out-expo);
+    opacity   1.5s var(--ease-in-out),
+    transform 1.5s var(--ease-out-expo),
+    filter    1.4s var(--ease-out-expo);
 }
 
 /* Active (visible) state — sharp, at scale 1, no blur.
@@ -692,12 +692,16 @@ main {
   pointer-events: none;
   white-space: normal;
   opacity: 0;
-  transition: opacity 0.6s var(--ease-out-expo, ease-out);
-  transition-delay: 0.4s;
+  /* Default state = fade-OUT path. No delay; fades in lockstep with slide. */
+  transition: opacity 0.9s var(--ease-in-out, ease-out);
   z-index: 3;
 }
 
-.hero-portrait-slide.is-active .hero-discipline { opacity: 1; }
+.hero-portrait-slide.is-active .hero-discipline {
+  opacity: 1;
+  /* Active state = fade-IN path. Delayed so the photo arrives first, then label. */
+  transition-delay: 0.4s;
+}
 
 /* :nth-of-type counts <span> siblings only — the <img> in each slide doesn't count. So the first label = (1), second = (2), third = (3). */
 .hero-portrait-slide.is-active .hero-discipline:nth-of-type(2) { transition-delay: 0.9s; }
