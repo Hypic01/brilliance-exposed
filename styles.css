@@ -684,11 +684,11 @@ main {
   max-width: min(45%, 22ch);
   font-family: var(--font-display, 'Cormorant Garamond'), serif;
   font-style: italic;
-  font-weight: 500;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  letter-spacing: 0.04em;
+  font-weight: 400;
+  font-size: 1.125rem; /* 18px — Italic Quote per FIGMA_DESIGN_SYSTEM.md */
+  letter-spacing: 0;
   color: rgba(255, 255, 255, 0.85);
-  line-height: 1.15;
+  line-height: 1.4;
   pointer-events: none;
   white-space: normal;
   opacity: 0;
