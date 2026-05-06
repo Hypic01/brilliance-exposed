@@ -225,6 +225,13 @@
   let heroClickFn = null;
   let heroKeyFn = null;
 
+  // ===========================================================
+  // HERO LABELS (v1, placeholder data)
+  // See: docs/superpowers/specs/2026-05-06-hero-discipline-labels-design.md
+  // Labels are static HTML inside each .hero-portrait-slide and inherit
+  // .is-active state automatically. v2 will replace placeholders with
+  // Alexis's real per-subject metadata (separate spec).
+  // ===========================================================
   function initHeroCarousel() {
     const heroPortrait = document.getElementById('heroPortrait');
     if (!heroPortrait) return;
