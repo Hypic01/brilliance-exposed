@@ -682,7 +682,7 @@ main {
   top: var(--y);
   transform: translate(-50%, -50%);
   max-width: min(45%, 22ch);
-  font-family: var(--font-serif, 'Cormorant Garamond'), serif;
+  font-family: var(--font-display, 'Cormorant Garamond'), serif;
   font-style: italic;
   font-weight: 500;
   font-size: clamp(1rem, 2vw, 1.5rem);
@@ -699,6 +699,7 @@ main {
 
 .hero-portrait-slide.is-active .hero-discipline { opacity: 1; }
 
+/* :nth-of-type counts <span> siblings only — the <img> in each slide doesn't count. So the first label = (1), second = (2), third = (3). */
 .hero-portrait-slide.is-active .hero-discipline:nth-of-type(2) { transition-delay: 0.9s; }
 .hero-portrait-slide.is-active .hero-discipline:nth-of-type(3) { transition-delay: 1.4s; }
 
