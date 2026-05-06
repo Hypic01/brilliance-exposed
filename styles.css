@@ -685,7 +685,7 @@ main {
   font-family: var(--font-display, 'Cormorant Garamond'), serif;
   font-style: italic;
   font-weight: 400;
-  font-size: 1.125rem; /* 18px — Italic Quote per FIGMA_DESIGN_SYSTEM.md */
+  font-size: 1.6875rem; /* 27px — 1.5x of design system Italic Quote (18px) per visual feedback */
   letter-spacing: 0;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.4;
