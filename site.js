@@ -255,7 +255,7 @@
 
     function start() {
       if (carouselTimer) return;
-      carouselTimer = setInterval(() => showSlide(currentSlide + 1), 4000);
+      carouselTimer = setInterval(() => showSlide(currentSlide + 1), 3000);
     }
 
     showSlide(0);

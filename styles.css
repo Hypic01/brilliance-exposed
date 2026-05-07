@@ -661,7 +661,7 @@ main {
   opacity: 1;
   transform: scale(1);               /* reset — animation takes over from here */
   filter: blur(0);
-  animation: kenBurns 4.5s cubic-bezier(0.25, 0, 0.5, 1) forwards;
+  animation: kenBurns 3.5s cubic-bezier(0.25, 0, 0.5, 1) forwards;
 }
 
 .hero-portrait-slide img {
@@ -700,12 +700,12 @@ main {
 .hero-portrait-slide.is-active .hero-discipline {
   opacity: 1;
   /* Active state = fade-IN path. Delayed so the photo arrives first, then label. */
-  transition-delay: 0.4s;
+  transition-delay: 0.5s;
 }
 
 /* :nth-of-type counts <span> siblings only — the <img> in each slide doesn't count. So the first label = (1), second = (2), third = (3). */
-.hero-portrait-slide.is-active .hero-discipline:nth-of-type(2) { transition-delay: 0.9s; }
-.hero-portrait-slide.is-active .hero-discipline:nth-of-type(3) { transition-delay: 1.4s; }
+.hero-portrait-slide.is-active .hero-discipline:nth-of-type(2) { transition-delay: 1.0s; }
+.hero-portrait-slide.is-active .hero-discipline:nth-of-type(3) { transition-delay: 1.5s; }
 
 .hero-discipline[data-anchor='right']  { transform: translate(-100%, -50%); }
 .hero-discipline[data-anchor='left']   { transform: translate(0, -50%); }
