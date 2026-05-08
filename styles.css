@@ -630,6 +630,15 @@ main {
   cursor: pointer;
   z-index: 2;
 }
+
+/* Suppress the global gold focus-ring on the hero — its 3px outline-offset
+   creates a visible square frame around the photo on click/focus that
+   competes with the cinematic feel. Keyboard users can still tab through;
+   the hero remains focusable, it just doesn't render the gold outline. */
+.hero-portrait:focus,
+.hero-portrait:focus-visible {
+  outline: none;
+}
 /* Each slide IS the frame. The Ken Burns animation scales the entire
    slide (frame + image together) so the whole square approaches the
    viewer — not just the image cropping inside a static box.
