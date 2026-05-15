@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<style>html,body{background:#000;color:#e0e0e0}html{color-scheme:dark}</style>
+<title>Interviews — Brilliance Exposed</title>
+<meta name="description" content="Video interviews with the honorees of Brilliance Exposed — conversations with Black-presenting professionals in STEAM.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ========== NAVIGATION ========== -->
+<header class="nav" id="navbar">
+  <a href="index.html" class="nav-logo" aria-label="Brilliance Exposed — Home">
+    <img src="./logo/logo-white.png" alt="Brilliance Exposed">
+  </a>
+  <nav aria-label="Primary">
+    <ul class="nav-links">
+      <li><a href="about.html">About</a></li>
+      <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="blog.html">Journal</a></li>
+    </ul>
+  </nav>
+  <a href="donate.html" class="nav-donate">Donate</a>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navMobilePanel">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="nav-backdrop" id="navBackdrop"></div>
+
+<aside class="nav-mobile-panel" id="navMobilePanel" aria-hidden="true">
+  <a href="about.html">About</a>
+  <a href="gallery.html" aria-current="page">Gallery</a>
+  <a href="events.html">Events</a>
+  <a href="shop.html">Shop</a>
+  <a href="contact.html">Contact</a>
+  <a href="blog.html">Journal</a>
+  <a href="donate.html" class="btn-gold">Donate</a>
+</aside>
+
+<main id="main">
+
+<section class="interviews-page">
+
+  <!-- ========== HEADER ========== -->
+  <header class="interviews-header">
+    <h1 class="interviews-title">Interviews</h1>
+
+    <div class="interviews-toolbar">
+      <div class="interviews-filter" role="tablist" aria-label="Filter interviews by category">
+        <button class="filter-chip is-trigger" type="button" aria-expanded="true">+Categories</button>
+        <button class="filter-chip is-active" type="button" data-cat="all">All</button>
+        <button class="filter-chip" type="button" data-cat="science">Science</button>
+        <button class="filter-chip" type="button" data-cat="technology">Technology</button>
+        <button class="filter-chip" type="button" data-cat="engineering">Engineering</button>
+        <button class="filter-chip" type="button" data-cat="arts">Arts</button>
+        <button class="filter-chip" type="button" data-cat="mathematics">Mathematics</button>
+      </div>
+      <span class="interviews-viewing" id="interviewsViewing">Viewing: All</span>
+    </div>
+  </header>
+
+  <!-- ========== INTERVIEW LIST ========== -->
+  <div class="interviews-list" id="interviewsList">
+
+    <!-- Row 1 — image left -->
+    <article class="interview-row" data-cat="science">
+      <div class="interview-portrait">
+        <div class="interview-portrait-frame">
+          <img src="./Images/image11.jpeg" alt="Portrait of First Last" loading="lazy">
+        </div>
+        <div class="interview-portrait-name" aria-hidden="true">
+          <span>FIRST</span>
+          <span>LAST</span>
+        </div>
+      </div>
+      <div class="interview-meta">
+        <div class="interview-meta-inner">
+          <header class="interview-meta-head">
+            <h2 class="interview-title">
+              Title
+              <span class="interview-subtitle">w/ First Last</span>
+            </h2>
+            <span class="interview-date">JAN 1, 2026</span>
+          </header>
+          <p class="interview-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="interview-footer">
+            <span class="interview-desc">Desc 1</span>
+            <a href="#" class="interview-play" aria-disabled="true" aria-label="Play interview (coming soon)">Play</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Row 2 — image right -->
+    <article class="interview-row is-reversed" data-cat="arts">
+      <div class="interview-portrait">
+        <div class="interview-portrait-frame">
+          <img src="./Images/image13.jpeg" alt="Portrait of First Last" loading="lazy">
+        </div>
+        <div class="interview-portrait-name" aria-hidden="true">
+          <span>FIRST</span>
+          <span>LAST</span>
+        </div>
+      </div>
+      <div class="interview-meta">
+        <div class="interview-meta-inner">
+          <header class="interview-meta-head">
+            <h2 class="interview-title">
+              Title
+              <span class="interview-subtitle">w/ First Last</span>
+            </h2>
+            <span class="interview-date">JAN 1, 2026</span>
+          </header>
+          <p class="interview-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="interview-footer">
+            <span class="interview-desc">Desc 1</span>
+            <a href="#" class="interview-play" aria-disabled="true" aria-label="Play interview (coming soon)">Play</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Row 3 — image left -->
+    <article class="interview-row" data-cat="engineering">
+      <div class="interview-portrait">
+        <div class="interview-portrait-frame">
+          <img src="./Images/image10.jpeg" alt="Portrait of First Last" loading="lazy">
+        </div>
+        <div class="interview-portrait-name" aria-hidden="true">
+          <span>FIRST</span>
+          <span>LAST</span>
+        </div>
+      </div>
+      <div class="interview-meta">
+        <div class="interview-meta-inner">
+          <header class="interview-meta-head">
+            <h2 class="interview-title">
+              Title
+              <span class="interview-subtitle">w/ First Last</span>
+            </h2>
+            <span class="interview-date">JAN 1, 2026</span>
+          </header>
+          <p class="interview-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="interview-footer">
+            <span class="interview-desc">Desc 1</span>
+            <a href="#" class="interview-play" aria-disabled="true" aria-label="Play interview (coming soon)">Play</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Row 4 — image right -->
+    <article class="interview-row is-reversed" data-cat="technology">
+      <div class="interview-portrait">
+        <div class="interview-portrait-frame">
+          <img src="./Images/image12.jpeg" alt="Portrait of First Last" loading="lazy">
+        </div>
+        <div class="interview-portrait-name" aria-hidden="true">
+          <span>FIRST</span>
+          <span>LAST</span>
+        </div>
+      </div>
+      <div class="interview-meta">
+        <div class="interview-meta-inner">
+          <header class="interview-meta-head">
+            <h2 class="interview-title">
+              Title
+              <span class="interview-subtitle">w/ First Last</span>
+            </h2>
+            <span class="interview-date">JAN 1, 2026</span>
+          </header>
+          <p class="interview-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="interview-footer">
+            <span class="interview-desc">Desc 1</span>
+            <a href="#" class="interview-play" aria-disabled="true" aria-label="Play interview (coming soon)">Play</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Row 5 — image left -->
+    <article class="interview-row" data-cat="mathematics">
+      <div class="interview-portrait">
+        <div class="interview-portrait-frame">
+          <img src="./Images/image6.jpeg" alt="Portrait of First Last" loading="lazy">
+        </div>
+        <div class="interview-portrait-name" aria-hidden="true">
+          <span>FIRST</span>
+          <span>LAST</span>
+        </div>
+      </div>
+      <div class="interview-meta">
+        <div class="interview-meta-inner">
+          <header class="interview-meta-head">
+            <h2 class="interview-title">
+              Title
+              <span class="interview-subtitle">w/ First Last</span>
+            </h2>
+            <span class="interview-date">JAN 1, 2026</span>
+          </header>
+          <p class="interview-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+          <div class="interview-footer">
+            <span class="interview-desc">Desc 1</span>
+            <a href="#" class="interview-play" aria-disabled="true" aria-label="Play interview (coming soon)">Play</a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="./logo/logo-white.png" alt="Brilliance Exposed">
+        <p class="footer-tagline">An international photographic exhibition honoring Black-presenting professionals in STEAM.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="interviews.html" aria-current="page">Interviews</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog.html">Journal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="donate.html">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#press">Press</a></li>
+          <li><a href="contact.html#partnerships">Partnerships</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-newsletter">
+        <h4>Stay Connected</h4>
+        <p>Exhibition updates delivered to your inbox.</p>
+        <form class="newsletter-form" data-form="newsletter">
+          <input type="email" placeholder="Email address" aria-label="Email address" required>
+          <button type="submit" aria-label="Subscribe">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M3 8h10M9 4l4 4-4 4"/>
+            </svg>
+          </button>
+        </form>
+        <p class="newsletter-status" data-form-status></p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copyright">&copy; 2026 Brilliance Exposed. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#" aria-disabled="true">Instagram</a>
+        <a href="#" aria-disabled="true">Facebook</a>
+        <a href="#" aria-disabled="true">X / Twitter</a>
+        <a href="#" aria-disabled="true">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Interviews: category filter -->
+<script>
+(function () {
+  'use strict';
+  const chips = document.querySelectorAll('.interviews-filter .filter-chip[data-cat]');
+  const rows  = document.querySelectorAll('#interviewsList .interview-row');
+  const viewing = document.getElementById('interviewsViewing');
+
+  function setActive(chip) {
+    chips.forEach(c => c.classList.toggle('is-active', c === chip));
+  }
+
+  function applyFilter(cat) {
+    rows.forEach(row => {
+      const match = cat === 'all' || row.dataset.cat === cat;
+      row.classList.toggle('is-hidden', !match);
+    });
+    if (viewing) {
+      const label = cat === 'all' ? 'All' : cat.charAt(0).toUpperCase() + cat.slice(1);
+      viewing.textContent = 'Viewing: ' + label;
+    }
+  }
+
+  chips.forEach(chip => {
+    chip.addEventListener('click', () => {
+      setActive(chip);
+      applyFilter(chip.dataset.cat);
+    });
+  });
+})();
+</script>
+
+<script src="site.js"></script>
+</body>
+</html>
