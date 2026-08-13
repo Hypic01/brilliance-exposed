@@ -6,30 +6,33 @@
 <meta name="color-scheme" content="dark">
 <style>html,body{background:#000;color:#e0e0e0}html{color-scheme:dark}</style>
 <title>Journal — Brilliance Exposed</title>
-<meta name="description" content="Insights, stories, and perspectives from the world of Brilliance Exposed.">
+<meta name="description" content="The Brilliance Exposed journal — dispatches from the darkroom, honoree stories, and notes from the exhibition tour.">
+<link rel="icon" href="./logo/logo-white.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
+<div class="grain" aria-hidden="true"></div>
+
 <!-- ========== NAVIGATION ========== -->
 <header class="nav" id="navbar">
   <a href="index.html" class="nav-logo" aria-label="Brilliance Exposed — Home">
-    <img src="./logo/logo-white.png" alt="Brilliance Exposed">
+    <span class="nav-logo-word">Brilliance<em>Exposed</em></span>
   </a>
   <nav aria-label="Primary">
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="events.html">Events</a></li>
+      <li><a href="events.html">Visit</a></li>
       <li><a href="shop.html">Shop</a></li>
+      <li><a href="blog.html">Journal</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li><a href="blog.html" aria-current="page">Journal</a></li>
     </ul>
   </nav>
   <a href="donate.html" class="nav-donate">Donate</a>
@@ -43,137 +46,136 @@
 <aside class="nav-mobile-panel" id="navMobilePanel" aria-hidden="true">
   <a href="about.html">About</a>
   <a href="gallery.html">Gallery</a>
-  <a href="events.html">Events</a>
+  <a href="events.html">Visit</a>
   <a href="shop.html">Shop</a>
+  <a href="blog.html">Journal</a>
   <a href="contact.html">Contact</a>
-  <a href="blog.html" aria-current="page">Journal</a>
   <a href="donate.html" class="btn-gold">Donate</a>
 </aside>
 
 <main id="main">
 
-<div class="blog-page">
-
-  <!-- ========== HEADER ========== -->
-  <div class="blog-header reveal">
-    <h1 class="blog-title">Journal</h1>
-    <p class="blog-subtitle">
-      Insights, stories, and perspectives from the world of contemporary art and photography. Explore our latest exhibitions, artist spotlights, and creative techniques.
-    </p>
+<!-- ========== PAGE HEAD ========== -->
+<div class="page-head">
+  <div class="container">
+    <p class="page-head-eyebrow label label--gold reveal is-visible">The Journal</p>
+    <h1 class="page-head-title reveal is-visible">Dispatches From<br><em>the Darkroom</em></h1>
+    <p class="page-head-intro reveal is-visible reveal-d1">What happens between the shutter and the gallery wall &mdash; honoree stories, notes from the tour, and the craft behind the portraits.</p>
   </div>
-
-  <!-- ========== BLOG CARD GRID ========== -->
-  <div class="blog-grid">
-
-    <a href="blog-post.html" class="blog-card reveal reveal-d1">
-      <div class="blog-card-image">
-        <img src="./Images/blog-1.jpeg" alt="The Art of Capturing Brilliance" loading="lazy">
-      </div>
-      <div class="blog-card-content">
-        <p class="blog-card-meta">Exhibition Insights &bull; February 27, 2026</p>
-        <h2 class="blog-card-heading">The Art of Capturing Brilliance</h2>
-        <p class="blog-card-excerpt">Curabitur elementum imperdiet consectetur. Nullam eros nisl, commodo a cursus in, egestas vitae nisl. Etiam ultrica. Morbi vehicula imperdiet lacinia.</p>
-        <span class="blog-card-link">Read More</span>
-      </div>
-    </a>
-
-    <a href="blog-post.html" class="blog-card reveal reveal-d2">
-      <div class="blog-card-image">
-        <img src="./Images/blog-2.jpeg" alt="Monochrome Mastery" loading="lazy">
-      </div>
-      <div class="blog-card-content">
-        <p class="blog-card-meta">Exhibition Insights &bull; February 27, 2026</p>
-        <h2 class="blog-card-heading">Monochrome Mastery</h2>
-        <p class="blog-card-excerpt">Curabitur elementum imperdiet consectetur. Nullam eros nisl, commodo a cursus in, egestas vitae nisl. Etiam ultrica. Morbi vehicula imperdiet lacinia.</p>
-        <span class="blog-card-link">Read More</span>
-      </div>
-    </a>
-
-    <a href="blog-post.html" class="blog-card reveal reveal-d3">
-      <div class="blog-card-image">
-        <img src="./Images/blog-3.jpeg" alt="Abstract Expressions" loading="lazy">
-      </div>
-      <div class="blog-card-content">
-        <p class="blog-card-meta">Exhibition Insights &bull; February 27, 2026</p>
-        <h2 class="blog-card-heading">Abstract Expressions</h2>
-        <p class="blog-card-excerpt">Curabitur elementum imperdiet consectetur. Nullam eros nisl, commodo a cursus in, egestas vitae nisl. Etiam ultrica. Morbi vehicula imperdiet lacinia.</p>
-        <span class="blog-card-link">Read More</span>
-      </div>
-    </a>
-
-    <a href="blog-post.html" class="blog-card reveal reveal-d4">
-      <div class="blog-card-image">
-        <img src="./Images/blog-4.jpeg" alt="Sculptural Perspectives" loading="lazy">
-      </div>
-      <div class="blog-card-content">
-        <p class="blog-card-meta">Exhibition Insights &bull; February 27, 2026</p>
-        <h2 class="blog-card-heading">Sculptural Perspectives</h2>
-        <p class="blog-card-excerpt">Curabitur elementum imperdiet consectetur. Nullam eros nisl, commodo a cursus in, egestas vitae nisl. Etiam ultrica. Morbi vehicula imperdiet lacinia.</p>
-        <span class="blog-card-link">Read More</span>
-      </div>
-    </a>
-
-    <a href="blog-post.html" class="blog-card reveal reveal-d1">
-      <div class="blog-card-image">
-        <img src="./Images/blog-6.jpeg" alt="The Art of Capturing Brilliance" loading="lazy">
-      </div>
-      <div class="blog-card-content">
-        <p class="blog-card-meta">Exhibition Insights &bull; February 27, 2026</p>
-        <h2 class="blog-card-heading">The Art of Capturing Brilliance</h2>
-        <p class="blog-card-excerpt">Curabitur elementum imperdiet consectetur. Nullam eros nisl, commodo a cursus in, egestas vitae nisl. Etiam ultrica. Morbi vehicula imperdiet lacinia.</p>
-        <span class="blog-card-link">Read More</span>
-      </div>
-    </a>
-
-    <a href="blog-post.html" class="blog-card reveal reveal-d2">
-      <div class="blog-card-image">
-        <img src="./Images/blog-5.jpeg" alt="Light and Shadow" loading="lazy">
-      </div>
-      <div class="blog-card-content">
-        <p class="blog-card-meta">Exhibition Insights &bull; February 27, 2026</p>
-        <h2 class="blog-card-heading">Light and Shadow</h2>
-        <p class="blog-card-excerpt">Curabitur elementum imperdiet consectetur. Nullam eros nisl, commodo a cursus in, egestas vitae nisl. Etiam ultrica. Morbi vehicula imperdiet lacinia.</p>
-        <span class="blog-card-link">Read More</span>
-      </div>
-    </a>
-
-    <a href="blog-post.html" class="blog-card reveal reveal-d3">
-      <div class="blog-card-image">
-        <img src="./Images/blog-7.jpeg" alt="Behind the Scenes" loading="lazy">
-      </div>
-      <div class="blog-card-content">
-        <p class="blog-card-meta">Exhibition Insights &bull; February 27, 2026</p>
-        <h2 class="blog-card-heading">Behind the Scenes</h2>
-        <p class="blog-card-excerpt">Curabitur elementum imperdiet consectetur. Nullam eros nisl, commodo a cursus in, egestas vitae nisl. Etiam ultrica. Morbi vehicula imperdiet lacinia.</p>
-        <span class="blog-card-link">Read More</span>
-      </div>
-    </a>
-
-    <a href="blog-post.html" class="blog-card reveal reveal-d4">
-      <div class="blog-card-image">
-        <img src="./Images/blog-1.jpeg" alt="The Art of Capturing Brilliance" loading="lazy">
-      </div>
-      <div class="blog-card-content">
-        <p class="blog-card-meta">Exhibition Insights &bull; February 27, 2026</p>
-        <h2 class="blog-card-heading">The Art of Brilliance</h2>
-        <p class="blog-card-excerpt">Curabitur elementum imperdiet consectetur. Nullam eros nisl, commodo a cursus in, egestas vitae nisl. Etiam ultrica. Morbi vehicula imperdiet lacinia.</p>
-        <span class="blog-card-link">Read More</span>
-      </div>
-    </a>
-
-  </div>
-
 </div>
 
+<!-- ========== JOURNAL GRID ========== -->
+<section class="section" style="padding-top: clamp(24px, 4vw, 48px);" aria-label="Journal entries">
+  <div class="container">
+    <div class="blog-grid">
+
+      <a href="blog-post.html" class="blog-card is-featured reveal">
+        <span class="blog-card-figure develop reveal">
+          <img src="./Images/blog-1.jpeg" alt="An ornate mirror in the Paris gallery — final days of the international debut" loading="lazy">
+        </span>
+        <span>
+          <span class="blog-card-meta">The Tour &bull; August 2026</span>
+          <span class="blog-card-title" style="display:block;">Final Days in Paris</span>
+          <span class="blog-card-excerpt" style="display:block;">Notes from Galerie Brilliance as the international debut enters its last week &mdash; the guest book, the repeat visitors, and what crosses the Atlantic next for the New York reception.</span>
+          <span class="blog-card-link">Read the Story</span>
+        </span>
+      </a>
+
+      <a href="blog-post.html" class="blog-card reveal">
+        <span class="blog-card-figure develop reveal">
+          <img src="./Images/image15.jpeg" alt="An honoree with his saxophone — from a portrait sitting" loading="lazy">
+        </span>
+        <span class="blog-card-meta">Behind the Lens &bull; February 2026</span>
+        <span class="blog-card-title" style="display:block;">The Art of Capturing Brilliance</span>
+        <span class="blog-card-excerpt" style="display:block;">How do you photograph a mind? Michele Zousmer on the sittings behind the 2026 series.</span>
+        <span class="blog-card-link">Read the Story</span>
+      </a>
+
+      <a href="blog-post.html" class="blog-card reveal">
+        <span class="blog-card-figure develop reveal">
+          <img src="./Images/image17.jpeg" alt="An honoree seated in monochrome — from the series" loading="lazy">
+        </span>
+        <span class="blog-card-meta">Craft &bull; February 2026</span>
+        <span class="blog-card-title" style="display:block;">Why Black and White</span>
+        <span class="blog-card-excerpt" style="display:block;">Color flatters. Monochrome reveals. On the exhibition&rsquo;s choice to strip every portrait to light, shadow, and character.</span>
+        <span class="blog-card-link">Read the Story</span>
+      </a>
+
+      <a href="blog-post.html" class="blog-card reveal reveal-d1">
+        <span class="blog-card-figure develop reveal">
+          <img src="./Images/events-exhibit.jpeg" alt="A portrait from the series - installed at museum scale" loading="lazy">
+        </span>
+        <span class="blog-card-meta">The Tour &bull; March 2026</span>
+        <span class="blog-card-title" style="display:block;">Hanging Fifty Stories in Detroit</span>
+        <span class="blog-card-excerpt" style="display:block;">Installation notes from the Charles H. Wright Museum &mdash; what it takes to hang a portrait series so that a room full of strangers goes quiet.</span>
+        <span class="blog-card-link">Read the Story</span>
+      </a>
+
+      <a href="blog-post.html" class="blog-card reveal reveal-d2">
+        <span class="blog-card-figure develop reveal">
+          <img src="./Images/blog-4.jpeg" alt="Portrait sitting in progress" loading="lazy">
+        </span>
+        <span class="blog-card-meta">Honoree Stories &bull; March 2026</span>
+        <span class="blog-card-title" style="display:block;">The Mathematician Who Mapped the World</span>
+        <span class="blog-card-excerpt" style="display:block;">Dr. Gladys West&rsquo;s calculations became GPS. Her portrait sitting became one of the quietest, most electric hours of the series.</span>
+        <span class="blog-card-link">Read the Story</span>
+      </a>
+
+      <a href="blog-post.html" class="blog-card reveal">
+        <span class="blog-card-figure develop reveal">
+          <img src="./Images/blog-5.jpeg" alt="Light and shadow study" loading="lazy">
+        </span>
+        <span class="blog-card-meta">Craft &bull; April 2026</span>
+        <span class="blog-card-title" style="display:block;">Light and Shadow</span>
+        <span class="blog-card-excerpt" style="display:block;">A field guide to the exhibition&rsquo;s visual language &mdash; why the portraits emerge from darkness, and what that darkness means.</span>
+        <span class="blog-card-link">Read the Story</span>
+      </a>
+
+      <a href="blog-post.html" class="blog-card reveal reveal-d1">
+        <span class="blog-card-figure develop reveal">
+          <img src="./Images/image19.jpeg" alt="A young visitor in a doctor's coat - the next generation" loading="lazy">
+        </span>
+        <span class="blog-card-meta">Impact &bull; April 2026</span>
+        <span class="blog-card-title" style="display:block;">When the School Buses Arrive</span>
+        <span class="blog-card-excerpt" style="display:block;">Field-trip mornings at the museum &mdash; and the moment a student stops in front of a portrait and doesn&rsquo;t move for a while.</span>
+        <span class="blog-card-link">Read the Story</span>
+      </a>
+
+      <a href="blog-post.html" class="blog-card reveal reveal-d2">
+        <span class="blog-card-figure develop reveal">
+          <img src="./Images/image4.jpeg" alt="An honoree during their interview sitting" loading="lazy">
+        </span>
+        <span class="blog-card-meta">Behind the Lens &bull; May 2026</span>
+        <span class="blog-card-title" style="display:block;">Recording the Voices</span>
+        <span class="blog-card-excerpt" style="display:block;">Behind the interview series &mdash; fifty conversations about closed doors, open ones, and the moment each honoree decided to keep going.</span>
+        <span class="blog-card-link">Read the Story</span>
+      </a>
+
+      <a class="blog-plate reveal" href="#newsletter">
+        <span>More dispatches are developing.</span>
+        <span class="btn-ghost" style="padding-block: 6px; font-style: normal;"><span class="line"></span>Get Them First</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
 </main>
+
+<!-- ========== TOAST ========== -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="check" aria-hidden="true">&#10003;</span>
+  <span data-toast-msg></span>
+</div>
 
 <!-- ========== FOOTER ========== -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="./logo/logo-white.png" alt="Brilliance Exposed">
-        <p class="footer-tagline">An international photographic exhibition honoring Black-presenting professionals in STEAM.</p>
+        <div class="footer-brand-lockup"><span class="nav-logo-word">Brilliance<em>Exposed</em></span></div>
+        <p class="footer-tagline">An international photographic exhibition celebrating Black-presenting pioneers in Science, Technology, Engineering, Arts &amp; Mathematics.</p>
+        <p class="footer-tagline" style="margin-top: 10px; font-size: 0.8rem; color: var(--text-muted);">Founded by Alexis Dixon &middot; Photographed by Michele Zousmer</p>
       </div>
 
       <div class="footer-col">
@@ -181,10 +183,10 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li><a href="events.html">Visit</a></li>
           <li><a href="shop.html">Shop</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li><a href="blog.html">Journal</a></li>
+          <li><a href="visite.html" lang="fr">Visite (FR)</a></li>
         </ul>
       </div>
 
@@ -193,14 +195,15 @@
         <ul>
           <li><a href="donate.html">Donate</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="contact.html#press">Press</a></li>
+          <li><a href="press.html">Press</a></li>
           <li><a href="contact.html#partnerships">Partnerships</a></li>
+          <li><a href="legal.html">Privacy &amp; Terms</a></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-newsletter">
+      <div class="footer-col footer-newsletter" id="newsletter">
         <h4>Stay Connected</h4>
-        <p>Exhibition updates delivered to your inbox.</p>
+        <p>Exhibition updates, new portraits, and tour dates &mdash; delivered to your inbox.</p>
         <form class="newsletter-form" data-form="newsletter">
           <input type="email" placeholder="Email address" aria-label="Email address" required>
           <button type="submit" aria-label="Subscribe">
@@ -209,18 +212,14 @@
             </svg>
           </button>
         </form>
+        <p style="margin-top: 10px; font-size: 0.72rem; color: var(--text-muted);">Tour news only &mdash; no spam, unsubscribe anytime.</p>
         <p class="newsletter-status" data-form-status></p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copyright">&copy; 2026 Brilliance Exposed. All rights reserved.</p>
-      <div class="footer-socials">
-        <a href="#" aria-disabled="true">Instagram</a>
-        <a href="#" aria-disabled="true">Facebook</a>
-        <a href="#" aria-disabled="true">X / Twitter</a>
-        <a href="#" aria-disabled="true">LinkedIn</a>
-      </div>
+      <p class="footer-copyright">&copy; <span data-year>2026</span> Brilliance Exposed. All rights reserved.</p>
+      <p class="footer-tour">Detroit &middot; Paris &middot; New York &mdash; <em>The 2026 Tour</em></p>
     </div>
   </div>
 </footer>

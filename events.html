@@ -5,31 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
 <style>html,body{background:#000;color:#e0e0e0}html{color-scheme:dark}</style>
-<title>Events — Brilliance Exposed</title>
-<meta name="description" content="Exhibition venues and dates for Brilliance Exposed — Detroit, Paris, and New York City.">
+<title>Visit — Brilliance Exposed</title>
+<meta name="description" content="Where to experience Brilliance Exposed in person — now showing at the Charles H. Wright Museum, Detroit, then Paris and New York City.">
+<link rel="icon" href="./logo/logo-white.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
+<div class="grain" aria-hidden="true"></div>
+
 <!-- ========== NAVIGATION ========== -->
 <header class="nav" id="navbar">
   <a href="index.html" class="nav-logo" aria-label="Brilliance Exposed — Home">
-    <img src="./logo/logo-white.png" alt="Brilliance Exposed">
+    <span class="nav-logo-word">Brilliance<em>Exposed</em></span>
   </a>
   <nav aria-label="Primary">
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="events.html" aria-current="page">Events</a></li>
+      <li><a href="events.html">Visit</a></li>
       <li><a href="shop.html">Shop</a></li>
-      <li><a href="contact.html">Contact</a></li>
       <li><a href="blog.html">Journal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="visite.html" lang="fr" style="color: var(--gold);">FR</a></li>
     </ul>
   </nav>
   <a href="donate.html" class="nav-donate">Donate</a>
@@ -43,98 +47,152 @@
 <aside class="nav-mobile-panel" id="navMobilePanel" aria-hidden="true">
   <a href="about.html">About</a>
   <a href="gallery.html">Gallery</a>
-  <a href="events.html" aria-current="page">Events</a>
+  <a href="events.html">Visit</a>
   <a href="shop.html">Shop</a>
-  <a href="contact.html">Contact</a>
   <a href="blog.html">Journal</a>
+  <a href="contact.html">Contact</a>
   <a href="donate.html" class="btn-gold">Donate</a>
 </aside>
 
 <main id="main">
 
-<div class="events-v2">
-
-  <!-- Hero -->
-  <div class="page-header reveal">
-    <h1 class="page-header-title">Events</h1>
-    <p class="page-header-intro">Experience Brilliance Exposed at museums and galleries worldwide. From Detroit to Paris &mdash; each venue brings the exhibition to life.</p>
+<!-- ========== PAGE HEAD ========== -->
+<div class="page-head">
+  <div class="container">
+    <p class="page-head-eyebrow label label--gold reveal is-visible">Visit the Exhibition</p>
+    <h1 class="page-head-title reveal is-visible">Stand in<br><em>Their Light</em></h1>
+    <p class="page-head-intro reveal is-visible reveal-d1">Brilliance Exposed is touring the world through 2026. The inaugural Detroit run has concluded; Paris is in its final days; New York is next. Here is where to find it. <a href="visite.html" lang="fr" style="color: var(--gold); text-decoration: underline; text-underline-offset: 4px;">Version fran&ccedil;aise &rarr;</a></p>
   </div>
-
-  <!-- Current Exhibition -->
-  <div class="v2-section-eyebrow reveal">
-    <p class="section-eyebrow-rule"><span>Current Exhibition</span></p>
-  </div>
-
-  <section class="events-v2-current reveal">
-    <div class="events-v2-current-image">
-      <img src="./Images/events-exhibit.jpeg" alt="Brilliance Exposed at the Charles H. Wright Museum" loading="lazy">
-    </div>
-
-    <div class="events-v2-current-details">
-      <div class="events-v2-current-left">
-        <h2 class="events-v2-current-title">Charles H. Wright Museum<br>of African American History</h2>
-        <p class="events-v2-current-meta">Detroit, Michigan</p>
-        <p class="events-v2-current-meta">March 14, 2026 &mdash; June 21, 2026</p>
-      </div>
-
-      <div class="events-v2-current-right">
-        <p class="events-v2-current-desc">The inaugural exhibition of Brilliance Exposed opens at the Charles H. Wright Museum &mdash; one of the largest institutions in the world dedicated to the African American experience. Featuring the full 2026 portrait series alongside the premiere of the interview documentary segments.</p>
-        <a href="events.html" class="btn-gold">Learn More</a>
-      </div>
-    </div>
-  </section>
-
-  <hr class="hairline" role="presentation">
-
-  <!-- Upcoming Exhibitions -->
-  <div class="v2-section-eyebrow reveal">
-    <p class="section-eyebrow-rule"><span>Upcoming Exhibitions</span></p>
-  </div>
-
-  <section class="events-v2-upcoming">
-    <article class="events-v2-upcoming-card reveal reveal-d1">
-      <div class="events-v2-upcoming-image">
-        <img src="./Images/image8.jpeg" alt="Galerie Brilliance — Paris" loading="lazy">
-      </div>
-      <h3 class="events-v2-upcoming-title">Galerie Brilliance &mdash; Paris</h3>
-      <p class="events-v2-upcoming-meta">Paris, France</p>
-      <p class="events-v2-upcoming-meta">June 1, 2026 &mdash; August 15, 2026</p>
-      <p class="events-v2-upcoming-desc">The international debut of Brilliance Exposed arrives in Paris. The exhibition features the complete 2026 portrait series alongside new works for the European audience.</p>
-    </article>
-
-    <article class="events-v2-upcoming-card reveal reveal-d2">
-      <div class="events-v2-upcoming-image">
-        <img src="./Images/image4.jpeg" alt="Tiffany & Co. Flagship Reception" loading="lazy">
-      </div>
-      <h3 class="events-v2-upcoming-title">Tiffany &amp; Co. Flagship Reception</h3>
-      <p class="events-v2-upcoming-meta">New York, NY</p>
-      <p class="events-v2-upcoming-meta">Summer 2026 &mdash; Private Reception</p>
-      <p class="events-v2-upcoming-desc">An intimate private reception at the Tiffany &amp; Co. flagship on Fifth Avenue. A curated selection of portraits with a conversation between Alexis Dixon and Michele Zousmer.</p>
-    </article>
-  </section>
-
-  <hr class="hairline" role="presentation">
-
-  <!-- Past Exhibitions -->
-  <div class="v2-section-eyebrow reveal">
-    <p class="section-eyebrow-rule"><span>Past Exhibitions</span></p>
-  </div>
-
-  <section class="events-v2-past reveal">
-    <p>The archive of past exhibitions will be available here as our 2026 international tour concludes. Check back for posters, photographs, and documentary segments from each venue.</p>
-  </section>
-
 </div>
 
+<!-- ========== NOW SHOWING — PARIS ========== -->
+<section class="section" id="paris" style="padding-top: clamp(24px, 4vw, 48px);" aria-labelledby="current-title">
+  <div class="container">
+    <div class="chapter-head">
+      <p class="chapter-eyebrow label label--gold reveal">Now Showing &middot; Final Days</p>
+      <h2 class="chapter-title reveal" id="current-title">The International<br>Debut &mdash; Paris</h2>
+    </div>
+
+    <div class="showing reveal">
+      <div class="showing-media develop reveal">
+        <img src="./Images/image8.jpeg" alt="A portrait from the Brilliance Exposed European selection — on view at Galerie Brilliance, Paris">
+        <span class="showing-media-badge"><span class="dot"></span>Final Days</span>
+      </div>
+
+      <div class="showing-info">
+        <h3 class="showing-venue">Galerie Brilliance</h3>
+        <p class="showing-city">12 Rue des Archives, Le Marais &middot; 75004 Paris</p>
+
+        <div class="showing-dates">
+          <span class="d">Jun 1 &mdash; Aug 15</span>
+          <span class="thru">2026</span>
+        </div>
+
+        <p class="showing-desc">A curated European selection of the series with new works created for the Paris audience, opened as the inaugural American run concluded in Detroit. Closing August 15 &mdash; the final days to stand in this room before the portraits cross the Atlantic again.</p>
+
+        <div class="showing-facts">
+          <div class="showing-fact">
+            <span class="label">Hours</span>
+            <p>Tue &ndash; Sun &middot; 11:00 &ndash; 19:00</p>
+          </div>
+          <div class="showing-fact">
+            <span class="label">Admission</span>
+            <p>Free entry &middot; donations welcome</p>
+          </div>
+          <div class="showing-fact">
+            <span class="label">Getting There</span>
+            <p>M&eacute;tro H&ocirc;tel de Ville &middot; <a href="https://maps.google.com/?q=12+Rue+des+Archives,+75004+Paris" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline; text-underline-offset: 4px;">Map &rarr;</a></p>
+          </div>
+          <div class="showing-fact">
+            <span class="label">Access</span>
+            <p>Step-free entry &middot; school groups welcome</p>
+          </div>
+          <div class="showing-fact">
+            <span class="label">Closing</span>
+            <p>August 15, 2026 &middot; Next: New York</p>
+          </div>
+        </div>
+
+        <div class="showing-ctas">
+          <a href="mailto:visit@brillianceexposed.com?subject=Reserve%20free%20entry%20%E2%80%94%20Paris" class="btn-gold">Reserve Free Entry <span class="arrow">&rarr;</span></a>
+          <a href="contact.html" class="btn-ghost"><span class="line"></span>Group Visits</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hairline">
+
+<!-- ========== UPCOMING ========== -->
+<section class="section" aria-labelledby="upcoming-title">
+  <div class="container">
+    <div class="chapter-head">
+      <p class="chapter-eyebrow label label--gold reveal">Up Next &middot; And Where It Began</p>
+      <h2 class="chapter-title reveal" id="upcoming-title">The 2026 Tour<br>Continues</h2>
+    </div>
+
+    <div class="event-upcoming">
+      <article class="event-card reveal" id="tiffany">
+        <div class="event-card-figure develop reveal">
+          <img src="./Images/image4.jpeg" alt="Tiffany & Co. Flagship Reception, New York" loading="lazy">
+        </div>
+        <div class="event-card-body">
+          <h3 class="event-card-title">Tiffany &amp; Co. Flagship Reception</h3>
+          <p class="event-card-meta">New York, NY &middot; Fall 2026 &middot; Private Reception &middot; Up Next</p>
+          <p class="event-card-desc">An intimate evening at the Fifth Avenue flagship for collectors and press &mdash; a curated selection of portraits, with a conversation between Alexis Dixon and Michele Zousmer. <strong style="color: var(--text); font-weight: 500;">Public New York dates will be announced in September</strong> &mdash; the newsletter hears first.</p>
+          <a href="#newsletter" class="btn-ghost"><span class="line"></span>Get the Public Dates First</a>
+        </div>
+      </article>
+
+      <article class="event-card reveal reveal-d1" id="detroit">
+        <div class="event-card-figure develop reveal">
+          <img src="./Images/image16.jpeg" alt="A Brilliance Exposed honoree holding a framed portrait — the inaugural Detroit exhibition" loading="lazy">
+        </div>
+        <div class="event-card-body">
+          <h3 class="event-card-title">Charles H. Wright Museum &mdash; The Inaugural Run</h3>
+          <p class="event-card-meta">Detroit, Michigan &middot; Mar 14 &mdash; Jun 21, 2026 &middot; Concluded</p>
+          <p class="event-card-desc">Where it began: the full 2026 portrait series and the premiere of the interview documentary, inside one of the world&rsquo;s largest institutions dedicated to the African American experience.</p>
+          <a href="blog.html" class="btn-ghost"><span class="line"></span>Read the Installation Story</a>
+        </div>
+      </article>
+    </div>
+    <p style="margin-top: 40px; font-family: var(--font-display); font-style: italic; color: var(--text-muted); font-size: 1.1rem;">The tour archive &mdash; posters, installation photography, and documentary segments &mdash; opens here as each city closes.</p>
+  </div>
+</section>
+
+<!-- ========== BRING IT TO YOUR CITY ========== -->
+<section class="section closing" aria-label="Host the exhibition">
+  <div class="container">
+    <p class="closing-quote reveal">Want the exhibition in <em>your</em> museum, campus, or city?</p>
+    <div class="hero-ctas reveal reveal-d1" style="justify-content: center;">
+      <a href="contact.html#partnerships" class="btn-gold">Start the Conversation <span class="arrow">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
 </main>
+
+<!-- ========== MOBILE TICKET BAR ========== -->
+<div class="ticket-bar" id="ticketBar" aria-hidden="true">
+  <p class="ticket-bar-label"><strong>Final days &middot; Paris</strong><br>Free entry &middot; through Aug 15</p>
+  <a href="mailto:visit@brillianceexposed.com?subject=Reserve%20free%20entry%20%E2%80%94%20Paris" class="btn-gold">Reserve <span class="arrow">&rarr;</span></a>
+</div>
+
+<!-- ========== TOAST ========== -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="check" aria-hidden="true">&#10003;</span>
+  <span data-toast-msg></span>
+</div>
 
 <!-- ========== FOOTER ========== -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="./logo/logo-white.png" alt="Brilliance Exposed">
-        <p class="footer-tagline">An international photographic exhibition honoring Black-presenting professionals in STEAM.</p>
+        <div class="footer-brand-lockup"><span class="nav-logo-word">Brilliance<em>Exposed</em></span></div>
+        <p class="footer-tagline">An international photographic exhibition celebrating Black-presenting pioneers in Science, Technology, Engineering, Arts &amp; Mathematics.</p>
+        <p class="footer-tagline" style="margin-top: 10px; font-size: 0.8rem; color: var(--text-muted);">Founded by Alexis Dixon &middot; Photographed by Michele Zousmer</p>
       </div>
 
       <div class="footer-col">
@@ -142,10 +200,10 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li><a href="events.html">Visit</a></li>
           <li><a href="shop.html">Shop</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li><a href="blog.html">Journal</a></li>
+          <li><a href="visite.html" lang="fr">Visite (FR)</a></li>
         </ul>
       </div>
 
@@ -154,14 +212,15 @@
         <ul>
           <li><a href="donate.html">Donate</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="contact.html#press">Press</a></li>
+          <li><a href="press.html">Press</a></li>
           <li><a href="contact.html#partnerships">Partnerships</a></li>
+          <li><a href="legal.html">Privacy &amp; Terms</a></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-newsletter">
+      <div class="footer-col footer-newsletter" id="newsletter">
         <h4>Stay Connected</h4>
-        <p>Exhibition updates delivered to your inbox.</p>
+        <p>Exhibition updates, new portraits, and tour dates &mdash; delivered to your inbox.</p>
         <form class="newsletter-form" data-form="newsletter">
           <input type="email" placeholder="Email address" aria-label="Email address" required>
           <button type="submit" aria-label="Subscribe">
@@ -170,18 +229,14 @@
             </svg>
           </button>
         </form>
+        <p style="margin-top: 10px; font-size: 0.72rem; color: var(--text-muted);">Tour news only &mdash; no spam, unsubscribe anytime.</p>
         <p class="newsletter-status" data-form-status></p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copyright">&copy; 2026 Brilliance Exposed. All rights reserved.</p>
-      <div class="footer-socials">
-        <a href="#" aria-disabled="true">Instagram</a>
-        <a href="#" aria-disabled="true">Facebook</a>
-        <a href="#" aria-disabled="true">X / Twitter</a>
-        <a href="#" aria-disabled="true">LinkedIn</a>
-      </div>
+      <p class="footer-copyright">&copy; <span data-year>2026</span> Brilliance Exposed. All rights reserved.</p>
+      <p class="footer-tour">Detroit &middot; Paris &middot; New York &mdash; <em>The 2026 Tour</em></p>
     </div>
   </div>
 </footer>

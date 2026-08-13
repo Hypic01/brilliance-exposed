@@ -5,45 +5,53 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="dark">
 <style>html,body{background:#000;color:#e0e0e0}html{color-scheme:dark}</style>
-<title>Brilliance Exposed — Honoring Black Brilliance in STEAM</title>
-<meta name="description" content="Brilliance Exposed is an international photographic exhibition honoring Black-presenting professionals in Science, Technology, Engineering, Arts, and Mathematics.">
+<title>Brilliance Exposed — An International Photographic Exhibition</title>
+<meta name="description" content="Fifty extraordinary Black minds in Science, Technology, Engineering, Arts & Mathematics — photographed as the icons they are. Now showing at the Charles H. Wright Museum, Detroit.">
+<meta property="og:title" content="Brilliance Exposed — An International Photographic Exhibition">
+<meta property="og:description" content="Fifty extraordinary minds. One collective brilliance. Now showing in Detroit.">
+<meta property="og:type" content="website">
+<link rel="icon" href="./logo/logo-white.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body class="intro-active">
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
-<h1 class="visually-hidden">Brilliance Exposed — Honoring Black-Presenting Professionals in STEAM</h1>
+<div class="grain" aria-hidden="true"></div>
 
-<!-- ========== LANDING INTRO OVERLAY ========== -->
+<!-- ========== INTRO — the exposure begins ========== -->
 <div class="intro-overlay" id="introOverlay" role="presentation" aria-hidden="true">
   <div class="intro-phase intro-quote">
-    <p class="intro-quote-text">&ldquo;When we see ourselves reflected in excellence, we begin to believe in the possibility of our own brilliance.&rdquo;</p>
-    <p class="intro-quote-attribution">Alexis Dixon &mdash; Founder</p>
+    <p class="intro-quote-text">&ldquo;Every individual is a capsule of a unique story.&rdquo;</p>
+    <p class="intro-quote-attribution">Dr. Yasmin Hurd &mdash; Honoree, Exposure 01</p>
   </div>
   <div class="intro-phase intro-logo">
-    <img src="./logo/logo-white.png" alt="Brilliance Exposed">
+    <div>
+      <p class="intro-lockup">Brilliance<em>Exposed</em></p>
+      <div class="intro-lockup-rule" aria-hidden="true"></div>
+    </div>
   </div>
-  <span class="intro-skip">Tap anywhere to skip</span>
+  <span class="intro-skip">Skip</span>
 </div>
 
 <!-- ========== NAVIGATION ========== -->
 <header class="nav" id="navbar">
   <a href="index.html" class="nav-logo" aria-label="Brilliance Exposed — Home">
-    <img src="./logo/logo-white.png" alt="Brilliance Exposed">
+    <span class="nav-logo-word">Brilliance<em>Exposed</em></span>
   </a>
   <nav aria-label="Primary">
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="events.html">Events</a></li>
+      <li><a href="events.html">Visit</a></li>
       <li><a href="shop.html">Shop</a></li>
-      <li><a href="contact.html">Contact</a></li>
       <li><a href="blog.html">Journal</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="visite.html" lang="fr" style="color: var(--gold);">FR</a></li>
     </ul>
   </nav>
   <a href="donate.html" class="nav-donate">Donate</a>
@@ -57,266 +65,345 @@
 <aside class="nav-mobile-panel" id="navMobilePanel" aria-hidden="true">
   <a href="about.html">About</a>
   <a href="gallery.html">Gallery</a>
-  <a href="events.html">Events</a>
+  <a href="events.html">Visit</a>
   <a href="shop.html">Shop</a>
-  <a href="contact.html">Contact</a>
   <a href="blog.html">Journal</a>
+  <a href="contact.html">Contact</a>
   <a href="donate.html" class="btn-gold">Donate</a>
 </aside>
 
 <main id="main">
 
-<!-- ========== HERO — full-viewport portrait (click for profile) ========== -->
-<section class="hero" aria-label="Featured honoree — click portrait to view profile">
-  <div class="hero-grain"></div>
+<!-- ========== HERO — the first exposure ========== -->
+<section class="hero" aria-label="Brilliance Exposed — featured honorees">
 
-  <div class="hero-portrait" id="heroPortrait">
-    <div class="hero-portrait-slide is-active">
-      <img src="./Images/image13.jpeg" alt="Dr. Stephon Alexander — Theoretical Physicist, Jazz musician">
-      <span class="hero-discipline" aria-hidden="true" style="--x: 78%; --y: 22%;">Theoretical Physicist</span><!-- PLACEHOLDER -->
-      <span class="hero-discipline" aria-hidden="true" style="--x: 18%; --y: 78%;">Jazz musician</span><!-- PLACEHOLDER -->
+  <div class="hero-portrait" id="heroPortrait" aria-hidden="true">
+    <div class="hero-portrait-slide is-active"
+         data-chip="Exposure 01 · Science"
+         data-name="Dr. Yasmin Hurd"
+         data-role="Neuroscientist · Director, Addiction Institute">
+      <img src="./Images/gallery-portrait.jpeg" alt="">
     </div>
-    <div class="hero-portrait-slide">
-      <img src="./Images/image6.jpeg" alt="Brilliance Exposed honoree portrait — Professor of Psychiatry and Neuroscience" loading="lazy">
-      <span class="hero-discipline" aria-hidden="true" data-anchor="left" style="--x: 18%; --y: 78%;">Professor of Psychiatry and Neuroscience</span><!-- PLACEHOLDER -->
+    <div class="hero-portrait-slide"
+         data-chip="Exposure 02 · Science"
+         data-name="Dr. Stephon Alexander"
+         data-role="Theoretical Physicist · Jazz Musician">
+      <img src="./Images/portrait-alexander.jpeg" alt="" loading="lazy">
     </div>
-    <div class="hero-portrait-slide">
-      <img src="./Images/image10.jpeg" alt="Brilliance Exposed honoree portrait — Neurosurgeon" loading="lazy">
-      <span class="hero-discipline" aria-hidden="true" style="--x: 18%; --y: 78%;">Neurosurgeon</span><!-- PLACEHOLDER -->
+    <div class="hero-portrait-slide"
+         data-chip="Exposure 03 · Mathematics"
+         data-name="Dr. Gladys West"
+         data-role="Mathematician · GPS Pioneer">
+      <img src="./Images/portrait-west.jpeg" alt="" loading="lazy">
     </div>
-    <div class="hero-portrait-slide">
-      <img src="./Images/image11.jpeg" alt="Brilliance Exposed honoree portrait — Architect" loading="lazy">
-      <span class="hero-discipline" aria-hidden="true" style="--x: 82%; --y: 78%;">Architect</span><!-- PLACEHOLDER -->
+    <div class="hero-portrait-slide"
+         data-chip="Exposure 04 · Science"
+         data-name="Dr. Bianca Jones Marlin"
+         data-role="Neuroscientist &amp; Geneticist">
+      <img src="./Images/image11.jpeg" alt="" loading="lazy">
     </div>
-    <div class="hero-portrait-slide">
-      <img src="./Images/image12.jpeg" alt="Brilliance Exposed honoree portrait — Michelin Chef" loading="lazy">
-      <span class="hero-discipline" aria-hidden="true" style="--x: 82%; --y: 78%;">Michelin Chef</span><!-- PLACEHOLDER -->
+    <div class="hero-portrait-slide"
+         data-chip="Exposure 05 · Science"
+         data-name="Dr. Gentry Patrick"
+         data-role="Neuroscientist · Mentor">
+      <img src="./Images/image10.jpeg" alt="" loading="lazy">
     </div>
   </div>
-</section>
 
-<div class="divider"><span class="diamond"></span></div>
-
-<!-- ========== MISSION ========== -->
-<section class="mission" aria-labelledby="mission-heading">
-  <div class="mission-inner">
-    <p class="mission-label reveal" id="mission-heading">The Vision</p>
-    <p class="mission-text reveal reveal-d1">
-      <strong>Brilliance Exposed</strong> is more than an exhibition &mdash; it is a movement to make visible the extraordinary contributions of Black-presenting professionals who shape our world through Science, Technology, Engineering, Arts and Mathematics.
+  <div class="hero-content">
+    <p class="hero-status reveal is-visible">
+      <span class="dot"></span>
+      <span class="hero-status-text">Final Days &mdash; <strong>Galerie Brilliance, Paris</strong> &middot; Through August 15</span>
     </p>
-    <a href="about.html" class="btn-ghost reveal reveal-d2">
-      <span class="line"></span>
-      Learn About the Exhibition
-    </a>
+
+    <h1 class="hero-title">Fifty extraordinary minds.<br>One collective <em>brilliance.</em></h1>
+
+    <p class="hero-sub">An international photographic exhibition celebrating Black-presenting pioneers of Science, Technology, Engineering, Arts &amp; Mathematics &mdash; in striking black-and-white portraiture.</p>
+
+    <div class="hero-ctas">
+      <a href="events.html" class="btn-gold">Reserve Free Entry <span class="arrow">&rarr;</span></a>
+      <a href="gallery.html" class="btn-ghost"><span class="line"></span>Step Into the Gallery</a>
+    </div>
+
+    <p class="reveal is-visible" style="margin-top: 20px; font-size: 0.85rem; color: var(--text-secondary);">In the U.S.? New York is next, public dates in September &mdash; <a href="#newsletter" style="color: var(--gold); text-decoration: underline; text-underline-offset: 4px;">hear them&nbsp;first&nbsp;&rarr;</a></p>
+  </div>
+
+  <div class="hero-plate" id="heroPlate" aria-hidden="true">
+    <p class="hero-plate-chip">Exposure 01 · Science</p>
+    <p class="hero-plate-name">Dr. Yasmin Hurd</p>
+    <p class="hero-plate-role">Neuroscientist · Director, Addiction Institute</p>
+  </div>
+
+  <p class="hero-scroll" aria-hidden="true">Scroll to explore</p>
+</section>
+
+<!-- ========== 01 · THE MISSION ========== -->
+<section class="section" aria-labelledby="mission-title">
+  <div class="container">
+    <div class="chapter-head">
+      <span class="chapter-num" aria-hidden="true">01</span>
+      <p class="chapter-eyebrow label label--gold reveal">The Mission</p>
+      <h2 class="chapter-title reveal" id="mission-title">Brilliance is not gained.<br>It is <em class="lit">revealed.</em></h2>
+    </div>
+
+    <p class="mission-question reveal">What if you never saw yourself in successful roles or achievements? For millions of young people, that is not a hypothetical.</p>
+
+    <p class="mission-statement reveal reveal-d1">So we photograph Black pioneers of science, technology, engineering, arts and mathematics &mdash; and hang their portraits where the world <em>cannot look away.</em></p>
+
+    <div class="mission-support">
+      <div class="mission-point reveal reveal-d1">
+        <span class="label">See It</span>
+        <p>Fifty museum-scale portraits by humanitarian photographer Michele Zousmer &mdash; scientists, engineers, artists and mathematicians rendered as the icons they are.</p>
+      </div>
+      <div class="mission-point reveal reveal-d2">
+        <span class="label">Hear It</span>
+        <p>Every honoree sits for an interview. Their stories &mdash; the turning points, the closed doors, the breakthroughs &mdash; play alongside the portraits.</p>
+      </div>
+      <div class="mission-point reveal reveal-d3">
+        <span class="label">Stand In It</span>
+        <p>The exhibition tours museums and galleries worldwide, so a student anywhere can stand before a portrait and think: <em class="lit">that could be me.</em></p>
+      </div>
+    </div>
   </div>
 </section>
 
-<div class="divider"><span class="diamond"></span></div>
+<hr class="hairline">
 
-<!-- ========== FEATURED PORTRAITS (teaser → gallery) ========== -->
-<section class="portraits" aria-labelledby="portraits-heading">
-  <div class="section-inner">
-    <div class="section-header reveal">
-      <div>
-        <span class="section-eyebrow">Featured Portraits</span>
-        <h2 class="section-title" id="portraits-heading">Faces of Brilliance</h2>
+<!-- ========== 02 · THE PORTRAITS ========== -->
+<section class="section" aria-labelledby="portraits-title">
+  <div class="container">
+    <div class="chapter-head">
+      <span class="chapter-num" aria-hidden="true">02</span>
+      <p class="chapter-eyebrow label label--gold reveal">The Portraits</p>
+      <div class="section-header reveal">
+        <h2 class="chapter-title" id="portraits-title">Faces of Brilliance</h2>
+        <a href="gallery.html" class="btn-ghost"><span class="line"></span>View the Full Gallery</a>
       </div>
-      <a href="gallery.html" class="btn-ghost section-view-all">
-        <span class="line"></span>
-        View Full Gallery
-      </a>
+      <p class="exposure-chip reveal" style="margin-top: 16px;">Nine of fifty revealed &mdash; the series develops with each city</p>
     </div>
 
     <div class="portraits-grid">
-      <a href="gallery.html#clemons" class="portrait-card reveal reveal-d1">
-        <img src="./assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image0.jpeg" alt="Portrait of William 'Bil' Clemons Jr." loading="lazy">
-        <span class="portrait-card-number">01</span>
+      <a href="gallery.html" class="portrait-card develop reveal">
+        <img src="./Images/portrait-clemons.jpeg" alt="Portrait of William 'Bil' Clemons Jr." loading="lazy">
+        <span class="portrait-card-view">View Profile</span>
         <div class="portrait-card-meta">
+          <p class="portrait-card-chip">Exposure 06 · Science</p>
           <p class="portrait-card-name">William &ldquo;Bil&rdquo; Clemons Jr.</p>
           <p class="portrait-card-field">Structural Biologist</p>
         </div>
       </a>
 
-      <a href="gallery.html#west" class="portrait-card reveal reveal-d2">
-        <img src="./assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image1.jpeg" alt="Portrait of Dr. Gladys West" loading="lazy">
-        <span class="portrait-card-number">02</span>
+      <a href="gallery.html" class="portrait-card develop reveal reveal-d1">
+        <img src="./Images/portrait-west.jpeg" alt="Portrait of Dr. Gladys West" loading="lazy">
+        <span class="portrait-card-view">View Profile</span>
         <div class="portrait-card-meta">
+          <p class="portrait-card-chip">Exposure 03 · Mathematics</p>
           <p class="portrait-card-name">Dr. Gladys West</p>
           <p class="portrait-card-field">Mathematician &mdash; GPS Pioneer</p>
         </div>
       </a>
 
-      <a href="gallery.html#alexander" class="portrait-card reveal reveal-d3">
-        <img src="./assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image2.jpeg" alt="Portrait of Dr. Stephon Alexander" loading="lazy">
-        <span class="portrait-card-number">03</span>
+      <a href="gallery.html" class="portrait-card develop reveal reveal-d2">
+        <img src="./Images/portrait-alexander.jpeg" alt="Portrait of Dr. Stephon Alexander" loading="lazy">
+        <span class="portrait-card-view">View Profile</span>
         <div class="portrait-card-meta">
+          <p class="portrait-card-chip">Exposure 02 · Science</p>
           <p class="portrait-card-name">Dr. Stephon Alexander</p>
           <p class="portrait-card-field">Theoretical Physicist</p>
         </div>
       </a>
 
-      <a href="gallery.html" class="portrait-card reveal reveal-d4">
-        <img src="./assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image6.jpeg" alt="Portrait of a Brilliance Exposed honoree" loading="lazy">
-        <span class="portrait-card-number">04</span>
+      <a href="gallery.html" class="portrait-card develop reveal">
+        <img src="./Images/image12.jpeg" alt="Portrait of Willis Jenkins" loading="lazy">
+        <span class="portrait-card-view">View Profile</span>
         <div class="portrait-card-meta">
-          <p class="portrait-card-name">More in the Gallery</p>
-          <p class="portrait-card-field">Full 2026 Series</p>
+          <p class="portrait-card-chip">Exposure 07 · Science</p>
+          <p class="portrait-card-name">Willis Jenkins</p>
+          <p class="portrait-card-field">Research Scientist</p>
+        </div>
+      </a>
+
+      <a href="gallery.html" class="portrait-card portrait-card--series reveal reveal-d1">
+        <span class="series-num">09<span> / 50</span></span>
+        <span class="series-mark">The 2026<em> Series</em></span>
+        <span class="series-note">Nine portraits revealed &mdash; photographed<br>by Michele Zousmer</span>
+        <span class="btn-ghost" style="padding-block: 8px;"><span class="line"></span>View All</span>
+      </a>
+
+      <a href="gallery.html" class="portrait-card develop reveal reveal-d2">
+        <img src="./Images/image11.jpeg" alt="Portrait of Dr. Bianca Jones Marlin" loading="lazy">
+        <span class="portrait-card-view">View Profile</span>
+        <div class="portrait-card-meta">
+          <p class="portrait-card-chip">Exposure 04 · Science</p>
+          <p class="portrait-card-name">Dr. Bianca Jones Marlin</p>
+          <p class="portrait-card-field">Neuroscientist &amp; Geneticist</p>
         </div>
       </a>
     </div>
   </div>
 </section>
 
-<div class="divider"><span class="diamond"></span></div>
+<hr class="hairline">
 
-<!-- ========== FEATURED VIDEO ========== -->
-<section class="video-section" aria-labelledby="video-heading">
-  <div class="video-inner">
-    <a href="gallery.html#videos" class="video-frame reveal" aria-label="Watch the Brilliance Exposed interview series">
-      <img src="./assets/images/rebrillianceexposedxdfakickoffteamrosterinformatio/image4.jpeg" alt="" loading="lazy">
-      <span class="video-play">
-        <span class="video-play-btn">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="8,5 20,12 8,19"/></svg>
+<!-- ========== 03 · THE EXHIBITION (money path) ========== -->
+<section class="section" aria-labelledby="showing-title">
+  <div class="container">
+    <div class="chapter-head">
+      <span class="chapter-num" aria-hidden="true">03</span>
+      <p class="chapter-eyebrow label label--gold reveal">The Exhibition</p>
+      <h2 class="chapter-title reveal" id="showing-title">See It<br>In Person</h2>
+    </div>
+
+    <div class="showing reveal">
+      <div class="showing-media develop reveal">
+        <img src="./Images/image8.jpeg" alt="A portrait from the Brilliance Exposed European selection — on view in Paris">
+        <span class="showing-media-badge"><span class="dot"></span>Final Days &middot; Paris</span>
+      </div>
+
+      <div class="showing-info">
+        <h3 class="showing-venue">Galerie Brilliance &mdash; The International Debut</h3>
+        <p class="showing-city">Paris, France</p>
+
+        <div class="showing-dates">
+          <span class="d">Jun 1 &mdash; Aug 15</span>
+          <span class="thru">2026</span>
+        </div>
+
+        <p class="showing-desc">A curated European selection of the series, with new works created for the Paris audience &mdash; closing August 15. The tour&rsquo;s next stop: a private reception at the Tiffany&nbsp;&amp;&nbsp;Co. flagship in New York.</p>
+
+        <div class="showing-facts">
+          <div class="showing-fact">
+            <span class="label">Featuring</span>
+            <p>The European selection + new works</p>
+          </div>
+          <div class="showing-fact">
+            <span class="label">Closing</span>
+            <p>August 15, 2026</p>
+          </div>
+        </div>
+
+        <div class="showing-ctas">
+          <a href="events.html" class="btn-gold">Reserve Free Entry <span class="arrow">&rarr;</span></a>
+          <a href="events.html" class="btn-ghost"><span class="line"></span>Exhibition Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-list">
+      <a href="events.html" class="tour-item reveal">
+        <div class="tour-date">Fall 2026<span>Up Next &middot; Private Reception</span></div>
+        <div>
+          <p class="tour-name">Tiffany &amp; Co. Flagship Reception</p>
+          <p class="tour-venue">New York City, New York</p>
+        </div>
+        <span class="tour-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+      <a href="events.html" class="tour-item reveal reveal-d1">
+        <div class="tour-date">Mar &mdash; Jun 2026<span>The Inaugural Run &middot; Concluded</span></div>
+        <div>
+          <p class="tour-name">Charles H. Wright Museum of African American History</p>
+          <p class="tour-venue">Detroit, Michigan</p>
+        </div>
+        <span class="tour-arrow" aria-hidden="true">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== INTERLUDE ========== -->
+<section class="interlude reveal" aria-label="The series in one line">
+  <p>Fifty portraits<span class="sep">&middot;</span>Five disciplines<span class="sep">&middot;</span>One <em>collective brilliance</em></p>
+</section>
+
+<!-- ========== 04 · THE VOICES ========== -->
+<section class="section" aria-labelledby="voices-title">
+  <div class="container">
+    <div class="chapter-head">
+      <span class="chapter-num" aria-hidden="true">04</span>
+      <p class="chapter-eyebrow label label--gold reveal">The Voices</p>
+      <h2 class="chapter-title reveal" id="voices-title">Stories Behind<br>the Portraits</h2>
+    </div>
+
+    <div class="voices">
+      <a href="gallery.html#videos" class="video-frame develop reveal" aria-label="Watch the Brilliance Exposed interview series">
+        <img src="./Images/image4.jpeg" alt="" loading="lazy">
+        <span class="video-play">
+          <span class="video-play-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="8,5 20,12 8,19"/></svg>
+          </span>
         </span>
-      </span>
-    </a>
-
-    <div class="video-info">
-      <span class="section-eyebrow reveal">Featured Interview</span>
-      <h2 class="video-title reveal reveal-d1" id="video-heading">Stories<br>Behind the Portraits</h2>
-      <p class="video-desc reveal reveal-d2">
-        Go beyond the frame. Hear directly from the brilliant minds featured in the exhibition as they share their journeys, their turning points, and the moments that defined their paths in STEAM.
-      </p>
-      <a href="gallery.html#videos" class="btn-gold reveal reveal-d3">
-        Watch the Series
-        <span class="arrow">&rarr;</span>
+        <span class="video-duration">Trailer &middot; 2 min &middot; Premieres in New York</span>
       </a>
-    </div>
-  </div>
-</section>
 
-<div class="divider"><span class="diamond"></span></div>
-
-<!-- ========== EVENTS TEASER ========== -->
-<section class="events" aria-labelledby="events-heading">
-  <div class="section-inner">
-    <div class="section-header reveal">
       <div>
-        <span class="section-eyebrow">Upcoming Exhibitions</span>
-        <h2 class="section-title" id="events-heading">Where to Experience</h2>
+        <p class="voices-quote reveal reveal-d1">&ldquo;Every individual is a capsule of a unique story &mdash; which is why it is so important to invite all lives into science.&rdquo;</p>
+        <p class="voices-quote-attr reveal reveal-d1">Dr. Yasmin Hurd &mdash; Honoree</p>
+        <p class="voices-desc reveal reveal-d2">Go beyond the frame. Every honoree sits for a filmed conversation &mdash; their journeys, their turning points, and the moments that defined their paths in STEAM.</p>
+        <a href="#newsletter" class="btn-gold reveal reveal-d3">Get the Premiere Dates <span class="arrow">&rarr;</span></a>
       </div>
-      <a href="events.html" class="btn-ghost section-view-all">
-        <span class="line"></span>
-        See All Events
-      </a>
-    </div>
-
-    <div class="events-list">
-      <a href="events.html#detroit" class="event-item reveal reveal-d1">
-        <div class="event-date">
-          April 2026
-          <span class="event-date-line">Opening Reception</span>
-        </div>
-        <div class="event-details">
-          <p class="event-name">Charles H. Wright Museum of African American History</p>
-          <p class="event-venue">Detroit, Michigan</p>
-        </div>
-        <span class="event-arrow">&rarr;</span>
-      </a>
-
-      <a href="events.html#paris" class="event-item reveal reveal-d2">
-        <div class="event-date">
-          June 2026
-          <span class="event-date-line">International Debut</span>
-        </div>
-        <div class="event-details">
-          <p class="event-name">Galerie Brilliance &mdash; Paris Exhibition</p>
-          <p class="event-venue">Paris, France</p>
-        </div>
-        <span class="event-arrow">&rarr;</span>
-      </a>
-
-      <a href="events.html#tiffany" class="event-item reveal reveal-d3">
-        <div class="event-date">
-          Summer 2026
-          <span class="event-date-line">Private Reception</span>
-        </div>
-        <div class="event-details">
-          <p class="event-name">Tiffany &amp; Co. Flagship Reception</p>
-          <p class="event-venue">New York City, New York</p>
-        </div>
-        <span class="event-arrow">&rarr;</span>
-      </a>
     </div>
   </div>
 </section>
 
-<!-- ========== IMPACT ========== -->
-<section class="impact" aria-labelledby="impact-heading">
-  <div class="impact-inner">
-    <p class="impact-mark reveal">&ldquo;</p>
-    <p class="impact-quote reveal reveal-d1" id="impact-heading">
-      These portraits are not souvenirs &mdash; they are invitations. Invitations to a younger generation to look at themselves and decide, <em>yes, that could be me too.</em>
-    </p>
-    <p class="impact-attribution reveal reveal-d2">Alexis Dixon &mdash; Founder, Brilliance Exposed</p>
+<hr class="hairline">
 
-    <div class="impact-stats reveal reveal-d3">
-      <div class="impact-stat">
-        <span class="impact-stat-number">A growing</span>
-        <span class="impact-stat-label">Portrait Series</span>
-      </div>
-      <div class="impact-stat">
-        <span class="impact-stat-number">3</span>
-        <span class="impact-stat-label">International Venues</span>
-      </div>
-      <div class="impact-stat">
-        <span class="impact-stat-number">1</span>
-        <span class="impact-stat-label">Powerful Mission</span>
-      </div>
+<!-- ========== 05 · SUPPORT ========== -->
+<section class="section" aria-labelledby="support-title">
+  <div class="container">
+    <div class="chapter-head">
+      <span class="chapter-num" aria-hidden="true">05</span>
+      <p class="chapter-eyebrow label label--gold reveal">Support</p>
+      <h2 class="chapter-title reveal" id="support-title">Keep the Light On</h2>
     </div>
 
-    <a href="donate.html" class="btn-gold reveal reveal-d4">
-      Support the Mission
-      <span class="arrow">&rarr;</span>
-    </a>
+    <div class="support">
+      <div class="support-card reveal">
+        <img class="support-bg" src="./Images/image19.jpeg" alt="" aria-hidden="true" loading="lazy">
+        <h3>Help Us Keep Growing</h3>
+        <p>Every contribution carries the exhibition to a new city, funds a new portrait, and puts another mirror in front of a young person who needs to see themselves in it.</p>
+        <a href="donate.html" class="btn-gold">Donate <span class="arrow">&rarr;</span></a>
+      </div>
+      <div class="support-card reveal reveal-d1">
+        <img class="support-bg" src="./Images/image15.jpeg" alt="" aria-hidden="true" loading="lazy">
+        <h3>Take the Message With You</h3>
+        <p>The Converse &times; Brilliance Exposed collaboration and exhibition pieces &mdash; every purchase funds the tour. Wear the story past the gallery walls.</p>
+        <a href="shop.html" class="btn-ghost"><span class="line"></span>Visit the Shop</a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Portrait modal (inside main so it's swapped in via SPA router when navigating to home) -->
-<div class="portrait-modal" id="portraitModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="portraitModalName">
-  <div class="portrait-modal-backdrop" data-modal-close></div>
-  <div class="portrait-modal-inner">
-    <button class="portrait-modal-close" type="button" aria-label="Close dialog" data-modal-close>&times;</button>
-    <div class="portrait-modal-image">
-      <img data-modal-image src="" alt="">
-    </div>
-    <div class="portrait-modal-content">
-      <span class="portrait-modal-eyebrow">Honoree Profile</span>
-      <h2 class="portrait-modal-name" id="portraitModalName" data-modal-name></h2>
-      <p class="portrait-modal-role" data-modal-role></p>
-      <div class="portrait-modal-bio" data-modal-bio></div>
-      <div class="portrait-modal-actions">
-        <a href="#" class="btn-gold" data-modal-video aria-disabled="true" rel="noopener">
-          Interview Coming Soon
-        </a>
-        <a href="gallery.html" class="btn-ghost">
-          <span class="line"></span>
-          Full Gallery
-        </a>
-      </div>
-    </div>
+<!-- ========== CLOSING ========== -->
+<section class="section closing" aria-label="Founder's words">
+  <div class="container">
+    <span class="closing-mark reveal" aria-hidden="true">&ldquo;</span>
+    <p class="closing-quote reveal reveal-d1">These portraits are not souvenirs &mdash; they are invitations. Invitations to a younger generation to look at themselves and decide, <em>yes, that could be me too.</em></p>
+    <p class="closing-attr reveal reveal-d2">Alexis Dixon &mdash; Founder, Brilliance Exposed</p>
   </div>
-</div>
+</section>
 
 </main>
+
+<!-- ========== MOBILE TICKET BAR ========== -->
+<div class="ticket-bar" id="ticketBar" aria-hidden="true">
+  <p class="ticket-bar-label"><strong>Final days &middot; Paris</strong><br>New York is next &mdash; dates in Sept</p>
+  <a href="events.html" class="btn-gold">Reserve <span class="arrow">&rarr;</span></a>
+</div>
+
+<!-- ========== TOAST ========== -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="check" aria-hidden="true">&#10003;</span>
+  <span data-toast-msg></span>
+</div>
 
 <!-- ========== FOOTER ========== -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="./logo/logo-white.png" alt="Brilliance Exposed">
-        <p class="footer-tagline">An international photographic exhibition honoring Black-presenting professionals in STEAM.</p>
+        <div class="footer-brand-lockup"><span class="nav-logo-word">Brilliance<em>Exposed</em></span></div>
+        <p class="footer-tagline">An international photographic exhibition celebrating Black-presenting pioneers in Science, Technology, Engineering, Arts &amp; Mathematics.</p>
+        <p class="footer-tagline" style="margin-top: 10px; font-size: 0.8rem; color: var(--text-muted);">Founded by Alexis Dixon &middot; Photographed by Michele Zousmer</p>
       </div>
 
       <div class="footer-col">
@@ -324,10 +411,10 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li><a href="events.html">Visit</a></li>
           <li><a href="shop.html">Shop</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li><a href="blog.html">Journal</a></li>
+          <li><a href="visite.html" lang="fr">Visite (FR)</a></li>
         </ul>
       </div>
 
@@ -336,14 +423,15 @@
         <ul>
           <li><a href="donate.html">Donate</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="contact.html#press">Press</a></li>
+          <li><a href="press.html">Press</a></li>
           <li><a href="contact.html#partnerships">Partnerships</a></li>
+          <li><a href="legal.html">Privacy &amp; Terms</a></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-newsletter">
+      <div class="footer-col footer-newsletter" id="newsletter">
         <h4>Stay Connected</h4>
-        <p>Exhibition updates delivered to your inbox.</p>
+        <p>Exhibition updates, new portraits, and tour dates &mdash; delivered to your inbox.</p>
         <form class="newsletter-form" data-form="newsletter">
           <input type="email" placeholder="Email address" aria-label="Email address" required>
           <button type="submit" aria-label="Subscribe">
@@ -352,18 +440,14 @@
             </svg>
           </button>
         </form>
+        <p style="margin-top: 10px; font-size: 0.72rem; color: var(--text-muted);">Tour news only &mdash; no spam, unsubscribe anytime.</p>
         <p class="newsletter-status" data-form-status></p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copyright">&copy; 2026 Brilliance Exposed. All rights reserved.</p>
-      <div class="footer-socials">
-        <a href="#" aria-disabled="true">Instagram</a>
-        <a href="#" aria-disabled="true">Facebook</a>
-        <a href="#" aria-disabled="true">X / Twitter</a>
-        <a href="#" aria-disabled="true">LinkedIn</a>
-      </div>
+      <p class="footer-copyright">&copy; <span data-year>2026</span> Brilliance Exposed. All rights reserved.</p>
+      <p class="footer-tour">Detroit &middot; Paris &middot; New York &mdash; <em>The 2026 Tour</em></p>
     </div>
   </div>
 </footer>

@@ -6,30 +6,33 @@
 <meta name="color-scheme" content="dark">
 <style>html,body{background:#000;color:#e0e0e0}html{color-scheme:dark}</style>
 <title>Contact — Brilliance Exposed</title>
-<meta name="description" content="Contact Brilliance Exposed — press, partnerships, nominations, and general inquiries.">
+<meta name="description" content="Reach the Brilliance Exposed team — exhibition inquiries, group visits, press, and partnerships.">
+<link rel="icon" href="./logo/logo-white.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
+<div class="grain" aria-hidden="true"></div>
+
 <!-- ========== NAVIGATION ========== -->
 <header class="nav" id="navbar">
   <a href="index.html" class="nav-logo" aria-label="Brilliance Exposed — Home">
-    <img src="./logo/logo-white.png" alt="Brilliance Exposed">
+    <span class="nav-logo-word">Brilliance<em>Exposed</em></span>
   </a>
   <nav aria-label="Primary">
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="events.html">Events</a></li>
+      <li><a href="events.html">Visit</a></li>
       <li><a href="shop.html">Shop</a></li>
-      <li><a href="contact.html" aria-current="page">Contact</a></li>
       <li><a href="blog.html">Journal</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
   <a href="donate.html" class="nav-donate">Donate</a>
@@ -43,97 +46,91 @@
 <aside class="nav-mobile-panel" id="navMobilePanel" aria-hidden="true">
   <a href="about.html">About</a>
   <a href="gallery.html">Gallery</a>
-  <a href="events.html">Events</a>
+  <a href="events.html">Visit</a>
   <a href="shop.html">Shop</a>
-  <a href="contact.html" aria-current="page">Contact</a>
   <a href="blog.html">Journal</a>
+  <a href="contact.html">Contact</a>
   <a href="donate.html" class="btn-gold">Donate</a>
 </aside>
 
 <main id="main">
 
-<div class="contact-v2">
-
-  <!-- Hero -->
-  <div class="page-header reveal">
-    <h1 class="page-header-title">Get in Touch</h1>
-    <p class="page-header-intro">We&rsquo;d love to hear from you. Whether you&rsquo;re interested in the exhibition, partnerships, or press inquiries &mdash; reach out below.</p>
+<!-- ========== PAGE HEAD ========== -->
+<div class="page-head">
+  <div class="container">
+    <p class="page-head-eyebrow label label--gold reveal is-visible">Contact</p>
+    <h1 class="page-head-title reveal is-visible">We Read Every Message</h1>
+    <p class="page-head-intro reveal is-visible reveal-d1">Exhibition inquiries, school and group visits, press, partnerships &mdash; or just to tell us what a portrait meant to you. Reach out below &mdash; we reply within two business days.</p>
   </div>
-
-  <div class="contact-v2-body">
-
-    <!-- Left: Contact info -->
-    <div class="contact-v2-info reveal">
-      <p class="section-eyebrow-rule"><span>Contact Information</span></p>
-
-      <div class="contact-v2-info-section">
-        <p class="contact-v2-info-label">Physical</p>
-        <p>123 Gallery Street</p>
-        <p>New York, NY 10001</p>
-        <p>United States</p>
-      </div>
-
-      <div class="contact-v2-info-section" id="press">
-        <p class="contact-v2-info-label">Digital</p>
-        <a href="mailto:info@brillianceexposed.com">info@brillianceexposed.com</a>
-        <a href="tel:+10000000000">+1 (000) 000-0000</a>
-      </div>
-
-      <div class="contact-v2-info-section" id="partnerships">
-        <p class="contact-v2-info-label">Social Media</p>
-        <p>@brillianceexposed <span class="contact-v2-muted">(coming soon)</span></p>
-        <p>BrillianceExposed <span class="contact-v2-muted">(coming soon)</span></p>
-      </div>
-    </div>
-
-    <!-- Right: Form -->
-    <div class="contact-v2-form reveal reveal-d1">
-      <p class="section-eyebrow-rule"><span>Leave a Message</span></p>
-
-      <form data-form="contact">
-        <div class="contact-v2-form-row">
-          <div class="contact-v2-field">
-            <label for="contactName">Name</label>
-            <input type="text" id="contactName" name="name" placeholder="Enter your name" required>
-          </div>
-          <div class="contact-v2-field">
-            <label for="contactEmail">Email</label>
-            <input type="email" id="contactEmail" name="email" placeholder="email@address.com" required>
-          </div>
-        </div>
-
-        <div class="contact-v2-field">
-          <label for="contactMessage">Message</label>
-          <textarea id="contactMessage" name="message" placeholder="Type your message here&hellip;" required></textarea>
-        </div>
-
-        <button type="submit" class="btn-gold">
-          Send Message
-        </button>
-
-        <p class="form-status" data-form-status></p>
-      </form>
-    </div>
-
-  </div>
-
-  <hr class="hairline" role="presentation">
-
-  <p class="contact-v2-press">
-    For press inquiries and partnership opportunities, please email <a href="mailto:press@brillianceexposed.com">press@brillianceexposed.com</a>.
-  </p>
-
 </div>
 
+<!-- ========== CONTACT BODY ========== -->
+<section class="section" style="padding-top: clamp(24px, 4vw, 48px);" aria-label="Contact information and form">
+  <div class="container">
+    <div class="contact-body">
+
+      <div class="reveal">
+        <div class="contact-info-section" id="general">
+          <span class="label">General</span>
+          <a href="mailto:info@brillianceexposed.com">info@brillianceexposed.com</a>
+        </div>
+
+        <div class="contact-info-section" id="press">
+          <span class="label">Press</span>
+          <a href="mailto:press@brillianceexposed.com">press@brillianceexposed.com</a>
+          <p><a href="press.html" style="color: var(--gold); text-decoration: underline; text-underline-offset: 4px;">Visit the press room &rarr;</a></p>
+        </div>
+
+        <div class="contact-info-section" id="partnerships">
+          <span class="label">Partnerships &amp; Venues</span>
+          <a href="mailto:partnerships@brillianceexposed.com">partnerships@brillianceexposed.com</a>
+          <p>For museums, galleries, campuses, and sponsors interested in hosting the exhibition.</p>
+        </div>
+      </div>
+
+      <div class="reveal reveal-d1">
+        <form data-form="contact">
+          <div class="contact-form-row">
+            <div class="contact-field">
+              <label for="contactName">Name</label>
+              <input type="text" id="contactName" name="name" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <div class="contact-field">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" name="email" placeholder="email@address.com" autocomplete="email" required>
+            </div>
+          </div>
+
+          <div class="contact-field">
+            <label for="contactMessage">Message</label>
+            <textarea id="contactMessage" name="message" placeholder="Tell us what brings you here&hellip;" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-gold">Send Message <span class="arrow">&rarr;</span></button>
+          <p class="form-status" data-form-status></p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 </main>
+
+<!-- ========== TOAST ========== -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="check" aria-hidden="true">&#10003;</span>
+  <span data-toast-msg></span>
+</div>
 
 <!-- ========== FOOTER ========== -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="./logo/logo-white.png" alt="Brilliance Exposed">
-        <p class="footer-tagline">An international photographic exhibition honoring Black-presenting professionals in STEAM.</p>
+        <div class="footer-brand-lockup"><span class="nav-logo-word">Brilliance<em>Exposed</em></span></div>
+        <p class="footer-tagline">An international photographic exhibition celebrating Black-presenting pioneers in Science, Technology, Engineering, Arts &amp; Mathematics.</p>
+        <p class="footer-tagline" style="margin-top: 10px; font-size: 0.8rem; color: var(--text-muted);">Founded by Alexis Dixon &middot; Photographed by Michele Zousmer</p>
       </div>
 
       <div class="footer-col">
@@ -141,10 +138,10 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li><a href="events.html">Visit</a></li>
           <li><a href="shop.html">Shop</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li><a href="blog.html">Journal</a></li>
+          <li><a href="visite.html" lang="fr">Visite (FR)</a></li>
         </ul>
       </div>
 
@@ -153,14 +150,15 @@
         <ul>
           <li><a href="donate.html">Donate</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="contact.html#press">Press</a></li>
+          <li><a href="press.html">Press</a></li>
           <li><a href="contact.html#partnerships">Partnerships</a></li>
+          <li><a href="legal.html">Privacy &amp; Terms</a></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-newsletter">
+      <div class="footer-col footer-newsletter" id="newsletter">
         <h4>Stay Connected</h4>
-        <p>Exhibition updates delivered to your inbox.</p>
+        <p>Exhibition updates, new portraits, and tour dates &mdash; delivered to your inbox.</p>
         <form class="newsletter-form" data-form="newsletter">
           <input type="email" placeholder="Email address" aria-label="Email address" required>
           <button type="submit" aria-label="Subscribe">
@@ -169,18 +167,14 @@
             </svg>
           </button>
         </form>
+        <p style="margin-top: 10px; font-size: 0.72rem; color: var(--text-muted);">Tour news only &mdash; no spam, unsubscribe anytime.</p>
         <p class="newsletter-status" data-form-status></p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copyright">&copy; 2026 Brilliance Exposed. All rights reserved.</p>
-      <div class="footer-socials">
-        <a href="#" aria-disabled="true">Instagram</a>
-        <a href="#" aria-disabled="true">Facebook</a>
-        <a href="#" aria-disabled="true">X / Twitter</a>
-        <a href="#" aria-disabled="true">LinkedIn</a>
-      </div>
+      <p class="footer-copyright">&copy; <span data-year>2026</span> Brilliance Exposed. All rights reserved.</p>
+      <p class="footer-tour">Detroit &middot; Paris &middot; New York &mdash; <em>The 2026 Tour</em></p>
     </div>
   </div>
 </footer>

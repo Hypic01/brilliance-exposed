@@ -6,30 +6,33 @@
 <meta name="color-scheme" content="dark">
 <style>html,body{background:#000;color:#e0e0e0}html{color-scheme:dark}</style>
 <title>Gallery — Brilliance Exposed</title>
-<meta name="description" content="The portrait gallery of Brilliance Exposed — honoring Black-presenting professionals in STEAM.">
+<meta name="description" content="The portrait gallery of Brilliance Exposed — fifty Black-presenting pioneers in Science, Technology, Engineering, Arts and Mathematics, photographed by Michele Zousmer.">
+<link rel="icon" href="./logo/logo-white.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <a class="skip-link" href="#main">Skip to main content</a>
 
+<div class="grain" aria-hidden="true"></div>
+
 <!-- ========== NAVIGATION ========== -->
 <header class="nav" id="navbar">
   <a href="index.html" class="nav-logo" aria-label="Brilliance Exposed — Home">
-    <img src="./logo/logo-white.png" alt="Brilliance Exposed">
+    <span class="nav-logo-word">Brilliance<em>Exposed</em></span>
   </a>
   <nav aria-label="Primary">
     <ul class="nav-links">
       <li><a href="about.html">About</a></li>
-      <li><a href="gallery.html" aria-current="page">Gallery</a></li>
-      <li><a href="events.html">Events</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="events.html">Visit</a></li>
       <li><a href="shop.html">Shop</a></li>
-      <li><a href="contact.html">Contact</a></li>
       <li><a href="blog.html">Journal</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
   <a href="donate.html" class="nav-donate">Donate</a>
@@ -42,114 +45,268 @@
 
 <aside class="nav-mobile-panel" id="navMobilePanel" aria-hidden="true">
   <a href="about.html">About</a>
-  <a href="gallery.html" aria-current="page">Gallery</a>
-  <a href="events.html">Events</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="events.html">Visit</a>
   <a href="shop.html">Shop</a>
-  <a href="contact.html">Contact</a>
   <a href="blog.html">Journal</a>
+  <a href="contact.html">Contact</a>
   <a href="donate.html" class="btn-gold">Donate</a>
 </aside>
 
 <main id="main">
 
-<div class="gallery-v2">
-
-  <!-- Hero -->
-  <div class="page-header reveal">
-    <h1 class="page-header-title">Gallery</h1>
-    <p class="page-header-intro">Portraits of brilliance &mdash; honoring the extraordinary contributions of Black-presenting professionals in Science, Technology, Engineering, Arts, and Math.</p>
+<!-- ========== PAGE HEAD ========== -->
+<div class="page-head">
+  <div class="container">
+    <p class="page-head-eyebrow label label--gold reveal is-visible">The Portrait Gallery</p>
+    <h1 class="page-head-title reveal is-visible">Nine Exposures.<br><em>Forty-One to Come.</em></h1>
+    <p class="exposure-chip reveal is-visible" style="margin-top: 18px;">Nine revealed today &middot; Fifty by New York</p>
+    <p class="page-head-intro reveal is-visible reveal-d1">Every portrait in the series is a real scientist, engineer, artist or mathematician &mdash; photographed by Michele Zousmer, and paired with their story. Nine exposures are public today; the series grows to fifty across the 2026 tour. Select a portrait to meet them.</p>
   </div>
-
-  <!-- Featured portrait -->
-  <section class="gallery-v2-featured reveal">
-    <div class="gallery-v2-featured-image">
-      <img src="./Images/gallery-portrait.jpeg" alt="Portrait of Yasmin Hurd">
-    </div>
-    <div class="gallery-v2-featured-info">
-      <h2 class="gallery-v2-featured-name">Yasmin Hurd</h2>
-      <p class="gallery-v2-featured-role">PhD &mdash; Chair of Transnational Neuroscience, Director of Addiction Institute</p>
-      <p class="gallery-v2-featured-quote">&ldquo;I find it beautiful that every individual is a capsule of a unique story, which is why it is so important to invite all lives into science.&rdquo;</p>
-      <p class="gallery-v2-featured-bio">Dr. Hurd has spent decades advancing our understanding of addiction and the neurobiology of opioid use disorder, inspiring future generations of scientists through rigorous research and mentorship.</p>
-      <a href="#" class="gallery-v2-featured-link">Read Full Story &rarr;</a>
-    </div>
-  </section>
-
-  <hr class="hairline" role="presentation">
-
-  <!-- STEAM filter tabs + grid -->
-  <div class="gallery-v2-tabs" id="galleryTabs" role="tablist" aria-label="Filter by STEAM category">
-    <button class="gallery-v2-tab is-active" data-cat="all" role="tab" aria-selected="true">All</button>
-    <button class="gallery-v2-tab" data-cat="science" role="tab" aria-selected="false">Science</button>
-    <button class="gallery-v2-tab" data-cat="technology" role="tab" aria-selected="false">Technology</button>
-    <button class="gallery-v2-tab" data-cat="engineering" role="tab" aria-selected="false">Engineering</button>
-    <button class="gallery-v2-tab" data-cat="arts" role="tab" aria-selected="false">Arts</button>
-    <button class="gallery-v2-tab" data-cat="mathematics" role="tab" aria-selected="false">Math</button>
-  </div>
-
-  <section class="gallery-v2-grid" id="galleryGrid">
-    <article class="gallery-v2-card" data-cat="science">
-      <div class="gallery-v2-card-image"><img src="./Images/gallery-portrait.jpeg" alt="Portrait of Yasmin Hurd" loading="lazy"></div>
-      <h3 class="gallery-v2-card-name">Yasmin Hurd</h3>
-      <p class="gallery-v2-card-role">Chair of Transnational Neuroscience</p>
-    </article>
-    <article class="gallery-v2-card" data-cat="science">
-      <div class="gallery-v2-card-image"><img src="./Images/image13.jpeg" alt="Portrait of Alena Analeigh" loading="lazy"></div>
-      <h3 class="gallery-v2-card-name">Alena Analeigh</h3>
-      <p class="gallery-v2-card-role">Young Scientist &amp; Innovator</p>
-    </article>
-    <article class="gallery-v2-card" data-cat="science">
-      <div class="gallery-v2-card-image"><img src="./Images/image6.jpeg" alt="Portrait of Zach Green" loading="lazy"></div>
-      <h3 class="gallery-v2-card-name">Zach Green</h3>
-      <p class="gallery-v2-card-role">Scientist &amp; Entrepreneur</p>
-    </article>
-    <article class="gallery-v2-card" data-cat="science">
-      <div class="gallery-v2-card-image"><img src="./Images/image10.jpeg" alt="Portrait of Gentry Patrick" loading="lazy"></div>
-      <h3 class="gallery-v2-card-name">Gentry Patrick</h3>
-      <p class="gallery-v2-card-role">Neuroscientist</p>
-    </article>
-    <article class="gallery-v2-card" data-cat="science">
-      <div class="gallery-v2-card-image"><img src="./Images/image11.jpeg" alt="Portrait of Bianca Jones Marlin" loading="lazy"></div>
-      <h3 class="gallery-v2-card-name">Bianca Jones Marlin</h3>
-      <p class="gallery-v2-card-role">Neuroscientist &amp; Geneticist</p>
-    </article>
-    <article class="gallery-v2-card" data-cat="science">
-      <div class="gallery-v2-card-image"><img src="./Images/image12.jpeg" alt="Portrait of Willis Jenkins" loading="lazy"></div>
-      <h3 class="gallery-v2-card-name">Willis Jenkins</h3>
-      <p class="gallery-v2-card-role">Research Scientist</p>
-    </article>
-    <article class="gallery-v2-card" data-cat="technology">
-      <div class="gallery-v2-card-image"></div>
-      <h3 class="gallery-v2-card-name">Coming Soon</h3>
-      <p class="gallery-v2-card-role">Technology Honoree</p>
-    </article>
-    <article class="gallery-v2-card" data-cat="engineering">
-      <div class="gallery-v2-card-image"></div>
-      <h3 class="gallery-v2-card-name">Coming Soon</h3>
-      <p class="gallery-v2-card-role">Engineering Honoree</p>
-    </article>
-    <article class="gallery-v2-card" data-cat="arts">
-      <div class="gallery-v2-card-image"></div>
-      <h3 class="gallery-v2-card-name">Coming Soon</h3>
-      <p class="gallery-v2-card-role">Arts Honoree</p>
-    </article>
-    <article class="gallery-v2-card" data-cat="mathematics">
-      <div class="gallery-v2-card-image"></div>
-      <h3 class="gallery-v2-card-name">Coming Soon</h3>
-      <p class="gallery-v2-card-role">Mathematics Honoree</p>
-    </article>
-  </section>
-
 </div>
 
+<!-- ========== FEATURED PORTRAIT ========== -->
+<section class="section" style="padding-top: clamp(24px, 4vw, 48px);" aria-labelledby="featured-name">
+  <div class="container">
+    <div class="gallery-featured">
+      <div class="gallery-featured-figure develop reveal">
+        <img src="./Images/gallery-portrait.jpeg" alt="Portrait of Dr. Yasmin Hurd">
+      </div>
+      <div>
+        <p class="exposure-chip reveal">Featured &mdash; Exposure 01 · Science</p>
+        <h2 class="gallery-featured-name reveal" id="featured-name">Dr. Yasmin Hurd</h2>
+        <p class="gallery-featured-role reveal">Neuroscientist &middot; Director, Addiction Institute</p>
+        <p class="gallery-featured-quote reveal reveal-d1">&ldquo;I find it beautiful that every individual is a capsule of a unique story, which is why it is so important to invite all lives into science.&rdquo;</p>
+        <p class="gallery-featured-bio reveal reveal-d2">Dr. Hurd has spent decades advancing our understanding of addiction and the neurobiology of opioid use disorder &mdash; inspiring future generations of scientists through rigorous research and mentorship.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hairline">
+
+<!-- ========== ALL PORTRAITS ========== -->
+<section class="section" aria-labelledby="grid-title">
+  <div class="container">
+    <div class="chapter-head">
+      <p class="chapter-eyebrow label label--gold reveal">All Portraits</p>
+      <h2 class="chapter-title reveal" id="grid-title">The 2026 Series</h2>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+
+      <button class="gallery-card develop reveal" data-cat="science"
+        data-name="Dr. Yasmin Hurd" data-role="Neuroscientist · Director, Addiction Institute"
+        data-chip="Exposure 01 · Science"
+        data-bio="<p>&ldquo;I find it beautiful that every individual is a capsule of a unique story, which is why it is so important to invite all lives into science.&rdquo;</p><p>Dr. Hurd has spent decades advancing our understanding of addiction and the neurobiology of opioid use disorder, inspiring future generations of scientists through rigorous research and mentorship.</p>">
+        <span class="gallery-card-figure">
+          <img src="./Images/gallery-portrait.jpeg" alt="Portrait of Dr. Yasmin Hurd" loading="lazy">
+          <span class="gallery-card-chip">Exp 01 · Science</span>
+        </span>
+        <span class="gallery-card-info">
+          <span class="gallery-card-name">Dr. Yasmin Hurd</span>
+          <span class="gallery-card-role">Translational Neuroscience</span>
+        </span>
+      </button>
+
+      <button class="gallery-card develop reveal reveal-d1" data-cat="science"
+        data-name="Dr. Stephon Alexander" data-role="Theoretical Physicist · Jazz Musician"
+        data-chip="Exposure 02 · Science"
+        data-bio="<p>Physicist exploring the intersection of cosmology, music and mathematics &mdash; and a working jazz saxophonist. His portrait holds both instruments: the equations and the horn.</p>">
+        <span class="gallery-card-figure">
+          <img src="./Images/portrait-alexander.jpeg" alt="Portrait of Dr. Stephon Alexander" loading="lazy">
+          <span class="gallery-card-chip">Exp 02 · Science</span>
+        </span>
+        <span class="gallery-card-info">
+          <span class="gallery-card-name">Dr. Stephon Alexander</span>
+          <span class="gallery-card-role">Theoretical Physicist</span>
+        </span>
+      </button>
+
+      <button class="gallery-card develop reveal reveal-d2" data-cat="mathematics"
+        data-name="Dr. Gladys West" data-role="Mathematician — GPS Pioneer"
+        data-chip="Exposure 03 · Mathematics"
+        data-bio="<p>Her mathematical modeling of the shape of the Earth became the foundation of the Global Positioning System. Every glowing blue dot on every map traces back to her calculations.</p>">
+        <span class="gallery-card-figure">
+          <img src="./Images/portrait-west.jpeg" alt="Portrait of Dr. Gladys West" loading="lazy">
+          <span class="gallery-card-chip">Exp 03 · Mathematics</span>
+        </span>
+        <span class="gallery-card-info">
+          <span class="gallery-card-name">Dr. Gladys West</span>
+          <span class="gallery-card-role">Mathematician &mdash; GPS Pioneer</span>
+        </span>
+      </button>
+
+      <button class="gallery-card develop reveal" data-cat="science"
+        data-name="Dr. Bianca Jones Marlin" data-role="Neuroscientist & Geneticist"
+        data-chip="Exposure 04 · Science"
+        data-bio="<p>Investigates how experiences leave marks that cross generations &mdash; the biology of inherited memory. Her work asks what our ancestors hand down to us, in body as well as story.</p>">
+        <span class="gallery-card-figure">
+          <img src="./Images/image11.jpeg" alt="Portrait of Dr. Bianca Jones Marlin" loading="lazy">
+          <span class="gallery-card-chip">Exp 04 · Science</span>
+        </span>
+        <span class="gallery-card-info">
+          <span class="gallery-card-name">Dr. Bianca Jones Marlin</span>
+          <span class="gallery-card-role">Neuroscientist &amp; Geneticist</span>
+        </span>
+      </button>
+
+      <button class="gallery-card develop reveal reveal-d1" data-cat="science"
+        data-name="Dr. Gentry Patrick" data-role="Neuroscientist · Mentor"
+        data-chip="Exposure 05 · Science"
+        data-bio="<p>Neuroscientist studying how our brain&rsquo;s synapses are built and maintained &mdash; and a champion for opening the doors of science to students from every background.</p>">
+        <span class="gallery-card-figure">
+          <img src="./Images/image10.jpeg" alt="Portrait of Dr. Gentry Patrick" loading="lazy">
+          <span class="gallery-card-chip">Exp 05 · Science</span>
+        </span>
+        <span class="gallery-card-info">
+          <span class="gallery-card-name">Dr. Gentry Patrick</span>
+          <span class="gallery-card-role">Neuroscientist</span>
+        </span>
+      </button>
+
+      <button class="gallery-card develop reveal reveal-d2" data-cat="science"
+        data-name="William &ldquo;Bil&rdquo; Clemons Jr." data-role="Structural Biologist"
+        data-chip="Exposure 06 · Science"
+        data-bio="<p>Structural biologist mapping the machinery of the cell, one protein at a time &mdash; work that quietly underpins the next generation of medicine.</p>">
+        <span class="gallery-card-figure">
+          <img src="./Images/portrait-clemons.jpeg" alt="Portrait of William 'Bil' Clemons Jr." loading="lazy">
+          <span class="gallery-card-chip">Exp 06 · Science</span>
+        </span>
+        <span class="gallery-card-info">
+          <span class="gallery-card-name">William &ldquo;Bil&rdquo; Clemons Jr.</span>
+          <span class="gallery-card-role">Structural Biologist</span>
+        </span>
+      </button>
+
+      <button class="gallery-card develop reveal" data-cat="science"
+        data-name="Willis Jenkins" data-role="Research Scientist"
+        data-chip="Exposure 07 · Science"
+        data-bio="<p>Research scientist in the 2026 series. Full biography and interview segments arrive with the tour.</p>">
+        <span class="gallery-card-figure">
+          <img src="./Images/image12.jpeg" alt="Portrait of Willis Jenkins" loading="lazy">
+          <span class="gallery-card-chip">Exp 07 · Science</span>
+        </span>
+        <span class="gallery-card-info">
+          <span class="gallery-card-name">Willis Jenkins</span>
+          <span class="gallery-card-role">Research Scientist</span>
+        </span>
+      </button>
+
+      <button class="gallery-card develop reveal reveal-d1" data-cat="science"
+        data-name="Alena Analeigh" data-role="Young Scientist & Innovator"
+        data-chip="Exposure 08 · Science"
+        data-bio="<p>The youngest face in the series &mdash; a reminder that the next fifty portraits are already out there, in classrooms, waiting to be seen.</p>">
+        <span class="gallery-card-figure">
+          <img src="./Images/image13.jpeg" alt="Portrait of Alena Analeigh" loading="lazy">
+          <span class="gallery-card-chip">Exp 08 · Science</span>
+        </span>
+        <span class="gallery-card-info">
+          <span class="gallery-card-name">Alena Analeigh</span>
+          <span class="gallery-card-role">Young Scientist &amp; Innovator</span>
+        </span>
+      </button>
+
+      <button class="gallery-card develop reveal reveal-d2" data-cat="science"
+        data-name="Zach Green" data-role="Scientist & Entrepreneur"
+        data-chip="Exposure 09 · Science"
+        data-bio="<p>Scientist and entrepreneur in the 2026 series. Full biography and interview segments arrive with the tour.</p>">
+        <span class="gallery-card-figure">
+          <img src="./Images/image6.jpeg" alt="Portrait of Zach Green" loading="lazy">
+          <span class="gallery-card-chip">Exp 09 · Science</span>
+        </span>
+        <span class="gallery-card-info">
+          <span class="gallery-card-name">Zach Green</span>
+          <span class="gallery-card-role">Scientist &amp; Entrepreneur</span>
+        </span>
+      </button>
+
+    </div>
+
+    <div class="series-progress reveal">
+      <p class="series-progress-num">09<span> / 50</span></p>
+      <div>
+        <p><strong>Nine exposures revealed.</strong> The full fifty develop across the 2026 tour &mdash; new portraits join the series with each city. Science and mathematics lead; technology, engineering, and the arts are in the darkroom now.</p>
+        <a href="contact.html" class="btn-ghost"><span class="line"></span>Be First to See Each One</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== VOICES ANCHOR ========== -->
+<section class="section" id="videos" aria-labelledby="videos-title">
+  <div class="container">
+    <div class="chapter-head">
+      <p class="chapter-eyebrow label label--gold reveal">The Voices</p>
+      <h2 class="chapter-title reveal" id="videos-title">Hear Them<br>Tell It</h2>
+    </div>
+
+    <div class="voices">
+      <div class="video-frame develop reveal" aria-label="Brilliance Exposed interview series — premiering with the Detroit exhibition">
+        <img src="./Images/image4.jpeg" alt="" loading="lazy">
+        <span class="video-play">
+          <span class="video-play-btn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><polygon points="8,5 20,12 8,19"/></svg>
+          </span>
+        </span>
+        <span class="video-duration">Premieres in New York &middot; 2026</span>
+      </div>
+      <div>
+        <p class="voices-quote reveal reveal-d1">Every honoree sits for a filmed conversation. The interview series premieres with the New York reception this fall &mdash; and lands here after the tour.</p>
+        <a href="#newsletter" class="btn-gold reveal reveal-d2" style="margin-top: 28px;">Get the Dates First <span class="arrow">&rarr;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== THE EXPERIENCE BAND ========== -->
+<section class="experience-band reveal" aria-label="The exhibition in person">
+  <img class="bg" src="./Images/events-exhibit.jpeg" alt="" loading="lazy">
+  <div class="experience-band-content">
+    <p class="exposure-chip">In Person</p>
+    <h2>A screen can show you the portraits.<br>Only the room lets you stand in them.</h2>
+    <p>Museum-scale prints, floor-to-ceiling, with the honorees&rsquo; voices in the air. The exhibition is designed to be walked through &mdash; slowly.</p>
+    <a href="events.html" class="btn-gold">Plan Your Visit <span class="arrow">&rarr;</span></a>
+  </div>
+</section>
+
 </main>
+
+<!-- ========== PORTRAIT MODAL ========== -->
+<div class="portrait-modal" id="portraitModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="portraitModalName">
+  <div class="portrait-modal-backdrop" data-modal-close></div>
+  <div class="portrait-modal-inner">
+    <button class="portrait-modal-close" type="button" aria-label="Close dialog" data-modal-close>&times;</button>
+    <div class="portrait-modal-image">
+      <img data-modal-image src="" alt="">
+    </div>
+    <div class="portrait-modal-content">
+      <span class="exposure-chip" data-modal-chip>Honoree Profile</span>
+      <h2 class="portrait-modal-name" id="portraitModalName" data-modal-name></h2>
+      <p class="portrait-modal-role" data-modal-role></p>
+      <div class="portrait-modal-bio" data-modal-bio></div>
+      <div class="portrait-modal-actions">
+        <a href="events.html" class="btn-gold">See the Exhibition</a>
+        <button class="btn-ghost" data-modal-close type="button"><span class="line"></span>Back to Gallery</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== TOAST ========== -->
+<div class="toast" id="toast" role="status" aria-live="polite">
+  <span class="check" aria-hidden="true">&#10003;</span>
+  <span data-toast-msg></span>
+</div>
 
 <!-- ========== FOOTER ========== -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <img src="./logo/logo-white.png" alt="Brilliance Exposed">
-        <p class="footer-tagline">An international photographic exhibition honoring Black-presenting professionals in STEAM.</p>
+        <div class="footer-brand-lockup"><span class="nav-logo-word">Brilliance<em>Exposed</em></span></div>
+        <p class="footer-tagline">An international photographic exhibition celebrating Black-presenting pioneers in Science, Technology, Engineering, Arts &amp; Mathematics.</p>
+        <p class="footer-tagline" style="margin-top: 10px; font-size: 0.8rem; color: var(--text-muted);">Founded by Alexis Dixon &middot; Photographed by Michele Zousmer</p>
       </div>
 
       <div class="footer-col">
@@ -157,10 +314,10 @@
         <ul>
           <li><a href="about.html">About</a></li>
           <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="events.html">Events</a></li>
+          <li><a href="events.html">Visit</a></li>
           <li><a href="shop.html">Shop</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li><a href="blog.html">Journal</a></li>
+          <li><a href="visite.html" lang="fr">Visite (FR)</a></li>
         </ul>
       </div>
 
@@ -169,14 +326,15 @@
         <ul>
           <li><a href="donate.html">Donate</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><a href="contact.html#press">Press</a></li>
+          <li><a href="press.html">Press</a></li>
           <li><a href="contact.html#partnerships">Partnerships</a></li>
+          <li><a href="legal.html">Privacy &amp; Terms</a></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-newsletter">
+      <div class="footer-col footer-newsletter" id="newsletter">
         <h4>Stay Connected</h4>
-        <p>Exhibition updates delivered to your inbox.</p>
+        <p>Exhibition updates, new portraits, and tour dates &mdash; delivered to your inbox.</p>
         <form class="newsletter-form" data-form="newsletter">
           <input type="email" placeholder="Email address" aria-label="Email address" required>
           <button type="submit" aria-label="Subscribe">
@@ -185,18 +343,14 @@
             </svg>
           </button>
         </form>
+        <p style="margin-top: 10px; font-size: 0.72rem; color: var(--text-muted);">Tour news only &mdash; no spam, unsubscribe anytime.</p>
         <p class="newsletter-status" data-form-status></p>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copyright">&copy; 2026 Brilliance Exposed. All rights reserved.</p>
-      <div class="footer-socials">
-        <a href="#" aria-disabled="true">Instagram</a>
-        <a href="#" aria-disabled="true">Facebook</a>
-        <a href="#" aria-disabled="true">X / Twitter</a>
-        <a href="#" aria-disabled="true">LinkedIn</a>
-      </div>
+      <p class="footer-copyright">&copy; <span data-year>2026</span> Brilliance Exposed. All rights reserved.</p>
+      <p class="footer-tour">Detroit &middot; Paris &middot; New York &mdash; <em>The 2026 Tour</em></p>
     </div>
   </div>
 </footer>
